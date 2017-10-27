@@ -1,0 +1,60 @@
+{
+	"name": "BlueSpiceAvatars",
+	"version": "2.27.1-alpha",
+	"url": "https://help.bluespice.com/index.php/Avatars",
+	"author": "Marc Reymann",
+	"descriptionmsg": "bs-avatars-desc",
+	"type": "bluespice",
+	"bsgExtensions": {
+		"BlueSpiceAvatars": {
+			"className": "Avatars",
+			"extPath": "/BlueSpiceAvatars"
+		}
+	},
+	"callback": "Avatars::onRegistration",
+	"APIModules": {
+		"bs-avatars-tasks": "BSApiAvatarsTasks"
+	},
+	"MessagesDirs": {
+		"BlueSpiceAvatars": [
+			"i18n"
+		]
+	},
+	"AutoloadClasses": {
+		"Avatars": "Avatars.class.php",
+		"BSApiAvatarsTasks": "includes/api/BSApiAvatarsTasks.php"
+	},
+	"ResourceModules": {
+		"ext.bluespice.avatars.js": {
+			"scripts": [
+				"bluespice.avatars.js"
+			],
+			"messages": [
+				"bs-avatars-upload-title",
+				"bs-avatars-upload-label",
+				"bs-avatars-generate-new-label",
+				"bs-avatars-warning-title",
+				"bs-avatars-warning-text",
+				"bs-avatars-userimage-title",
+				"bs-avatars-set-userimage-failed",
+				"bs-avatars-set-userimage-saved",
+				"bs-avatars-userimage-help",
+				"bs-avatars-file-upload-fieldset-title",
+				"bs-avatars-userimage-title",
+				"bs-avatars-auto-generate-fieldset-title"
+			]
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "resources",
+		"remoteExtPath": "BlueSpiceAvatars/resources"
+	},
+	"Hooks": {
+		"BeforePageDisplay": "Avatars::onBeforePageDisplay",
+		"BSUserManagerAfterAddUser": "Avatars::onBSUserManagerAfterAddUser",
+		"LocalUserCreated": "Avatars::onLocalUserCreated",
+		"UnitTestsList": "Avatars::onUnitTestsList"
+	},
+	"load_composer_autoloader": true,
+	"manifest_version": 1
+}

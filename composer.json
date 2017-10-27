@@ -1,0 +1,13 @@
+{
+	"name": "mediawiki/blue-spice-avatars",
+	"type": "mediawiki-extension",
+	"description": "Provides generic and individual user pictures",
+	"license": "GPL-3.0",
+	"require": {
+		"composer/installers": "~1.0"
+	},
+	"autoload": {
+		"psr-4": {
+		}
+	}
+}
