@@ -2,13 +2,20 @@
 	"name": "BlueSpiceAvatars",
 	"version": "2.27.1-alpha",
 	"url": "https://help.bluespice.com/index.php/Avatars",
-	"author": "Marc Reymann",
+	"author": [
+		"Marc Reymann",
+		"Patric Wirth"
+	],
 	"descriptionmsg": "bs-avatars-desc",
 	"type": "bluespice",
 	"bsgExtensions": {
 		"BlueSpiceAvatars": {
 			"className": "Avatars",
-			"extPath": "/BlueSpiceAvatars"
+			"extPath": "/BlueSpiceAvatars",
+			"configDefinitions": {
+				"AvatarsDefaultSize": "\\BlueSpice\\Avatars\\ConfigDefinition\\AvatarsDefaultSize::getInstance",
+				"AvatarsGenerator": "\\BlueSpice\\Avatars\\ConfigDefinition\\AvatarsGenerator::getInstance"
+			}
 		}
 	},
 	"callback": "Avatars::onRegistration",
@@ -21,13 +28,16 @@
 		]
 	},
 	"AutoloadClasses": {
-		"Avatars": "Avatars.class.php",
+		"Avatars": "Avatars.php",
 		"BSApiAvatarsTasks": "includes/api/BSApiAvatarsTasks.php"
 	},
 	"ResourceModules": {
 		"ext.bluespice.avatars.js": {
 			"scripts": [
 				"bluespice.avatars.js"
+			],
+			"dependencies": [
+				"ext.bluespice.extjs"
 			],
 			"messages": [
 				"bs-avatars-upload-title",
@@ -49,11 +59,19 @@
 		"localBasePath": "resources",
 		"remoteExtPath": "BlueSpiceAvatars/resources"
 	},
+	"config_prefix": "bsg",
+	"config": {
+		"AvatarsDefaultSize": {
+			"value": 40
+		},
+		"AvatarsGenerator": {
+			"value": "InstantAvatar"
+		}
+	},
 	"Hooks": {
-		"BeforePageDisplay": "Avatars::onBeforePageDisplay",
-		"BSUserManagerAfterAddUser": "Avatars::onBSUserManagerAfterAddUser",
-		"LocalUserCreated": "Avatars::onLocalUserCreated",
-		"UnitTestsList": "Avatars::onUnitTestsList"
+		"BeforePageDisplay": "\\BlueSpice\\Avatars\\Hook\\BeforePageDisplay\\AddModules::callback",
+		"UnitTestsList": "Avatars::onUnitTestsList",
+		"BSCoreGetUserMiniProfileBeforeInit": "\\BlueSpice\\Avatars\\Hook\\BSCoreGetUserMiniProfileBeforeInit\\SetAvatar::callback"
 	},
 	"load_composer_autoloader": true,
 	"manifest_version": 1

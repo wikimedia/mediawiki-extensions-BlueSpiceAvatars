@@ -1,5 +1,7 @@
 <?php
 
+use BlueSpice\Avatars\Generator;
+
 class BSApiAvatarsTasks extends BSApiTasksBase {
 
 	protected $aTasks = array(
@@ -41,7 +43,7 @@ class BSApiAvatarsTasks extends BSApiTasksBase {
 		$oUser = $this->getUser();
 		Avatars::unsetUserImage( $oUser );
 		$oAvatars = BsExtensionManager::getExtension( 'Avatars' );
-		$sAvatarFileName = Avatars::$sAvatarFilePrefix . $oUser->getId() . ".png";
+		$sAvatarFileName = Generator::FILE_PREFIX . $oUser->getId() . ".png";
 		$oStatus = BsFileSystemHelper::uploadAndConvertImage(
 			$this->getRequest()->getVal( 'name' ),
 			'Avatars',
@@ -88,8 +90,8 @@ class BSApiAvatarsTasks extends BSApiTasksBase {
 
 		$oUser = $this->getUser();
 		Avatars::unsetUserImage($oUser);
-		$oAvatars = BsExtensionManager::getExtension( 'Avatars' );
-		$sNewPath = $oAvatars->generateAvatar( $oUser, array(), true );
+		$generator = new Generator( $this->getConfig() );
+		$generator->generate( $oUser, [], true );
 
 		$oResponse->success = true;
 		$oResponse->message = wfMessage( 'bs-avatars-generate-complete' )->plain();
