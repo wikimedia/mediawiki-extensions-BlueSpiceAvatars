@@ -9,13 +9,17 @@
 	],
 	"descriptionmsg": "bs-avatars-desc",
 	"type": "bluespice",
-	"bsgExtensions": {
-		"BlueSpiceAvatars": {
-			"className": "Avatars",
-			"extPath": "/BlueSpiceAvatars",
-			"configDefinitions": {
-				"AvatarsDefaultSize": "\\BlueSpice\\Avatars\\ConfigDefinition\\AvatarsDefaultSize::getInstance",
-				"AvatarsGenerator": "\\BlueSpice\\Avatars\\ConfigDefinition\\AvatarsGenerator::getInstance"
+	"attributes": {
+		"BlueSpiceFoundation": {
+			"Extensions": {
+				"BlueSpiceAvatars": {
+					"className": "Avatars",
+					"extPath": "/BlueSpiceAvatars",
+					"configDefinitions": {
+						"AvatarsDefaultSize": "\\BlueSpice\\Avatars\\ConfigDefinition\\AvatarsDefaultSize::getInstance",
+						"AvatarsGenerator": "\\BlueSpice\\Avatars\\ConfigDefinition\\AvatarsGenerator::getInstance"
+					}
+				}
 			}
 		}
 	},
@@ -75,5 +79,5 @@
 		"BSCoreGetUserMiniProfileBeforeInit": "\\BlueSpice\\Avatars\\Hook\\BSCoreGetUserMiniProfileBeforeInit\\SetAvatar::callback"
 	},
 	"load_composer_autoloader": true,
-	"manifest_version": 1
+	"manifest_version": 2
 }
