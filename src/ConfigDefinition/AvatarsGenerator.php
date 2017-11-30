@@ -11,8 +11,4 @@ class AvatarsGenerator extends \BlueSpice\ConfigDefinition\ArraySetting {
 	public function getLabelMessageKey() {
 		return 'bs-avatars-pref-generator';
 	}
-
-	public function isStored() {
-		return true;
-	}
 }
