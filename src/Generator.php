@@ -51,7 +51,7 @@ class Generator {
 					);
 					break;
 				default:
-					throw new MWException(
+					throw new \MWException(
 						'FATAL: Avatar generator not found!'
 					);
 			}
