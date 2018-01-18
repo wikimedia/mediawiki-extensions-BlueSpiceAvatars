@@ -17,10 +17,10 @@ class Generator {
 
 	/**
 	 *
-	 * @param \Contig $contig
+	 * @param \Config $config
 	 */
-	public function __construct( $contig ) {
-		$this->config = $contig;
+	public function __construct( $config ) {
+		$this->config = $config;
 	}
 
 	/**
@@ -83,18 +83,6 @@ class Generator {
 
 			$user->invalidateCache();
 		}
-
-		$iAvatarHeight = empty( $params[static::PARAM_HEIGHT] )
-			? $this->config->get( 'AvatarsDefaultSize' )
-			: $params[static::PARAM_HEIGHT]
-		;
-
-		$iAvatarWidth = empty( $params[static::PARAM_WIDTH] )
-			? $this->config->get( 'AvatarsDefaultSize' )
-			: $params[static::PARAM_WIDTH]
-		;
-
-		return $oFile->createThumb( $iAvatarWidth, $iAvatarHeight );
 	}
 
 	protected function generateIdention( \User $user, $size ) {

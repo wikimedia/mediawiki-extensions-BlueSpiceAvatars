@@ -16,10 +16,12 @@
 					"className": "Avatars",
 					"extPath": "/BlueSpiceAvatars",
 					"configDefinitions": {
-						"AvatarsDefaultSize": "\\BlueSpice\\Avatars\\ConfigDefinition\\AvatarsDefaultSize::getInstance",
 						"AvatarsGenerator": "\\BlueSpice\\Avatars\\ConfigDefinition\\AvatarsGenerator::getInstance"
 					}
 				}
+			},
+			"DynamicFileRegistry": {
+				"userprofileimage": "\\BlueSpice\\Avatars\\DynamicFileDispatcher\\UserProfileImage"
 			}
 		}
 	},
@@ -58,6 +60,12 @@
 				"bs-avatars-userimage-title",
 				"bs-avatars-auto-generate-fieldset-title"
 			]
+		},
+		"ext.bluespice.avatars.history.styles": {
+			"styles": "ext.bluespice.avatars.history.css"
+		},
+		"ext.bluespice.avatars.preferences.styles": {
+			"styles": "ext.bluespice.avatars.preferences.css"
 		}
 	},
 	"ResourceFileModulePaths": {
@@ -66,17 +74,18 @@
 	},
 	"config_prefix": "bsg",
 	"config": {
-		"AvatarsDefaultSize": {
-			"value": 40
-		},
 		"AvatarsGenerator": {
 			"value": "InstantAvatar"
 		}
 	},
+	"DefaultUserOptions": {
+		"bs-avatars-profileimage": ""
+	},
 	"Hooks": {
 		"BeforePageDisplay": "\\BlueSpice\\Avatars\\Hook\\BeforePageDisplay\\AddModules::callback",
-		"UnitTestsList": "Avatars::onUnitTestsList",
-		"BSCoreGetUserMiniProfileBeforeInit": "\\BlueSpice\\Avatars\\Hook\\BSCoreGetUserMiniProfileBeforeInit\\SetAvatar::callback"
+		"GetPreferences": "\\BlueSpice\\Avatars\\Hook\\GetPreferences\\AddProfileImage::callback",
+		"PageHistoryLineEnding": "\\BlueSpice\\Avatars\\Hook\\PageHistoryLineEnding\\AddProfileImage::callback",
+		"UnitTestsList": "Avatars::onUnitTestsList"
 	},
 	"load_composer_autoloader": true,
 	"manifest_version": 2
