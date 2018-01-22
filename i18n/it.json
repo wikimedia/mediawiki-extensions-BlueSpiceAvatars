@@ -10,6 +10,7 @@
 	"bs-avatars-desc": "Fornisce immagini utente generiche e individuali",
 	"bs-avatars-pref-generator": "Generatore:",
 	"bs-avatars-pref-defaultsize": "Dimensioni predefinite, pixel:",
+	"bs-avatars-pref-userimage-img-alt": "La tua immagine utente attuale",
 	"bs-avatars-upload-complete": "L'immagine è stata caricata.",
 	"bs-avatars-generate-complete": "Un nuovo avatar è stato generato.",
 	"bs-avatars-upload-title": "Cambia immagine del profilo",
