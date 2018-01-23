@@ -29,7 +29,7 @@ Ext.define('BS.Avatars.SettingsWindow', {
 		this.tfUserImage = Ext.create('Ext.form.field.Text', {
 			name: 'uimg',
 			blankText: mw.message('bs-avatars-userimage-help').plain(),
-			emptyText: mw.user.options.get('MW::UserImage'),
+			emptyText: mw.user.options.get( 'bs-avatars-profileimage' ),
 			allowBlank: false,
 			labelWidth: 150,
 			padding: "0 5 0 0"
@@ -101,7 +101,7 @@ Ext.define('BS.Avatars.SettingsWindow', {
 		});
 	},
 	confirmOverwrite: function(callback) {
-		if (mw.user.options.get('MW::UserImage')) {
+		if( mw.user.options.get( 'bs-avatars-profileimage' ) ) {
 			bs.util.confirm('AMwarn2', {
 				text: mw.message('bs-avatars-warning-text').plain(),
 				title: mw.message('bs-avatars-warning-title').plain()},

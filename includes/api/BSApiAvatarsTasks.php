@@ -38,7 +38,6 @@ class BSApiAvatarsTasks extends BSApiTasksBase {
 	}
 
 	public function task_uploadFile( $oTaskData, $aParams ) {
-		global $wgRequest;
 		$oResponse = $this->makeStandardReturn();
 		$oUser = $this->getUser();
 		Avatars::unsetUserImage( $oUser );
@@ -77,7 +76,7 @@ class BSApiAvatarsTasks extends BSApiTasksBase {
 		}
 
 		$oUser = $this->getUser();
-		$oUser->setOption( 'MW::UserImage', $sUserImage );
+		$oUser->setOption( 'bs-avatars-profileimage', $sUserImage );
 		$oUser->saveSettings();
 
 		$oResponse->success = true;

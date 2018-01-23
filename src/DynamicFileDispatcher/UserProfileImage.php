@@ -4,7 +4,6 @@ namespace BlueSpice\Avatars\DynamicFileDispatcher;
 
 use BlueSpice\Avatars\Generator;
 use BlueSpice\DynamicFileDispatcher\UserProfileImage as UPI;
-use BlueSpice\Avatars\Config;
 use BlueSpice\DynamicFileDispatcher\UserProfileImage\AnonImage;
 
 class UserProfileImage extends UPI {

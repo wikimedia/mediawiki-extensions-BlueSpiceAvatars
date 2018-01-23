@@ -82,8 +82,8 @@ class Avatars extends \BlueSpice\Extension {
 	 * @param User $oUser
 	 */
 	public static function unsetUserImage($oUser) {
-		if( $oUser->getOption( 'MW::UserImage' ) ) {
-			$oUser->setOption( 'MW::UserImage', false );
+		if( $oUser->getOption( 'bs-avatars-profileimage' ) ) {
+			$oUser->setOption( 'bs-avatars-profileimage', false );
 			$oUser->saveSettings();
 			$oUser->invalidateCache();
 		}
