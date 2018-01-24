@@ -85,7 +85,8 @@
 		"BeforePageDisplay": "\\BlueSpice\\Avatars\\Hook\\BeforePageDisplay\\AddModules::callback",
 		"GetPreferences": "\\BlueSpice\\Avatars\\Hook\\GetPreferences\\AddProfileImage::callback",
 		"PageHistoryLineEnding": "\\BlueSpice\\Avatars\\Hook\\PageHistoryLineEnding\\AddProfileImage::callback",
-		"UnitTestsList": "Avatars::onUnitTestsList"
+		"UnitTestsList": "Avatars::onUnitTestsList",
+		"BSMigrateUserPropertiesFromDeviatingNames": "\\BlueSpice\\Avatars\\Hook\\BSMigrateUserPropertiesFromDeviatingNames\\MigrateUserImage::callback"
 	},
 	"load_composer_autoloader": true,
 	"manifest_version": 2
