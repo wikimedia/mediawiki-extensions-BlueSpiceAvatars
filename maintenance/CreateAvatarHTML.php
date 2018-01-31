@@ -13,7 +13,7 @@ class CreateAvatarHTML extends Maintenance {
 				#$this->addArg( "username", "Username of new user" );
 				#$this->addArg( "password", "Password to set (not required if --force is used)", false);
 				$this->requireExtension( 'BlueSpiceFoundation' );
-				$this->requireExtension( 'Avatars' );
+				$this->requireExtension( 'BlueSpiceAvatars' );
 		}
 
 		public function execute() {
