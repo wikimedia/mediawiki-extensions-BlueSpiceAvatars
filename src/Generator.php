@@ -68,7 +68,7 @@ class Generator {
 			}
 			# Delete thumb folder if it exists
 			$status = \BsFileSystemHelper::deleteFolder(
-				'Avatars' . DS . 'thumb' . DS . $oFile->getName(),
+				"Avatars/thumb/{$oFile->getName()}",
 				true
 			);
 			if( !$status->isGood() ) {

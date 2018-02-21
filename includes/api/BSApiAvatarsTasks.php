@@ -54,7 +54,10 @@ class BSApiAvatarsTasks extends BSApiTasksBase {
 		}
 
 		# found no way to regenerate thumbs. just delete thumb folder if it exists
-		$oStatus = BsFileSystemHelper::deleteFolder( 'Avatars' . DS . 'thumb' . DS . $sAvatarFileName, true );
+		$oStatus = BsFileSystemHelper::deleteFolder(
+			"Avatars/thumb/$sAvatarFileName",
+			true
+		);
 		if ( !$oStatus->isGood() ) {
 			throw new MWException( 'FATAL: Avatar thumbs could no be deleted!' );
 		}
