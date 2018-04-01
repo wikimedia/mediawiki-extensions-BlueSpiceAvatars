@@ -1,11 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ronel1"
+			"Ronel1",
+			"Guycn2"
 		]
 	},
 	"prefs-avatars": "תמונת משתמש",
-	"bs-avatars-desc": "מספק תמונות משתמש כללי ואישי",
+	"bs-avatars-desc": "אספקת תמונות משתמש כלליות ואישיות",
 	"bs-avatars-pref-generator": "גנרטור:",
 	"bs-avatars-pref-defaultsize": "גודל ברירת המחדל של פיקסל:",
 	"bs-avatars-upload-complete": "התמונה הועלה בהצלחה.",
