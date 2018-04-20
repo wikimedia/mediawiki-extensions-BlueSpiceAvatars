@@ -59,7 +59,9 @@ class ProfileImage {
 			UserProfileImage::HEIGHT => $this->height
 		] );
 
-		$displayUsername = \BsUserHelper::getUserDisplayName( $this->user );
+		$userHelper = Services::getInstance()->getBSUtilityFactory()
+			->getUserHelper( $this->user );
+		$displayUsername = $userHelper->getDisplayName();
 		$attribs = [
 			'src' => $this->urlBuilder->build( $params ),
 			'width' => $this->width,
