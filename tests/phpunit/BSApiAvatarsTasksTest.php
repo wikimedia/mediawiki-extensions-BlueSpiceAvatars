@@ -1,4 +1,6 @@
-wi<?php
+<?php
+
+use BlueSpice\Tests\BSApiTasksTestBase;
 
 /*
  * Test BlueSpiceAvatars API Endpoints
