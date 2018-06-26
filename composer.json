@@ -1,5 +1,5 @@
 {
-	"name": "mediawiki/blue-spice-avatars",
+	"name": "bluespice/avatars",
 	"type": "mediawiki-extension",
 	"description": "Provides generic and individual user pictures",
 	"license": "GPL-3.0-only",
@@ -24,5 +24,8 @@
 		"fix": [
 			"minus-x fix ."
 		]
+	},
+	"extra": {
+		"installer-name": "BlueSpiceAvatars"
 	}
 }
