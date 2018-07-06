@@ -20,7 +20,7 @@ class Image extends \BlueSpice\DynamicFileDispatcher\File {
 	/**
 	 *
 	 * @param Module $dfd
-	 * @param sring $src
+	 * @param string $src
 	 * @param \User $user
 	 */
 	public function __construct( Module $dfd, $src, $user ) {
