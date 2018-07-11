@@ -49,6 +49,7 @@ class Avatars extends \BlueSpice\Extension {
 				'directory' => BS_DATA_DIR . '/Avatars/',
 				'hashLevels' => 0,
 				'url' => BS_DATA_PATH . '/Avatars',
+				'scriptDirUrl' => $GLOBALS['wgScriptPath']
 			);
 		} else {
 			$wgForeignFileRepos[] = array(
