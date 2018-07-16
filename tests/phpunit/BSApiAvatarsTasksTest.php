@@ -51,6 +51,8 @@ class BSApiAvatarsTasksTest extends BSApiTasksTestBase {
 	       ]
 	   ]
 	 * @return type
+	 * @group Broken
+	 * @see https://phabricator.wikimedia.org/T199710
 	 */
 	function testSetUserImage( ) {
 
