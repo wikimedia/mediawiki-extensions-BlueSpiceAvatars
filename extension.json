@@ -38,6 +38,9 @@
 		"Avatars": "Avatars.php",
 		"BSApiAvatarsTasks": "includes/api/BSApiAvatarsTasks.php"
 	},
+	"AutoloadNamespaces": {
+		"BlueSpice\\Avatars\\": "src/"
+	},
 	"ResourceModules": {
 		"ext.bluespice.avatars.js": {
 			"scripts": [
@@ -87,6 +90,5 @@
 		"PageHistoryLineEnding": "\\BlueSpice\\Avatars\\Hook\\PageHistoryLineEnding\\AddProfileImage::callback",
 		"BSMigrateUserPropertiesFromDeviatingNames": "\\BlueSpice\\Avatars\\Hook\\BSMigrateUserPropertiesFromDeviatingNames\\MigrateUserImage::callback"
 	},
-	"load_composer_autoloader": true,
 	"manifest_version": 2
 }
