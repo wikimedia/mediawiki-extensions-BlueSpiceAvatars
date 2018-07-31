@@ -64,7 +64,7 @@ class Avatars extends \BlueSpice\Extension {
 
 	/**
 	 * DEPRECATED - Use new \BlueSpice\Avatars\Generator()->getAvatarFile()
-	 * instread
+	 * instead
 	 * Gets Avatar file from user ID
 	 * @deprecated since version 3.0.0
 	 * @param int $iUserId
@@ -92,7 +92,7 @@ class Avatars extends \BlueSpice\Extension {
 	}
 
 	/**
-	 * DEPRECATED - Use new \BlueSpice\Avatars\Generator()->generate() instread
+	 * DEPRECATED - Use new \BlueSpice\Avatars\Generator()->generate() instead
 	 * Generate an avatar image
 	 * @deprecated since version 3.0.0
 	 * @param User $oUser

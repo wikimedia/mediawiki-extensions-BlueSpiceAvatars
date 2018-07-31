@@ -93,7 +93,7 @@ class BSApiAvatarsTasks extends BSApiTasksBase {
 		$oUser = $this->getUser();
 		Avatars::unsetUserImage($oUser);
 		$generator = new Generator( $this->getConfig() );
-		$generator->generate( $oUser, [], true );
+		$generator->generate( $oUser, [ Generator::PARAM_OVERWRITE => true ] );
 
 		$oResponse->success = true;
 		$oResponse->message = wfMessage( 'bs-avatars-generate-complete' )->plain();

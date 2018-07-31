@@ -27,7 +27,7 @@ function generateIdenticon( $iUserId, $iUserImageDefaultSize=64 ) {
 	$angle=hexdec(substr($avatarhash,18,2));
 
 	/* size of each sprite */
-	$spriteZ=128;
+	$spriteZ=256;
 
 	/* start with blank 3x3 identicon */
 	$identicon=imagecreatetruecolor($spriteZ*3,$spriteZ*3);
