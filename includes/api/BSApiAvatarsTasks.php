@@ -40,7 +40,7 @@ class BSApiAvatarsTasks extends BSApiTasksBase {
 	public function task_uploadFile( $oTaskData, $aParams ) {
 		$oResponse = $this->makeStandardReturn();
 		$oUser = $this->getUser();
-		Avatars::unsetUserImage( $oUser );
+		\BlueSpice\Avatars\Extension::unsetUserImage( $oUser );
 		$oAvatars = BsExtensionManager::getExtension( 'Avatars' );
 		$sAvatarFileName = Generator::FILE_PREFIX . $oUser->getId() . ".png";
 		$oStatus = BsFileSystemHelper::uploadAndConvertImage(
@@ -91,7 +91,7 @@ class BSApiAvatarsTasks extends BSApiTasksBase {
 		$oResponse = $this->makeStandardReturn();
 
 		$oUser = $this->getUser();
-		Avatars::unsetUserImage($oUser);
+		\BlueSpice\Avatars\Extension::unsetUserImage($oUser);
 		$generator = new Generator( $this->getConfig() );
 		$generator->generate( $oUser, [ Generator::PARAM_OVERWRITE => true ] );
 
