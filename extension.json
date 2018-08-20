@@ -91,7 +91,8 @@
 		"BeforePageDisplay": "\\BlueSpice\\Avatars\\Hook\\BeforePageDisplay\\AddModules::callback",
 		"GetPreferences": "\\BlueSpice\\Avatars\\Hook\\GetPreferences\\AddProfileImage::callback",
 		"PageHistoryLineEnding": "\\BlueSpice\\Avatars\\Hook\\PageHistoryLineEnding\\AddProfileImage::callback",
-		"BSMigrateUserPropertiesFromDeviatingNames": "\\BlueSpice\\Avatars\\Hook\\BSMigrateUserPropertiesFromDeviatingNames\\MigrateUserImage::callback"
+		"BSMigrateUserPropertiesFromDeviatingNames": "\\BlueSpice\\Avatars\\Hook\\BSMigrateUserPropertiesFromDeviatingNames\\MigrateUserImage::callback",
+		"UploadVerifyFile": "\\BlueSpice\\Avatars\\Hook\\UploadVerifyFile\\PreventUserImageOverwrite::callback"
 	},
 	"manifest_version": 2
 }
