@@ -28,7 +28,6 @@
 			}
 		}
 	},
-	"callback": "\\BlueSpice\\Avatars\\Extension::onRegistration",
 	"APIModules": {
 		"bs-avatars-tasks": "BSApiAvatarsTasks"
 	},
@@ -91,7 +90,8 @@
 		"GetPreferences": "\\BlueSpice\\Avatars\\Hook\\GetPreferences\\AddProfileImage::callback",
 		"PageHistoryLineEnding": "\\BlueSpice\\Avatars\\Hook\\PageHistoryLineEnding\\AddProfileImage::callback",
 		"BSMigrateUserPropertiesFromDeviatingNames": "\\BlueSpice\\Avatars\\Hook\\BSMigrateUserPropertiesFromDeviatingNames\\MigrateUserImage::callback",
-		"UploadVerifyFile": "\\BlueSpice\\Avatars\\Hook\\UploadVerifyFile\\PreventUserImageOverwrite::callback"
+		"UploadVerifyFile": "\\BlueSpice\\Avatars\\Hook\\UploadVerifyFile\\PreventUserImageOverwrite::callback",
+		"SetupAfterCache": "\\BlueSpice\\Avatars\\Hook\\SetupAfterCache\\AddForeignFileRepo::callback"
 	},
 	"manifest_version": 2
 }

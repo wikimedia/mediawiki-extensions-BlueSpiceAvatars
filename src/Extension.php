@@ -33,22 +33,6 @@ namespace BlueSpice\Avatars;
 class Extension extends \BlueSpice\Extension {
 
 	/**
-	 * extension.json callback
-	 * @global array $wgForeignFileRepos
-	 */
-	public static function onRegistration() {
-		global $wgForeignFileRepos;
-		$wgForeignFileRepos[] = [
-			'class' => 'FileRepo',
-			'name' => 'Avatars',
-			'directory' => BS_DATA_DIR . '/Avatars/',
-			'hashLevels' => 0,
-			'url' => BS_DATA_PATH . '/Avatars',
-			'scriptDirUrl' => $GLOBALS['wgScriptPath']
-		];
-	}
-
-	/**
 	 * DEPRECATED - Use new \BlueSpice\Avatars\Generator()->getAvatarFile()
 	 * instead
 	 * Gets Avatar file from user ID
