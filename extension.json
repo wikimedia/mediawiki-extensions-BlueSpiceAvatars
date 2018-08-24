@@ -16,7 +16,7 @@
 		"BlueSpiceFoundation": {
 			"Extensions": {
 				"BlueSpiceAvatars": {
-					"className": "Avatars",
+					"className": "\\BlueSpice\\Avatars\\Extension",
 					"extPath": "/BlueSpiceAvatars",
 					"configDefinitions": {
 						"AvatarsGenerator": "\\BlueSpice\\Avatars\\ConfigDefinition\\AvatarsGenerator::getInstance"
@@ -28,7 +28,7 @@
 			}
 		}
 	},
-	"callback": "Avatars::onRegistration",
+	"callback": "\\BlueSpice\\Avatars\\Extension::onRegistration",
 	"APIModules": {
 		"bs-avatars-tasks": "BSApiAvatarsTasks"
 	},
@@ -38,7 +38,6 @@
 		]
 	},
 	"AutoloadClasses": {
-		"Avatars": "Avatars.php",
 		"BSApiAvatarsTasks": "includes/api/BSApiAvatarsTasks.php"
 	},
 	"AutoloadNamespaces": {

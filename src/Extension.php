@@ -1,7 +1,6 @@
 <?php
-
 /**
- * Avatars extension for BlueSpice
+ * Avatars Extension for BlueSpice
  *
  * Provide generic and individual user images
  *
@@ -29,12 +28,9 @@
  * @filesource
  */
 
-/**
- * Base class for the Avatars extension
- * @package BlueSpiceAvatars
- * @subpackage Avatars
- */
-class Avatars extends \BlueSpice\Extension {
+namespace BlueSpice\Avatars;
+
+class Extension extends \BlueSpice\Extension {
 
 	/**
 	 * extension.json callback
