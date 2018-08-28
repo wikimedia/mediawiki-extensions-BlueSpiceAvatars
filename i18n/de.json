@@ -4,7 +4,8 @@
 			"Marc Reymann <reymann@hallowelt.biz>",
 			"Stephan Muggli <muggli@hallowelt.biz>",
 			"Metalhead64",
-			"Kghbln"
+			"Kghbln",
+			"Hwboehm"
 		]
 	},
 	"prefs-avatars": "Benutzerbilder",
@@ -27,5 +28,6 @@
 	"bs-avatars-set-userimage-saved": "Das Benutzerbild wurde gespeichert.",
 	"bs-avatars-file-upload-fieldset-title": "Bild hochladen",
 	"bs-avatars-auto-generate-fieldset-title": "Benutzerbild automatisch generieren",
-	"apihelp-bs-avatars-tasks-description": "Hochladen, Erstellen und Festlegen von Benutzerbildern"
+	"apihelp-bs-avatars-tasks-description": "Hochladen, Erstellen und Festlegen von Benutzerbildern",
+	"apihelp-bs-avatars-tasks-summary": "Hochladen, Erstellen und Festlegen von Benutzerbildern"
 }
