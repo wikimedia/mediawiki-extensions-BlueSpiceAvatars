@@ -6,18 +6,20 @@ class PreventUserImageOverwrite extends \BlueSpice\Hook\UploadVerifyFile {
 
 	protected function skipProcessing() {
 		$fileName = $this->upload->getLocalFile()->getName();
-		if( empty( $fileName ) || !$fileExt = strrpos( $fileName, '.' ) ) {
+		$fileExt = strrpos( $fileName, '.' );
+
+		if ( empty( $fileName ) || !$fileExt ) {
 			return true;
 		}
 
 		$userName = substr( $fileName, 0, $fileExt );
 
 		$user = \User::newFromName( $userName );
-		if( !$user instanceof \User || $user->isAnon() ) {
+		if ( !$user instanceof \User || $user->isAnon() ) {
 			return true;
 		}
 
-		if( $user->getId() === $this->getContext()->getUser()->getId() ) {
+		if ( $user->getId() === $this->getContext()->getUser()->getId() ) {
 			return true;
 		}
 

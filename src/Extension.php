@@ -22,9 +22,8 @@
  *
  * @author     Marc Reymann <reymann@hallowelt.com>
  * @package    BlueSpiceAvatars
- * @subpackage Avatars
  * @copyright  Copyright (C) 2016 Hallo Welt! GmbH, All rights reserved.
- * @license    http://www.gnu.org/copyleft/gpl.html GNU Public License v3
+ * @license    http://www.gnu.org/copyleft/gpl.html GPL-3.0-only
  * @filesource
  */
 
@@ -52,8 +51,8 @@ class Extension extends \BlueSpice\Extension {
 	 * Clears a user's UserImage setting
 	 * @param User $oUser
 	 */
-	public static function unsetUserImage($oUser) {
-		if( $oUser->getOption( 'bs-avatars-profileimage' ) ) {
+	public static function unsetUserImage( $oUser ) {
+		if ( $oUser->getOption( 'bs-avatars-profileimage' ) ) {
 			$oUser->setOption( 'bs-avatars-profileimage', false );
 			$oUser->saveSettings();
 			$oUser->invalidateCache();
@@ -68,14 +67,14 @@ class Extension extends \BlueSpice\Extension {
 	 * @param User $oUser
 	 * @return string Relative URL to avatar image
 	 */
-	public function generateAvatar( $oUser, $aParams = array(), $bOverwrite = false ) {
+	public function generateAvatar( $oUser, $aParams = [], $bOverwrite = false ) {
 		wfDeprecated( __METHOD__, "3.0.0" );
 		$config = \BsExtensionManager::getExtension(
 			'BlueSpiceAvatars'
 		)->getConfig();
 		$avatarGenerator = new \BlueSpice\Avatars\Generator( $config );
 
-		if( $bOverwrite ) {
+		if ( $bOverwrite ) {
 			$aParams[\BlueSpice\Avatars\Generator::PARAM_OVERWRITE] = true;
 		}
 		return $avatarGenerator->generate( $oUser, $aParams );

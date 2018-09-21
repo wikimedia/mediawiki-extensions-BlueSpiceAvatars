@@ -2,16 +2,23 @@
 
 namespace BlueSpice\Avatars\Html\FormField;
 
-use BlueSpice\Services;
-use BlueSpice\Avatars\DynamicFileDispatcher\UserProfileImage;
-use BlueSpice\DynamicFileDispatcher\Params;
 use BlueSpice\Avatars\Html\ProfileImage;
 
 class UserImage extends \HTMLTextField {
+
+	/**
+	 *
+	 * @return string
+	 */
 	public function getLabel() {
 		return wfMessage( 'bs-avatars-pref-userimage' )->parse();
 	}
 
+	/**
+	 *
+	 * @param string $value
+	 * @return string
+	 */
 	public function getInputHTML( $value ) {
 		$this->mParent->getOutput()->addModuleStyles( 'ext.bluespice.avatars.preferences.styles' );
 

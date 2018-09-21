@@ -4,7 +4,11 @@ use BlueSpice\Avatars\Generator;
 
 class BSApiAvatarsTasks extends BSApiTasksBase {
 
-	protected $aTasks = array(
+	/**
+	 *
+	 * @var array
+	 */
+	protected $aTasks = [
 		'uploadFile' => [
 			'examples' => [],
 			'params' => []
@@ -27,17 +31,29 @@ class BSApiAvatarsTasks extends BSApiTasksBase {
 				]
 			]
 		]
-	);
+	];
 
+	/**
+	 *
+	 * @return array
+	 */
 	protected function getRequiredTaskPermissions() {
-		return array(
-			'uploadFile' => array( 'read' ),
-			'generateAvatar' => array( 'read' ),
-			'setUserImage' => array( 'read' )
-		);
+		return [
+			'uploadFile' => [ 'read' ],
+			'generateAvatar' => [ 'read' ],
+			'setUserImage' => [ 'read' ]
+		];
 	}
-
+	// phpcs:disable
+	/**
+	 *
+	 * @param stdClass $oTaskData
+	 * @param array $aParams
+	 * @return BSStandardAPIResponse
+	 * @throws MWException
+	 */
 	public function task_uploadFile( $oTaskData, $aParams ) {
+		// phpcs:enable
 		$oResponse = $this->makeStandardReturn();
 		$oUser = $this->getUser();
 		\BlueSpice\Avatars\Extension::unsetUserImage( $oUser );
@@ -67,7 +83,16 @@ class BSApiAvatarsTasks extends BSApiTasksBase {
 		return $oResponse;
 	}
 
+	// phpcs:disable
+	/**
+	 *
+	 * @param stdClass $oTaskData
+	 * @param array $aParams
+	 * @return BSStandardAPIResponse
+	 * @throws MWException
+	 */
 	public function task_setUserImage( $oTaskData, $aParams ) {
+		// phpcs:enable
 		$oResponse = $this->makeStandardReturn();
 		$sUserImage = $oTaskData->userImage;
 		// check if string is URL or valid file
@@ -87,11 +112,20 @@ class BSApiAvatarsTasks extends BSApiTasksBase {
 		return $oResponse;
 	}
 
+	// phpcs:disable
+	/**
+	 *
+	 * @param stdClass $oTaskData
+	 * @param array $aParams
+	 * @return BSStandardAPIResponse
+	 * @throws MWException
+	 */
 	public function task_generateAvatar( $oTaskData, $aParams ) {
+		// phpcs:enable
 		$oResponse = $this->makeStandardReturn();
 
 		$oUser = $this->getUser();
-		\BlueSpice\Avatars\Extension::unsetUserImage($oUser);
+		\BlueSpice\Avatars\Extension::unsetUserImage( $oUser );
 		$generator = new Generator( $this->getConfig() );
 		$generator->generate( $oUser, [ Generator::PARAM_OVERWRITE => true ] );
 

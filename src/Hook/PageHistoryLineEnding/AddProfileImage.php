@@ -11,7 +11,7 @@ class AddProfileImage extends PageHistoryLineEnding {
 
 		$username = $this->row->rev_user_text;
 		$user = \User::newFromName( $username );
-		if( $user instanceof \User === false ) {
+		if ( $user instanceof \User === false ) {
 			return true;
 		}
 		$profileImage = new ProfileImage( $user, 32, 32 );

@@ -32,12 +32,13 @@ class Generator {
 	public function generate( \User $user, array $params = [] ) {
 		$defaultSize = 1024;
 
-		if( !$oFile = $this->getAvatarFile( $user ) ) {
+		$oFile = $this->getAvatarFile( $user );
+		if ( !$oFile ) {
 			return '';
 		}
 
-		if( !$oFile->exists() || isset( $params[static::PARAM_OVERWRITE] ) ) {
-			switch( $this->config->get( 'AvatarsGenerator' ) ) {
+		if ( !$oFile->exists() || isset( $params[static::PARAM_OVERWRITE] ) ) {
+			switch ( $this->config->get( 'AvatarsGenerator' ) ) {
 				case 'Identicon':
 					$rawPNGAvatar = $this->generateIdention(
 						$user,
@@ -71,7 +72,7 @@ class Generator {
 				"Avatars/thumb/{$oFile->getName()}",
 				true
 			);
-			if( !$status->isGood() ) {
+			if ( !$status->isGood() ) {
 				throw new \MWException(
 					'FATAL: Avatar thumbs could no be deleted!'
 				);
@@ -85,11 +86,23 @@ class Generator {
 		}
 	}
 
+	/**
+	 *
+	 * @param \User $user
+	 * @param int $size
+	 * @return string
+	 */
 	protected function generateIdention( \User $user, $size ) {
 		require_once dirname( __DIR__ ) . "/includes/lib/Identicon/identicon.php";
 		return generateIdenticon( $user->getId(), $size );
 	}
 
+	/**
+	 *
+	 * @param \User $user
+	 * @param int $size
+	 * @return string
+	 */
 	protected function generateInstantAvatar( \User $user, $size ) {
 		$dir = dirname( __DIR__ ) . "/includes/lib/InstantAvatar";
 		require_once "$dir/instantavatar.php";
@@ -103,17 +116,17 @@ class Generator {
 			"$dir/glass.png"
 		);
 
-		if( !empty( $user->getRealName() ) ) {
+		if ( !empty( $user->getRealName() ) ) {
 			preg_match_all(
 				'#(^| )(.)#u',
 				$user->getRealName(),
 				$matches
 			);
 			$chars = implode( '', $matches[2] );
-			if( mb_strlen( $chars ) < 2 )
+			if ( mb_strlen( $chars ) < 2 ) {
 				$chars = $user->getRealName();
-		}
-		else {
+			}
+		} else {
 			$chars = $user->getName();
 		}
 		$instantAvatar->generateRandom( $chars );
@@ -123,7 +136,7 @@ class Generator {
 	/**
 	 * Gets Avatar file from user ID
 	 * @param \User $user
-	 * @return boolean|\File
+	 * @return bool|\File
 	 */
 	public function getAvatarFile( \User $user ) {
 		return \BsFileSystemHelper::getFileFromRepoName(
