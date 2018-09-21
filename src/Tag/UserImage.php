@@ -80,7 +80,7 @@ class UserImage {
 			'class' => 'bs-avatars-userimage-tag',
 			'width' => $width,
 			'height' => $height
-		]);
+		] );
 
 		return $html;
 	}

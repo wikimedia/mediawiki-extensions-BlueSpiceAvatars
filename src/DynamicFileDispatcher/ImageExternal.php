@@ -16,6 +16,10 @@ class ImageExternal extends Image {
 		);
 	}
 
+	/**
+	 *
+	 * @return string
+	 */
 	public function getMimeType() {
 		return '';
 	}

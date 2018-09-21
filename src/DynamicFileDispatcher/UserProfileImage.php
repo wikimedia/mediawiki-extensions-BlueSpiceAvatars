@@ -14,21 +14,21 @@ class UserProfileImage extends UPI {
 	 */
 	public function getFile() {
 		$file = parent::getFile();
-		if( $file instanceof AnonImage ) {
+		if ( $file instanceof AnonImage ) {
 			return $file;
 		}
 
 		$profileImage = $this->user->getOption( 'bs-avatars-profileimage' );
-		if( empty( $profileImage ) ) {
+		if ( empty( $profileImage ) ) {
 			return $this->getDefaultUserImageFile();
 		}
 
-		if( wfParseUrl( $profileImage ) !== false ) {
+		if ( wfParseUrl( $profileImage ) !== false ) {
 			return new ImageExternal( $this, $profileImage, $this->user );
 		}
 
 		$repoFile = \RepoGroup::singleton()->findFile( $profileImage );
-		if( $repoFile === false || !$repoFile->exists() ) {
+		if ( $repoFile === false || !$repoFile->exists() ) {
 			return $this->getDefaultUserImageFile();
 		}
 
@@ -46,7 +46,7 @@ class UserProfileImage extends UPI {
 	protected function getDefaultUserImageFile() {
 		$generator = new Generator( $this->getConfig() );
 		$file = $generator->getAvatarFile( $this->user );
-		if( !$file->exists() ) {
+		if ( !$file->exists() ) {
 			$generator->generate( $this->user );
 		}
 

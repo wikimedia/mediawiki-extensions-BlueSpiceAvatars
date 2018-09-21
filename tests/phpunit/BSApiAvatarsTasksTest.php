@@ -13,6 +13,7 @@ use BlueSpice\Tests\BSApiTasksTestBase;
  * @group API
  * @group Database
  * @group medium
+ * @covers \BSApiAvatarsTasks
  */
 class BSApiAvatarsTasksTest extends BSApiTasksTestBase {
 
@@ -22,12 +23,12 @@ class BSApiAvatarsTasksTest extends BSApiTasksTestBase {
 
 	/**
 	 * 'generateAvatar' => [
-	       'examples' => [],
-	       'params' => []
-	    ],
+		   'examples' => [],
+		   'params' => []
+		],
 	 * @return type
 	 */
-	function testGenerateAvatar() {
+	public function testGenerateAvatar() {
 		$data = $this->executeTask(
 		  'generateAvatar', []
 		);
@@ -37,25 +38,24 @@ class BSApiAvatarsTasksTest extends BSApiTasksTestBase {
 
 	/**
 	 * 'setUserImage' => [
-	       'examples' => [
-	           [
-	               'userImage' => 'ProfileImage.png'
-	           ]
-	       ],
-	       'params' => [
-	           'userImage' => [
-	               'desc' => 'Name of the image to set',
-	               'type' => 'string',
-	               'required' => true
-	           ]
-	       ]
+		   'examples' => [
+			   [
+				   'userImage' => 'ProfileImage.png'
+			   ]
+		   ],
+		   'params' => [
+			   'userImage' => [
+				   'desc' => 'Name of the image to set',
+				   'type' => 'string',
+				   'required' => true
+			   ]
+		   ]
 	   ]
 	 * @return type
 	 * @group Broken
 	 * @see https://phabricator.wikimedia.org/T199710
 	 */
-	function testSetUserImage( ) {
-
+	public function testSetUserImage() {
 		$data = $this->executeTask(
 		  'setUserImage', [
 				"userImage" => "File:DummyFile.png"
@@ -68,16 +68,16 @@ class BSApiAvatarsTasksTest extends BSApiTasksTestBase {
 	/**
 	 *
 	 * 'uploadFile' => [
-	       'examples' => [],
-	       'params' => []
+		   'examples' => [],
+		   'params' => []
 	   ],
 	 *
 	 * @return type
 	 */
-	function testUploadFile() {
+	public function testUploadFile() {
 		$this->doLogin( 'uploader' );
 
-		//create example image
+		// create example image
 		$extension = 'jpg';
 		$mimeType = 'image/jpg';
 
@@ -97,10 +97,10 @@ class BSApiAvatarsTasksTest extends BSApiTasksTestBase {
 			$this->markTestIncomplete( "Couldn't upload file!\n" );
 		}
 
-		//TODO: Complete test!
+		// TODO: Complete test!
 		$this->markTestIncomplete(
-          'This test has not been implemented yet.'
-        );
+		  'This test has not been implemented yet.'
+		);
 /*
 		$_GET["name"] = $fileName;
 
@@ -126,7 +126,8 @@ class BSApiAvatarsTasksTest extends BSApiTasksTestBase {
 	public function deleteFileByTitle( $title ) {
 		if ( $title->exists() ) {
 			$file = wfFindFile( $title, [ 'ignoreRedirect' => true ] );
-			$noOldArchive = ""; // yes this really needs to be set this way
+			// yes this really needs to be set this way
+			$noOldArchive = "";
 			$comment = "removing for test";
 			$restrictDeletedVersions = false;
 			$status = FileDeleteForm::doDelete(
@@ -193,7 +194,7 @@ class BSApiAvatarsTasksTest extends BSApiTasksTestBase {
 	 * @throws Exception
 	 * @return bool
 	 */
-	function fakeUploadFile( $fieldName, $fileName, $type, $filePath ) {
+	protected function fakeUploadFile( $fieldName, $fileName, $type, $filePath ) {
 		$tmpName = $this->getNewTempFile();
 		if ( !file_exists( $filePath ) ) {
 			throw new Exception( "$filePath doesn't exist!" );
@@ -220,7 +221,7 @@ class BSApiAvatarsTasksTest extends BSApiTasksTestBase {
 		return true;
 	}
 
-	function fakeUploadChunk( $fieldName, $fileName, $type, & $chunkData ) {
+	protected function fakeUploadChunk( $fieldName, $fileName, $type, & $chunkData ) {
 		$tmpName = $this->getNewTempFile();
 		// copy the chunk data to temp location:
 		if ( !file_put_contents( $tmpName, $chunkData ) ) {

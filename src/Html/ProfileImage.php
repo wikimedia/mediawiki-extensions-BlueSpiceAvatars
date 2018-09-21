@@ -38,19 +38,23 @@ class ProfileImage {
 	 * @param \User $user
 	 * @param int $width
 	 * @param int $height
-	 * @param UrlBuilder $urlBuilder
+	 * @param UrlBuilder|null $urlBuilder
 	 */
 	public function __construct( $user, $width = 32, $height = 32, $urlBuilder = null ) {
 		$this->user = $user;
 		$this->width = $width;
 		$this->height = $height;
 		$this->urlBuilder = $urlBuilder;
-		if( $urlBuilder === null ) {
+		if ( $urlBuilder === null ) {
 			$this->urlBuilder = Services::getInstance()
 				->getBSDynamicFileDispatcherUrlBuilder();
 		}
 	}
 
+	/**
+	 *
+	 * @return string
+	 */
 	public function getHtml() {
 		$params = new Params( [
 			Params::MODULE => UserProfileImage::MODULE_NAME,

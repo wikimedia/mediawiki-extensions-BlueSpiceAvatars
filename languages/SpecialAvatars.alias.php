@@ -1,17 +1,17 @@
 <?php
-$specialPageAliases = array();
+$specialPageAliases = [];
 
 /** English */
-$specialPageAliases['en'] = array(
-    'Avatars' => array( 'Avatars', 'Avatars' ),
-);
+$specialPageAliases['en'] = [
+	'Avatars' => [ 'Avatars', 'Avatars' ],
+];
 
 /** German (Deutsch) */
-$specialPageAliases['de'] = array(
-	'Avatars' => array( 'Avatare' ),
-);
+$specialPageAliases['de'] = [
+	'Avatars' => [ 'Avatare' ],
+];
 
 /** German (Deutsch) */
-$specialPageAliases['de-formal'] = array(
-	'Avatars' => array( 'Avatare' ),
-);
+$specialPageAliases['de-formal'] = [
+	'Avatars' => [ 'Avatare' ],
+];
