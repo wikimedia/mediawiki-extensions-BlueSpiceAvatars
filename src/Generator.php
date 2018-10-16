@@ -62,7 +62,7 @@ class Generator {
 				'Avatars'
 			);
 			if ( !$status->isGood() ) {
-				throw new MWException(
+				throw new \MWException(
 					'FATAL: Avatar could not be saved! '.$status->getMessage()
 				);
 			}
@@ -72,7 +72,7 @@ class Generator {
 				true
 			);
 			if( !$status->isGood() ) {
-				throw new MWException(
+				throw new \MWException(
 					'FATAL: Avatar thumbs could no be deleted!'
 				);
 			}
