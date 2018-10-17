@@ -7,6 +7,8 @@ Software
 
 | Software | Author | Version | License |
 |:--------|:-------|:--------|:-------|
+| [Instant Avatars](http://phoboslab.org/log/2008/12/instant-avatars) | Dominic Szablewski | - | unlicensed |
+| [PHP Identicons](https://sourceforge.net/projects/identicons/) | Bong Cosca | 1.0.1 | [GPL-3.0](https://www.gnu.org/licenses/gpl-3.0.txt) |
 
 Images
 ------
