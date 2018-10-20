@@ -16,7 +16,7 @@
 		"test": [
 			"parallel-lint . --exclude vendor --exclude node_modules",
 			"minus-x check .",
-			"phpcs -sp --ignore=includes/lib/*"
+			"phpcs -sp"
 		],
 		"fix": [
 			"minus-x fix .",
