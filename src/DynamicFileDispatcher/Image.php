@@ -39,20 +39,12 @@ class Image extends \BlueSpice\DynamicFileDispatcher\File {
 			'Content-type: ' . $this->getMimeType(),
 			true
 		);
-		// This is temporay code until the UserMiniProfile gets a rewrite
-		$path = $GLOBALS['IP'];
-		$scriptPath = $this->dfd->getConfig()->get( 'ScriptPath' );
-		if ( $scriptPath && $scriptPath != "" ) {
-			$countDirs = substr_count( $scriptPath, '/' );
-			$i = 0;
-			while ( $i < $countDirs ) {
-				$path = dirname( $path );
-				$i++;
-			}
-		}
+
+		// This is temporary code until the UserMiniProfile gets a rewrite
+		$path = $this->dfd->getConfig()->get( 'UploadDirectory' );
 		$path = str_replace(
 			'/nsfr_img_auth.php/',
-			'/images/',
+			'/',
 			$path . '/' . \BsFileSystemHelper::normalizePath( $this->src )
 		);
 
