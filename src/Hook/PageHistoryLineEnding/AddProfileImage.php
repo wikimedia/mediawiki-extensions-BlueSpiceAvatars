@@ -18,7 +18,7 @@ class AddProfileImage extends PageHistoryLineEnding {
 
 		$this->s = preg_replace(
 			"#(<span class='history-user'>)#",
-			'$1'.$profileImage->getHtml(),
+			'$1' . $profileImage->getHtml(),
 			$this->s
 		);
 

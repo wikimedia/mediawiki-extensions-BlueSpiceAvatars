@@ -64,7 +64,7 @@ class Generator {
 			);
 			if ( !$status->isGood() ) {
 				throw new \MWException(
-					'FATAL: Avatar could not be saved! '.$status->getMessage()
+					'FATAL: Avatar could not be saved! ' . $status->getMessage()
 				);
 			}
 			# Delete thumb folder if it exists

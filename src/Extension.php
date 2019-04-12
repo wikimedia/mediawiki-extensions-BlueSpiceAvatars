@@ -57,7 +57,6 @@ class Extension extends \BlueSpice\Extension {
 			$oUser->saveSettings();
 			$oUser->invalidateCache();
 		}
-		return;
 	}
 
 	/**
