@@ -7,6 +7,11 @@ use BlueSpice\Services;
 use BlueSpice\DynamicFileDispatcher\Params;
 use BlueSpice\Avatars\DynamicFileDispatcher\UserProfileImage;
 
+/**
+ * DEPRECATED
+ * @deprecated since version 3.1 - use Services::getInstance()->getBSRendererFactory()
+ * ->get( 'userimage'... instead
+ */
 class ProfileImage {
 
 	/**
@@ -34,13 +39,16 @@ class ProfileImage {
 	protected $urlBuilder = null;
 
 	/**
-	 *
+	 * DEPRECATED
+	 * @deprecated since version 3.1 - use Services::getInstance()->getBSRendererFactory()
+	 * ->get( 'userimage'... instead
 	 * @param \User $user
 	 * @param int $width
 	 * @param int $height
 	 * @param UrlBuilder|null $urlBuilder
 	 */
 	public function __construct( $user, $width = 32, $height = 32, $urlBuilder = null ) {
+		wfDebugLog( 'bluespice-deprecations', __METHOD__, 'private' );
 		$this->user = $user;
 		$this->width = $width;
 		$this->height = $height;
@@ -52,10 +60,13 @@ class ProfileImage {
 	}
 
 	/**
-	 *
+	 * DEPRECATED
+	 * @deprecated since version 3.1 - use Services::getInstance()->getBSRendererFactory()
+	 * ->get( 'userimage'... instead
 	 * @return string
 	 */
 	public function getHtml() {
+		wfDebugLog( 'bluespice-deprecations', __METHOD__, 'private' );
 		$params = new Params( [
 			Params::MODULE => UserProfileImage::MODULE_NAME,
 			UserProfileImage::USERNAME => $this->user->getName(),
