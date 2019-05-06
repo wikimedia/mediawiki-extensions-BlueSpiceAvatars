@@ -1,18 +1,19 @@
-Ext.Loader.setPath(
-	'BS.Avatars',
-	bs.em.paths.get( 'BlueSpiceAvatars' ) + '/resources/BS.Avatars'
-);
+( function ( mw, $, d ) {
+	var selectors = [
+		"#bs-authors-imageform",
+		".bs-avatars-userimage-pref.bs-userminiprofile",
+		".bs-avatars-userimage-pref-btn"
+	];
 
-mw.loader.using('ext.bluespice', function() {
-	function showDialog() {
-		Ext.require('BS.Avatars.SettingsWindow', function() {
-			BS.Avatars.SettingsWindow.show();
-		});
-	}
-	;
-	$('#bs-authors-imageform').on('click', function(e) {
+	$( d ).on( 'click', selectors.join( ', ' ), function( e ) {
 		e.preventDefault();
-		showDialog();
+		mw.loader.using( ['mediawiki.notify','ext.bluespice.extjs'] ).done( function() {
+			Ext.onReady( function() {
+				Ext.require( 'BS.Avatars.SettingsWindow', function() {
+					BS.Avatars.SettingsWindow.show();
+				} );
+			} );
+		} );
 		return false;
-	});
-});
+	} );
+} )( mediaWiki, jQuery, document );
