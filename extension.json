@@ -51,7 +51,7 @@
 				"bluespice.avatars.js"
 			],
 			"dependencies": [
-				"ext.bluespice.extjs"
+				"mediawiki.util"
 			],
 			"messages": [
 				"bs-avatars-upload-title",
