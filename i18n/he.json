@@ -2,14 +2,15 @@
 	"@metadata": {
 		"authors": [
 			"Ronel1",
-			"Guycn2"
+			"Guycn2",
+			"Erelon"
 		]
 	},
 	"prefs-avatars": "תמונת משתמש",
 	"bs-avatars-desc": "אספקת תמונות משתמש כלליות ואישיות",
 	"bs-avatars-pref-generator": "גנרטור:",
 	"bs-avatars-pref-defaultsize": "גודל ברירת המחדל של פיקסל:",
-	"bs-avatars-upload-complete": "התמונה הועלה בהצלחה.",
+	"bs-avatars-upload-complete": "התמונה הועלתה בהצלחה.",
 	"bs-avatars-generate-complete": "סמל חדש נוצר.",
 	"bs-avatars-upload-title": "שינוי תמונת הפרופיל",
 	"bs-avatars-upload-label": "תמונה",
@@ -19,7 +20,7 @@
 	"bs-avatars-userimage-title": "התמונות מ- URL wiki או תמונה",
 	"bs-avatars-userimage-help": "ז. א Picture.jpg או http://localhost/Picture.gif",
 	"bs-avatars-set-userimage-failed": "לא חוקי כתובת URL או תמונה בוויקי.",
-	"bs-avatars-set-userimage-saved": "תמונת המשתמש נשמר בהצלחה.",
+	"bs-avatars-set-userimage-saved": "תמונת המשתמש נשמרה בהצלחה.",
 	"bs-avatars-file-upload-fieldset-title": "העלאת התמונות",
 	"bs-avatars-auto-generate-fieldset-title": "אוטומטי ליצור גלגול"
 }
