@@ -5,7 +5,11 @@ namespace BlueSpice\Avatars\Hook\UploadVerifyFile;
 class PreventUserImageOverwrite extends \BlueSpice\Hook\UploadVerifyFile {
 
 	protected function skipProcessing() {
-		$fileName = $this->upload->getLocalFile()->getName();
+		$file = $this->upload->getLocalFile();
+		if ( $file === null ) {
+			return true;
+		}
+		$fileName = $file->getName();
 		$fileExt = strrpos( $fileName, '.' );
 
 		if ( empty( $fileName ) || !$fileExt ) {
