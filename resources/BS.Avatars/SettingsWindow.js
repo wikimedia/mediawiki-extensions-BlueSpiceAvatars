@@ -1,4 +1,5 @@
 Ext.define('BS.Avatars.SettingsWindow', {
+	requires: [ 'BS.form.UploadPanel' ],
 	extend: 'Ext.window.Window',
 	title: mw.message('bs-avatars-upload-title').plain(),
 	id: 'bs-avatars-upload-window',
