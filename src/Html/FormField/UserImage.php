@@ -5,7 +5,6 @@ namespace BlueSpice\Avatars\Html\FormField;
 use BlueSpice\Services;
 use BlueSpice\Renderer\Params;
 use BlueSpice\Renderer\UserImage as DFDImage;
-use OOUI\ButtonInputWidget;
 
 class UserImage extends \HTMLTextField {
 
@@ -36,10 +35,10 @@ class UserImage extends \HTMLTextField {
 			DFDImage::PARAM_CLASS => 'bs-avatars-userimage-pref',
 		];
 		$renderer = $factory->get( 'userimage', new Params( $params ) );
-		$button = new ButtonInputWidget( [
-			'label' => $this->msg( 'bs-avatars-upload-title' )->plain(),
-			'classes' => [ 'bs-avatars-userimage-pref-btn' ]
-		] );
+		$button = \Html::element( 'a', [
+			'href' => '#',
+			'class' => 'bs-avatars-userimage-pref-btn'
+		], $this->msg( 'bs-avatars-upload-title' )->plain() );
 		$html = parent::getInputHTML( $value ) . $renderer->render() . $button;
 
 		return $html;
