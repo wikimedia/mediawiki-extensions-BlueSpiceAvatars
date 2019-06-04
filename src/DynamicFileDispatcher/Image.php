@@ -35,10 +35,12 @@ class Image extends \BlueSpice\DynamicFileDispatcher\File {
 	 * @return void
 	 */
 	public function setHeaders( \WebResponse $response ) {
-		$response->header(
-			'Content-type: ' . $this->getMimeType(),
-			true
-		);
+		$headers = [];
+
+		$headers[] = 'Cache-Control: private';
+		$headers[] = 'Vary: Cookie';
+		$headers[] = 'Content-type: ' . $this->getMimeType();
+
 		// This is temporay code until the UserMiniProfile gets a rewrite
 		$path = $GLOBALS['IP'];
 		$scriptPath = $this->dfd->getConfig()->get( 'ScriptPath' );
@@ -56,7 +58,15 @@ class Image extends \BlueSpice\DynamicFileDispatcher\File {
 			$path . '/' . \BsFileSystemHelper::normalizePath( $this->src )
 		);
 
-		readfile( $path );
+		$streamer = new \HTTPFileStreamer(
+			$path,
+			[
+				'obResetFunc' => null,
+				'streamMimeFunc' => null
+			]
+		);
+
+		$res = $streamer->stream( $headers, true );
 	}
 
 	/**
