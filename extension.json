@@ -25,6 +25,9 @@
 			},
 			"DynamicFileRegistry": {
 				"userprofileimage": "\\BlueSpice\\Avatars\\DynamicFileDispatcher\\UserProfileImage"
+			},
+			"TagRegistry": {
+				"profileimage": "\\BlueSpice\\Avatars\\Tag\\ProfileImage"
 			}
 		}
 	},
