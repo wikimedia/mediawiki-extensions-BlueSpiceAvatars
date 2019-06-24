@@ -26,5 +26,6 @@
 	"bs-avatars-file-upload-fieldset-title": "Envio de imagem",
 	"bs-avatars-auto-generate-fieldset-title": "Gerar avatar automaticamente",
 	"apihelp-bs-avatars-tasks-description": "Fazendo upload, gerando e configurando avatares de usuários",
-	"apihelp-bs-avatars-tasks-summary": "Fazendo upload, gerando e configurando avatares de usuários"
+	"apihelp-bs-avatars-tasks-summary": "Fazendo upload, gerando e configurando avatares de usuários",
+	"bs-avatars-tag-profileimage-error-invalidusername": "O parâmetro \"username\" é obrigatório e deve conter um nome de usuário válido"
 }
