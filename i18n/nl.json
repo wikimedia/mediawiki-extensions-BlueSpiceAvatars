@@ -27,6 +27,7 @@
 	"bs-avatars-warning-text": "U hebt een gebruikersafbeelding in uw voorkeuren ingesteld. Als u avatars gaat gebruiken, dan wordt deze instelling gewist. Wilt u doorgaan?",
 	"bs-avatars-userimage-title": "Foto van wiki of afbeeldings-URL",
 	"bs-avatars-userimage-help": "bijvoorbeeld Afbeelding.jpg of http://localhost/Afbeelding.gif",
+	"bs-avatars-userimage-alt": "Profielafbeelding van gebruiker \"$1\"",
 	"bs-avatars-set-userimage-failed": "Geen geldige URL of afbeelding van wiki.",
 	"bs-avatars-set-userimage-saved": "Profielfoto opgeslagen",
 	"bs-avatars-file-upload-fieldset-title": "Afbeelding uploaden",
