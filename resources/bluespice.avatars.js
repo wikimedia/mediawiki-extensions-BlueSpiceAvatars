@@ -3,7 +3,7 @@ Ext.Loader.setPath(
 	bs.em.paths.get( 'BlueSpiceAvatars' ) + '/resources/BS.Avatars'
 );
 
-mw.loader.using('ext.bluespice', function() {
+mw.loader.using( "user.options", 'ext.bluespice', function() {
 	function showDialog() {
 		Ext.require('BS.Avatars.SettingsWindow', function() {
 			BS.Avatars.SettingsWindow.show();
