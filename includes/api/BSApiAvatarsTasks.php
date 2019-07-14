@@ -44,6 +44,7 @@ class BSApiAvatarsTasks extends BSApiTasksBase {
 			'setUserImage' => [ 'read' ]
 		];
 	}
+
 	// phpcs:disable
 	/**
 	 *
