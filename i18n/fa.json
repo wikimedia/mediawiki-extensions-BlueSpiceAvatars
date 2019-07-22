@@ -25,5 +25,6 @@
 	"bs-avatars-set-userimage-failed": "نشانی یا تصویر از ویکی نامعتبر.",
 	"bs-avatars-set-userimage-saved": "تصویر کاربری ذخیره شد.",
 	"bs-avatars-file-upload-fieldset-title": "بارگذاری تصویر",
-	"bs-avatars-auto-generate-fieldset-title": "تولید خودکار نماد"
+	"bs-avatars-auto-generate-fieldset-title": "تولید خودکار نماد",
+	"bs-avatars-tag-profileimage-error-invalidusername": "پارامتر «نام کاربری» ضروری است و باید شامل یک نام کاربریِ معتبر باشد"
 }
