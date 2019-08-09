@@ -8,7 +8,8 @@
 			"Siebrand",
 			"Esketti",
 			"McDutchie",
-			"Mar(c)"
+			"Mar(c)",
+			"Mainframe98"
 		]
 	},
 	"prefs-avatars": "Avatars",
@@ -27,5 +28,8 @@
 	"bs-avatars-set-userimage-failed": "Geen geldige URL of afbeelding van wiki.",
 	"bs-avatars-set-userimage-saved": "Profielfoto opgeslagen",
 	"bs-avatars-file-upload-fieldset-title": "Afbeelding uploaden",
-	"bs-avatars-auto-generate-fieldset-title": "Automatisch avatar genereren"
+	"bs-avatars-auto-generate-fieldset-title": "Automatisch avatar genereren",
+	"bs-avatars-pref-userimage": "Gebruikersafbeelding:",
+	"bs-avatars-pref-userimage-img-alt": "Uw huidige gebruikersafbeelding",
+	"bs-avatars-userimage-alt": "Profielafbeelding van gebruiker \"$1\""
 }

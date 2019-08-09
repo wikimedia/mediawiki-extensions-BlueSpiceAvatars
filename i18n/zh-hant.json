@@ -30,5 +30,6 @@
 	"bs-avatars-file-upload-fieldset-title": "圖片上傳",
 	"bs-avatars-auto-generate-fieldset-title": "自動產生頭像",
 	"apihelp-bs-avatars-tasks-description": "上傳、產生、設定用戶頭像",
-	"apihelp-bs-avatars-tasks-summary": "上傳、產生，並設定使用者頭像"
+	"apihelp-bs-avatars-tasks-summary": "上傳、產生，並設定使用者頭像",
+	"bs-avatars-tag-profileimage-error-invalidusername": "參數「username」為必要並且須包含一個有效的使用者名稱"
 }

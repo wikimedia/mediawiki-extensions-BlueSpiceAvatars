@@ -25,5 +25,6 @@
 	"bs-avatars-file-upload-fieldset-title": "Fote carecate",
 	"bs-avatars-auto-generate-fieldset-title": "Stemme auto generate",
 	"apihelp-bs-avatars-tasks-description": "Carecamende, generazione e 'mbostazione de l'avatar de l'utende",
-	"apihelp-bs-avatars-tasks-summary": "Carecamende, generazione e 'mbostazione de l'avatar de l'utende"
+	"apihelp-bs-avatars-tasks-summary": "Carecamende, generazione e 'mbostazione de l'avatar de l'utende",
+	"bs-avatars-tag-profileimage-error-invalidusername": "Parametre \"username\" jè richieste e adda tenè 'nu nome utende valide"
 }

@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Ата",
-			"Piramidion"
+			"Piramidion",
+			"Vlad5250"
 		]
 	},
 	"prefs-avatars": "Аватари",
@@ -26,5 +27,6 @@
 	"bs-avatars-file-upload-fieldset-title": "Завантажити зображення",
 	"bs-avatars-auto-generate-fieldset-title": "Автоматичне створення аватара",
 	"apihelp-bs-avatars-tasks-description": "Завантаження, генерування і налаштування користувацьких аватарів",
-	"apihelp-bs-avatars-tasks-summary": "Завантаження, генерування і налаштування користувацьких аватарів"
+	"apihelp-bs-avatars-tasks-summary": "Завантаження, генерування і налаштування користувацьких аватарів",
+	"bs-avatars-tag-profileimage-error-invalidusername": "Параметр «username» обов'язковий і має містити дійсне ім'я користувача"
 }
