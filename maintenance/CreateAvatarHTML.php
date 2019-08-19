@@ -14,7 +14,7 @@ class CreateAvatarHTML extends Maintenance {
 	 */
 	public function __construct() {
 		parent::__construct();
-		$this->mDescription = "Create HTML with links to Avatars";
+		$this->addDescription( "Create HTML with links to Avatars" );
 
 		$this->requireExtension( 'BlueSpiceFoundation' );
 		$this->requireExtension( 'BlueSpiceAvatars' );
