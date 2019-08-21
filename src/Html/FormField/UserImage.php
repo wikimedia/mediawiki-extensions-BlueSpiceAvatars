@@ -13,7 +13,7 @@ class UserImage extends \HTMLTextField {
 	 * @return string
 	 */
 	public function getLabel() {
-		return wfMessage( 'bs-avatars-pref-userimage' )->parse();
+		return $this->msg( 'bs-avatars-pref-userimage' )->parse();
 	}
 
 	/**
