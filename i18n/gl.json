@@ -2,13 +2,15 @@
 	"@metadata": {
 		"authors": [
 			"Elisardojm",
-			"Toliño"
+			"Toliño",
+			"Banjo"
 		]
 	},
 	"prefs-avatars": "Avatares",
 	"bs-avatars-desc": "Proporciona imaxes de usuario xenéricas e individuais",
 	"bs-avatars-pref-generator": "Xerador:",
 	"bs-avatars-pref-defaultsize": "Tamaño predeterminado en píxeles:",
+	"bs-avatars-pref-userimage": "Imaxe de usuario:",
 	"bs-avatars-upload-complete": "A imaxe subiuse.",
 	"bs-avatars-generate-complete": "Xerouse unha nova imaxe de perfil.",
 	"bs-avatars-upload-title": "Cambiar a imaxe do perfil",
