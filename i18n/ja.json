@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Shirayuki",
-			"S2KTS"
+			"S2KTS",
+			"Kkairri"
 		]
 	},
 	"prefs-avatars": "アバター",
@@ -23,5 +24,6 @@
 	"bs-avatars-set-userimage-failed": "有効な URL ではないか、またはウィキ内の画像ではありません。",
 	"bs-avatars-set-userimage-saved": "利用者の画像を保存しました。",
 	"bs-avatars-file-upload-fieldset-title": "画像のアップロード",
-	"bs-avatars-auto-generate-fieldset-title": "アバターの自動生成"
+	"bs-avatars-auto-generate-fieldset-title": "アバターの自動生成",
+	"bs-avatars-userimage-alt": "利用者 \"$1\" のプロフィール画像"
 }

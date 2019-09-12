@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Elisardojm",
-			"Toliño"
+			"Toliño",
+			"Banjo"
 		]
 	},
 	"prefs-avatars": "Avatares",
@@ -23,5 +24,6 @@
 	"bs-avatars-file-upload-fieldset-title": "Carga de imaxe",
 	"bs-avatars-auto-generate-fieldset-title": "Xerar o avatar automaticamente",
 	"apihelp-bs-avatars-tasks-description": "Subindo, xerando e instalando os avatares de usuario",
-	"apihelp-bs-avatars-tasks-summary": "Subindo, xerando e instalando os avatares de usuario"
+	"apihelp-bs-avatars-tasks-summary": "Subindo, xerando e instalando os avatares de usuario",
+	"bs-avatars-pref-userimage": "Imaxe de usuario:"
 }
