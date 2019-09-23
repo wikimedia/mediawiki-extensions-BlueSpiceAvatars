@@ -137,7 +137,7 @@ Ext.define('BS.Avatars.SettingsWindow', {
 			method: 'POST',
 			params: {
 				name: 'avatars',
-				token: mw.user.tokens.get( 'editToken' )
+				token: mw.user.tokens.get( 'csrfToken' )
 			},
 			waitMsg: mw.message('bs-extjs-uploading').plain(),
 			success: function(fp, o) {
