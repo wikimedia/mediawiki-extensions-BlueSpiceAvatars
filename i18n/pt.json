@@ -28,5 +28,6 @@
 	"bs-avatars-file-upload-fieldset-title": "Carregamento de imagem",
 	"bs-avatars-auto-generate-fieldset-title": "Gerar automaticamente uma imagem de perfil",
 	"apihelp-bs-avatars-tasks-description": "Carregar, gerar e definir imagens de perfil dos utilizadores",
-	"apihelp-bs-avatars-tasks-summary": "Carregar, gerar e definir imagens de perfil dos utilizadores"
+	"apihelp-bs-avatars-tasks-summary": "Carregar, gerar e definir imagens de perfil dos utilizadores",
+	"bs-avatars-tag-profileimage-error-invalidusername": "O parâmetro \"username\" é obrigatório e tem de conter um nome de utilizador válido"
 }

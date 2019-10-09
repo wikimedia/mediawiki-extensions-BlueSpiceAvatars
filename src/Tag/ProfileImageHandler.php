@@ -7,6 +7,7 @@ use Parser;
 use PPFrame;
 use Html;
 use User;
+use Message;
 use BlueSpice\RendererFactory;
 use BlueSpice\Renderer\Params;
 use BlueSpice\Renderer\UserImage;
@@ -69,7 +70,7 @@ class ProfileImageHandler extends Handler {
 		}
 		$user = User::newFromName( $this->processedArgs['username'] );
 		if ( !$user ) {
-			$msg = \Message::newFromKey(
+			$msg = Message::newFromKey(
 				'bs-avatars-tag-profileimage-error-invalidusername'
 			);
 			throw new MWException( $msg );
@@ -102,7 +103,7 @@ class ProfileImageHandler extends Handler {
 
 		$html = Html::element( 'img', [
 			'src' => $url,
-			'alt' => wfMessage(
+			'alt' => Message::newFromKey(
 				'bs-avatars-tag-userimage-img-alt',
 				$this->processedArgs['username']
 			)->text(),

@@ -25,5 +25,6 @@
 	"bs-avatars-set-userimage-failed": "Non è un URL valido o un'immagine da wiki.",
 	"bs-avatars-set-userimage-saved": "L'immagine utente è stata salvata.",
 	"bs-avatars-file-upload-fieldset-title": "Caricamento immagine",
-	"bs-avatars-auto-generate-fieldset-title": "Generazione automatica avatar"
+	"bs-avatars-auto-generate-fieldset-title": "Generazione automatica avatar",
+	"apihelp-bs-avatars-tasks-description": "Carica, genera e configura gli avatar dell'utente"
 }

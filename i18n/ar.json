@@ -26,5 +26,6 @@
 	"bs-avatars-file-upload-fieldset-title": "رفع الصورة",
 	"bs-avatars-auto-generate-fieldset-title": "توليد تلقائي للصورة الرمزية",
 	"apihelp-bs-avatars-tasks-description": "رفع وتوليد وإعداد الصور الرمزية للمستخدم",
-	"apihelp-bs-avatars-tasks-summary": "رفع وتوليد وإعداد الصور الرمزية للمستخدم"
+	"apihelp-bs-avatars-tasks-summary": "رفع وتوليد وإعداد الصور الرمزية للمستخدم",
+	"bs-avatars-tag-profileimage-error-invalidusername": "الوسيط \"اسم المستخدم\" مطلوب ويجب أن يحتوي على اسم مستخدم صالح"
 }

@@ -4,7 +4,8 @@
 			"Chrumps",
 			"Matma Rex",
 			"Alan ffm",
-			"Mateuszek045"
+			"Mateuszek045",
+			"Rail"
 		]
 	},
 	"prefs-avatars": "Awatary",
@@ -24,5 +25,7 @@
 	"bs-avatars-set-userimage-failed": "Nieprawidłowy adres URL lub obraz z wiki.",
 	"bs-avatars-set-userimage-saved": "Zdjęcie użytkownika zostało zapisane.",
 	"bs-avatars-file-upload-fieldset-title": "Ładowanie obrazu",
-	"bs-avatars-auto-generate-fieldset-title": "Automatyczne tworzenie awatara"
+	"bs-avatars-auto-generate-fieldset-title": "Automatyczne tworzenie awatara",
+	"bs-avatars-warning-text": "Masz ustawiony obraz użytkownika w preferencjach. Używanie awataru wyczyści to ustawienie. Czy chcesz kontynuować?",
+	"bs-avatars-userimage-alt": "Obraz profilowy {{GENDER:$1|użytkownika|użytkowniczki}} „$1”"
 }

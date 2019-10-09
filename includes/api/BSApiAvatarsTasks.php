@@ -79,7 +79,7 @@ class BSApiAvatarsTasks extends BSApiTasksBase {
 			throw new MWException( 'FATAL: Avatar thumbs could no be deleted!' );
 		}
 
-		$oResponse->message = wfMessage( 'bs-avatars-upload-complete' )->plain();
+		$oResponse->message = $this->msg( 'bs-avatars-upload-complete' )->plain();
 		$oResponse->success = true;
 		return $oResponse;
 	}
@@ -100,7 +100,7 @@ class BSApiAvatarsTasks extends BSApiTasksBase {
 		$oFile = wfFindFile( $sUserImage );
 		$bIsImage = is_object( $oFile ) && $oFile->canRender();
 		if ( !wfParseUrl( $sUserImage ) && !$bIsImage ) {
-			$oResponse->message = wfMessage( 'bs-avatars-set-userimage-failed' )->plain();
+			$oResponse->message = $this->msg( 'bs-avatars-set-userimage-failed' )->plain();
 			return $oResponse;
 		}
 
@@ -109,7 +109,7 @@ class BSApiAvatarsTasks extends BSApiTasksBase {
 		$oUser->saveSettings();
 
 		$oResponse->success = true;
-		$oResponse->message = wfMessage( 'bs-avatars-set-userimage-saved' )->plain();
+		$oResponse->message = $this->msg( 'bs-avatars-set-userimage-saved' )->plain();
 		return $oResponse;
 	}
 
@@ -131,7 +131,7 @@ class BSApiAvatarsTasks extends BSApiTasksBase {
 		$generator->generate( $oUser, [ Generator::PARAM_OVERWRITE => true ] );
 
 		$oResponse->success = true;
-		$oResponse->message = wfMessage( 'bs-avatars-generate-complete' )->plain();
+		$oResponse->message = $this->msg( 'bs-avatars-generate-complete' )->plain();
 		return $oResponse;
 	}
 

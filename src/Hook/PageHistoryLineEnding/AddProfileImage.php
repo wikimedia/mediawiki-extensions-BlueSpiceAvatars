@@ -3,22 +3,30 @@
 namespace BlueSpice\Avatars\Hook\PageHistoryLineEnding;
 
 use BlueSpice\Hook\PageHistoryLineEnding;
-use BlueSpice\Avatars\Html\ProfileImage;
+use BlueSpice\Renderer\Params;
+use BlueSpice\Renderer\UserImage as DFDImage;
 
 class AddProfileImage extends PageHistoryLineEnding {
 	protected function doProcess() {
-		$this->history->getOutput()->addModuleStyles( 'ext.bluespice.avatars.history.styles' );
+		$this->history->getOutput()->addModuleStyles(
+			'ext.bluespice.avatars.history.styles'
+		);
 
-		$username = $this->row->rev_user_text;
-		$user = \User::newFromName( $username );
+		$user = \User::newFromName( $this->row->rev_user_text );
 		if ( $user instanceof \User === false ) {
 			return true;
 		}
-		$profileImage = new ProfileImage( $user, 32, 32 );
+		$factory = $this->getServices()->getBSRendererFactory();
+		$params = [
+			DFDImage::PARAM_WIDTH => 32,
+			DFDImage::PARAM_HEIGHT => 32,
+			DFDImage::PARAM_USER => $user,
+		];
+		$renderer = $factory->get( 'userimage', new Params( $params ) );
 
 		$this->s = preg_replace(
 			"#(<span class='history-user'>)#",
-			'$1' . $profileImage->getHtml(),
+			'$1' . $renderer->render(),
 			$this->s
 		);
 

@@ -25,5 +25,6 @@
 	"bs-avatars-file-upload-fieldset-title": "Bildeopplasting",
 	"bs-avatars-auto-generate-fieldset-title": "Autogenerer avatar",
 	"apihelp-bs-avatars-tasks-description": "Laster opp, genererer og setter brukeravatarer",
-	"apihelp-bs-avatars-tasks-summary": "Laster opp, genererer og setter brukeravatarer"
+	"apihelp-bs-avatars-tasks-summary": "Laster opp, genererer og setter brukeravatarer",
+	"bs-avatars-tag-profileimage-error-invalidusername": "Parameteren «username» er påkrevd og må inneholde et gyldig brukernavn"
 }

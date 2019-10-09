@@ -98,7 +98,7 @@ Ext.define('BS.Avatars.SettingsWindow', {
 			'avatars',
 			'generateAvatar'
 		).done( function( response ) {
-			window.location.reload();
+			location.reload();
 		});
 	},
 	confirmOverwrite: function(callback) {
@@ -126,7 +126,7 @@ Ext.define('BS.Avatars.SettingsWindow', {
 			'setUserImage',
 			{ userImage: this.tfUserImage.getValue() }
 		).done( function( response ) {
-			window.location.reload();
+			location.reload();
 		});
 	},
 	doUpload: function() {
@@ -141,15 +141,17 @@ Ext.define('BS.Avatars.SettingsWindow', {
 			},
 			waitMsg: mw.message('bs-extjs-uploading').plain(),
 			success: function(fp, o) {
-				var responseObj = o.result;
-				mw.notify( responseObj.message, { title: mw.msg( 'bs-extjs-title-success' ) } );
+				var responseObj = o.result || o.response;
+				mw.notify( responseObj.message || responseObj.statusText, {
+					title: mw.msg( 'bs-extjs-title-success' )
+				} );
 				location.reload();
 			},
 			failure: function(fp, o) {
-				var responseObj = o.result;
+				var responseObj = o.result || o.response;
 				bs.util.alert( 'bs-avatars-upload-error',
 						{
-							text: responseObj.message,
+							text: responseObj.message || responseObj.statusText,
 							titleMsg: 'bs-extjs-title-warning'
 						}, {
 					scope: this

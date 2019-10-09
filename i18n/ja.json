@@ -2,15 +2,16 @@
 	"@metadata": {
 		"authors": [
 			"Shirayuki",
-			"S2KTS"
+			"S2KTS",
+			"Kkairri"
 		]
 	},
 	"prefs-avatars": "アバター",
 	"bs-avatars-desc": "汎用的で個別的な利用者画像を提供する",
 	"bs-avatars-pref-generator": "ジェネレーター:",
 	"bs-avatars-pref-defaultsize": "既定のサイズ (ピクセル):",
-	"bs-avatars-pref-userimage": "ユーザー画像:",
-	"bs-avatars-pref-userimage-img-alt": "あなたの現在のユーザー画像",
+	"bs-avatars-pref-userimage": "利用者画像:",
+	"bs-avatars-pref-userimage-img-alt": "あなたの現在の利用者画像",
 	"bs-avatars-upload-complete": "画像をアップロードしました。",
 	"bs-avatars-generate-complete": "新しいアバターを生成しました。",
 	"bs-avatars-upload-title": "プロフィール画像の変更",
@@ -23,5 +24,6 @@
 	"bs-avatars-set-userimage-failed": "有効な URL ではないか、またはウィキ内の画像ではありません。",
 	"bs-avatars-set-userimage-saved": "利用者の画像を保存しました。",
 	"bs-avatars-file-upload-fieldset-title": "画像のアップロード",
-	"bs-avatars-auto-generate-fieldset-title": "アバターの自動生成"
+	"bs-avatars-auto-generate-fieldset-title": "アバターの自動生成",
+	"bs-avatars-userimage-alt": "利用者 \"$1\" のプロフィール画像"
 }

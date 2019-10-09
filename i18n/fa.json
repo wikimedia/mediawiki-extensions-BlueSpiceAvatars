@@ -2,14 +2,15 @@
 	"@metadata": {
 		"authors": [
 			"Rtemis",
-			"Alirezaaa"
+			"Alirezaaa",
+			"FarsiNevis"
 		]
 	},
 	"prefs-avatars": "آواتارها",
 	"bs-avatars-desc": "تصاویری عمومی و شخصی ازکاربر فراهم می کند",
 	"bs-avatars-pref-generator": "تولیدکننده:",
 	"bs-avatars-pref-defaultsize": "اندازه پیش فرض بر حسب پیکسل:",
-	"bs-avatars-upload-complete": "تصویر با موفقیت بارگذاری شد.",
+	"bs-avatars-upload-complete": "تصویر بارگذاری شد.",
 	"bs-avatars-generate-complete": "یک آواتار نو ساخته شد.",
 	"bs-avatars-upload-title": "تصویر پروفایل را تغییر بده",
 	"bs-avatars-upload-label": "تصویر",
@@ -19,7 +20,11 @@
 	"bs-avatars-userimage-title": "تصویر از ویکی یا نشانی تصویر",
 	"bs-avatars-userimage-help": "به عنوان مثال Picture.jpg یا http://localhost/Picture.gif",
 	"bs-avatars-set-userimage-failed": "نشانی یا تصویر از ویکی نامعتبر.",
-	"bs-avatars-set-userimage-saved": "تصویر کاربر با موفقیت ذخیره شد.",
+	"bs-avatars-set-userimage-saved": "تصویر کاربری ذخیره شد.",
 	"bs-avatars-file-upload-fieldset-title": "بارگذاری تصویر",
-	"bs-avatars-auto-generate-fieldset-title": "تولید خودکار نماد"
+	"bs-avatars-auto-generate-fieldset-title": "تولید خودکار نماد",
+	"bs-avatars-pref-userimage": "تصویر کاربری:",
+	"bs-avatars-pref-userimage-img-alt": "تصویر کاربریِ کنونی شما",
+	"bs-avatars-userimage-alt": "تصویر نمایهٔ کاربر «$1»",
+	"bs-avatars-tag-profileimage-error-invalidusername": "پارامتر «نام کاربری» ضروری است و باید شامل یک نام کاربریِ معتبر باشد"
 }
