@@ -32,6 +32,11 @@
 			"TagRegistry": {
 				"profileimage": "\\BlueSpice\\Avatars\\Tag\\ProfileImage"
 			}
+		},
+		"BlueSpicePrivacy": {
+			"Handlers": [
+				"\\BlueSpice\\Avatars\\Privacy\\Handler"
+			]
 		}
 	},
 	"APIModules": {
