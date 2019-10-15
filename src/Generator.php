@@ -129,6 +129,7 @@ class Generator {
 		} else {
 			$chars = $user->getName();
 		}
+
 		$instantAvatar->generateRandom( $chars );
 		return $instantAvatar->getRawPNG();
 	}
