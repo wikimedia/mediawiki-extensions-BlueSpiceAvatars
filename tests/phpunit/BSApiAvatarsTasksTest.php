@@ -221,7 +221,7 @@ class BSApiAvatarsTasksTest extends BSApiTasksTestBase {
 		return true;
 	}
 
-	protected function fakeUploadChunk( $fieldName, $fileName, $type, & $chunkData ) {
+	protected function fakeUploadChunk( $fieldName, $fileName, $type, &$chunkData ) {
 		$tmpName = $this->getNewTempFile();
 		// copy the chunk data to temp location:
 		if ( !file_put_contents( $tmpName, $chunkData ) ) {
