@@ -53,7 +53,7 @@ class Image extends \BlueSpice\DynamicFileDispatcher\File {
 			}
 		}
 		$path = str_replace(
-			'/nsfr_img_auth.php/',
+			[ '/img_auth.php/', '/nsfr_img_auth.php/' ],
 			'/images/',
 			$path . '/' . \BsFileSystemHelper::normalizePath( $this->src )
 		);
