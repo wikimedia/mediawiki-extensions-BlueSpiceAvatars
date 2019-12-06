@@ -25,5 +25,6 @@
 	"bs-avatars-file-upload-fieldset-title": "Carga de la imaxe",
 	"bs-avatars-auto-generate-fieldset-title": "Xenerar avatar automáticamente",
 	"apihelp-bs-avatars-tasks-description": "Xubir, xenerar y configurar los avatares d'usuariu",
-	"apihelp-bs-avatars-tasks-summary": "Xubir, xenerar y configurar los avatares d'usuariu"
+	"apihelp-bs-avatars-tasks-summary": "Xubir, xenerar y configurar los avatares d'usuariu",
+	"bs-avatars-tag-profileimage-error-invalidusername": "Ríquese'l parámetru \"username\" y tien de contener un nome d'usuariu válidu"
 }
