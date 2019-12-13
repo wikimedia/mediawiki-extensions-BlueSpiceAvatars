@@ -5,7 +5,6 @@ namespace BlueSpice\Avatars\Hook\SetupAfterCache;
 class AddForeignFileRepo extends \BlueSpice\Hook\SetupAfterCache {
 
 	/**
-	 * @global array $wgForeignFileRepos
 	 * @return bool
 	 */
 	protected function doProcess() {
