@@ -17,7 +17,7 @@
 	"bs-avatars-upload-complete": "Se subió la imagen.",
 	"bs-avatars-generate-complete": "Se generó un nuevo avatar.",
 	"bs-avatars-upload-title": "Cambiar la imagen del perfil",
-	"bs-avatars-upload-label": "retratado",
+	"bs-avatars-upload-label": "Imagen",
 	"bs-avatars-generate-new-label": "Generar nuevo avatar",
 	"bs-avatars-warning-title": "Atención",
 	"bs-avatars-warning-text": "Has establecido una imagen de usuario en tus preferencias. El uso de avatares borrará este ajuste. ¿Quieres continuar?",
@@ -30,5 +30,5 @@
 	"bs-avatars-auto-generate-fieldset-title": "Generar avatar automáticamente",
 	"apihelp-bs-avatars-tasks-description": "Cargar, generar y configurar avatares de usuario",
 	"apihelp-bs-avatars-tasks-summary": "Cargar, generar y configurar avatares de usuario",
-	"bs-avatars-tag-profileimage-error-invalidusername": "Parameter \"username\" is required and must contain a valid username"
+	"bs-avatars-tag-profileimage-error-invalidusername": "Se requiere el parámetro «username» y este debe contener un nombre de usuario válido"
 }
