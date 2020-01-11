@@ -1,5 +1,6 @@
 <?php
 
+use BlueSpice\Api\Response\Standard;
 use BlueSpice\Avatars\Generator;
 
 class BSApiAvatarsTasks extends BSApiTasksBase {
@@ -50,7 +51,7 @@ class BSApiAvatarsTasks extends BSApiTasksBase {
 	 *
 	 * @param stdClass $oTaskData
 	 * @param array $aParams
-	 * @return BSStandardAPIResponse
+	 * @return Standard
 	 * @throws MWException
 	 */
 	public function task_uploadFile( $oTaskData, $aParams ) {
@@ -89,7 +90,7 @@ class BSApiAvatarsTasks extends BSApiTasksBase {
 	 *
 	 * @param stdClass $oTaskData
 	 * @param array $aParams
-	 * @return BSStandardAPIResponse
+	 * @return Standard
 	 * @throws MWException
 	 */
 	public function task_setUserImage( $oTaskData, $aParams ) {
@@ -118,7 +119,7 @@ class BSApiAvatarsTasks extends BSApiTasksBase {
 	 *
 	 * @param stdClass $oTaskData
 	 * @param array $aParams
-	 * @return BSStandardAPIResponse
+	 * @return Standard
 	 * @throws MWException
 	 */
 	public function task_generateAvatar( $oTaskData, $aParams ) {
