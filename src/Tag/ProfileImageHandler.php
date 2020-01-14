@@ -2,19 +2,19 @@
 
 namespace BlueSpice\Avatars\Tag;
 
+use BlueSpice\Avatars\DynamicFileDispatcher\UserProfileImage;
+use BlueSpice\DynamicFileDispatcher\Params as DFDParams;
+use BlueSpice\DynamicFileDispatcher\UrlBuilder;
+use BlueSpice\Renderer\Params;
+use BlueSpice\Renderer\UserImage;
+use BlueSpice\RendererFactory;
+use BlueSpice\Tag\Handler;
+use Html;
+use Message;
 use MWException;
 use Parser;
 use PPFrame;
-use Html;
 use User;
-use Message;
-use BlueSpice\RendererFactory;
-use BlueSpice\Renderer\Params;
-use BlueSpice\Renderer\UserImage;
-use BlueSpice\Tag\Handler;
-use BlueSpice\DynamicFileDispatcher\UrlBuilder;
-use BlueSpice\DynamicFileDispatcher\Params as DFDParams;
-use BlueSpice\Avatars\DynamicFileDispatcher\UserProfileImage;
 
 class ProfileImageHandler extends Handler {
 

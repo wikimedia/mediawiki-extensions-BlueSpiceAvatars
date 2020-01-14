@@ -2,9 +2,9 @@
 
 namespace BlueSpice\Avatars\Html\FormField;
 
-use BlueSpice\Services;
 use BlueSpice\Renderer\Params;
 use BlueSpice\Renderer\UserImage as DFDImage;
+use BlueSpice\Services;
 use OOUI\ButtonInputWidget;
 
 class UserImage extends \HTMLTextField {

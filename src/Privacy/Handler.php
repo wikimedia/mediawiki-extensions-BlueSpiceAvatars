@@ -6,10 +6,10 @@ use BlueSpice\Avatars\Extension as Avatars;
 use BlueSpice\Avatars\Generator;
 use BlueSpice\Privacy\IPrivacyHandler;
 use BlueSpice\Services;
-use User;
-use Status;
-use Exception;
 use Database;
+use Exception;
+use Status;
+use User;
 
 class Handler implements IPrivacyHandler {
 	protected $db;

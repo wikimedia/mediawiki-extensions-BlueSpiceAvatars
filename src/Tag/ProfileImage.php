@@ -2,11 +2,11 @@
 
 namespace BlueSpice\Avatars\Tag;
 
-use Parser;
-use PPFrame;
 use BlueSpice\Services;
 use BlueSpice\Tag\MarkerType;
 use BlueSpice\Tag\MarkerType\NoWiki;
+use Parser;
+use PPFrame;
 
 class ProfileImage extends \BlueSpice\Tag\Tag {
 

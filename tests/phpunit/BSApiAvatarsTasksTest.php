@@ -23,9 +23,9 @@ class BSApiAvatarsTasksTest extends BSApiTasksTestBase {
 
 	/**
 	 * 'generateAvatar' => [
-		   'examples' => [],
-		   'params' => []
-		],
+	 *	   'examples' => [],
+	 *	   'params' => []
+	 *	],
 	 * @return type
 	 */
 	public function testGenerateAvatar() {
@@ -33,24 +33,24 @@ class BSApiAvatarsTasksTest extends BSApiTasksTestBase {
 		  'generateAvatar', []
 		);
 
-		$this->assertEquals( true, $data->success, "Avatar was not generated" );
+		$this->assertTrue( $data->success, "Avatar was not generated" );
 	}
 
 	/**
 	 * 'setUserImage' => [
-		   'examples' => [
-			   [
-				   'userImage' => 'ProfileImage.png'
-			   ]
-		   ],
-		   'params' => [
-			   'userImage' => [
-				   'desc' => 'Name of the image to set',
-				   'type' => 'string',
-				   'required' => true
-			   ]
-		   ]
-	   ]
+	 *	   'examples' => [
+	 *		   [
+	 *			   'userImage' => 'ProfileImage.png'
+	 *		   ]
+	 *	   ],
+	 *	   'params' => [
+	 *		   'userImage' => [
+	 *			   'desc' => 'Name of the image to set',
+	 *			   'type' => 'string',
+	 *			   'required' => true
+	 *		   ]
+	 *	   ]
+	 * ]
 	 * @return type
 	 * @group Broken
 	 * @see https://phabricator.wikimedia.org/T199710
@@ -62,15 +62,15 @@ class BSApiAvatarsTasksTest extends BSApiTasksTestBase {
 		  ]
 		);
 
-		$this->assertEquals( true, $data->success, "Couldn't set user imag!\n" );
+		$this->assertTrue( $data->success, "Couldn't set user imag!\n" );
 	}
 
 	/**
 	 *
 	 * 'uploadFile' => [
-		   'examples' => [],
-		   'params' => []
-	   ],
+	 *	   'examples' => [],
+	 *	   'params' => []
+	 * ],
 	 *
 	 * @return type
 	 */

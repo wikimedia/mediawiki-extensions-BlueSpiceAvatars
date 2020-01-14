@@ -2,10 +2,10 @@
 
 namespace BlueSpice\Avatars\Html;
 
+use BlueSpice\Avatars\DynamicFileDispatcher\UserProfileImage;
+use BlueSpice\DynamicFileDispatcher\Params;
 use BlueSpice\DynamicFileDispatcher\UrlBuilder;
 use BlueSpice\Services;
-use BlueSpice\DynamicFileDispatcher\Params;
-use BlueSpice\Avatars\DynamicFileDispatcher\UserProfileImage;
 
 /**
  * DEPRECATED
