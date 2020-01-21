@@ -32,11 +32,8 @@ class UserProfileImage extends UPI {
 			return $this->getDefaultUserImageFile();
 		}
 
-		$width = $this->params[static::WIDTH];
-		$height = $this->params[static::HEIGHT];
-
-		$thumburl = $repoFile->createThumb( $width, $height );
-		return new Image( $this, $thumburl, $this->user );
+		return $this->getThumbnailImageFile(
+			$repoFile, static::WIDTH, static::HEIGHT );
 	}
 
 	/**
@@ -50,11 +47,22 @@ class UserProfileImage extends UPI {
 			$generator->generate( $this->user );
 		}
 
-		$thumburl = $file->createThumb(
-			$this->params[UPI::WIDTH],
-			$this->params[UPI::HEIGHT]
-		);
+		return $this->getThumbnailImageFile(
+			$file, UPI::WIDTH, UPI::HEIGHT );
+	}
 
-		return new Image( $this, $thumburl, $this->user );
+	/**
+	 * @param File $file
+	 * @param string $widthName
+	 * @param string $heightName
+	 * @return Image
+	 */
+	protected function getThumbnailImageFile( $file, $widthName, $heightName ) {
+		$params = [ 'width' => $this->params[ $widthName ] ];
+		$height = $this->params[ $heightName ];
+		if ( $height != -1 ) {
+			$params['height'] = $height;
+		}
+		return new Image( $this, $file->transform( $params ) );
 	}
 }
