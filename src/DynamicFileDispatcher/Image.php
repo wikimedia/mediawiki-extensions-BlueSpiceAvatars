@@ -3,30 +3,24 @@
 namespace BlueSpice\Avatars\DynamicFileDispatcher;
 
 use BlueSpice\DynamicFileDispatcher\Module;
+use MediaTransformError;
+use ThumbnailImage;
 
 class Image extends \BlueSpice\DynamicFileDispatcher\File {
 	/**
 	 *
-	 * @var string
+	 * @var ThumbnailImage|MediaTransformError|bool
 	 */
-	protected $src = '';
-
-	/**
-	 *
-	 * @var \User
-	 */
-	protected $user = null;
+	protected $thumb = false;
 
 	/**
 	 *
 	 * @param Module $dfd
-	 * @param string $src
-	 * @param \User $user
+	 * @param ThumbnailImage|MediaTransformError|bool $thumb
 	 */
-	public function __construct( Module $dfd, $src, $user ) {
+	public function __construct( Module $dfd, $thumb ) {
 		parent::__construct( $dfd );
-		$this->src = $src;
-		$this->user = $user;
+		$this->thumb = $thumb;
 	}
 
 	/**
@@ -35,38 +29,17 @@ class Image extends \BlueSpice\DynamicFileDispatcher\File {
 	 * @return void
 	 */
 	public function setHeaders( \WebResponse $response ) {
-		$headers = [];
+		if ( $this->thumb instanceof ThumbnailImage ) {
+			$headers = [];
+			$headers[] = 'Cache-Control: private';
+			$headers[] = 'Vary: Cookie';
 
-		$headers[] = 'Cache-Control: private';
-		$headers[] = 'Vary: Cookie';
-		$headers[] = 'Content-type: ' . $this->getMimeType();
-
-		// This is temporay code until the UserMiniProfile gets a rewrite
-		$path = $GLOBALS['IP'];
-		$scriptPath = $this->dfd->getConfig()->get( 'ScriptPath' );
-		if ( $scriptPath && $scriptPath != "" ) {
-			$countDirs = substr_count( $scriptPath, '/' );
-			$i = 0;
-			while ( $i < $countDirs ) {
-				$path = dirname( $path );
-				$i++;
-			}
+			$this->thumb->streamFile( $headers );
+		} elseif ( $this->thumb instanceof \MediaTransformError ) {
+			$response->statusHeader( $this->thumb->getHttpStatusCode() );
+		} else {
+			$response->statusHeader( 404 );
 		}
-		$path = str_replace(
-			[ '/img_auth.php/', '/nsfr_img_auth.php/' ],
-			'/images/',
-			$path . '/' . \BsFileSystemHelper::normalizePath( $this->src )
-		);
-
-		$streamer = new \HTTPFileStreamer(
-			$path,
-			[
-				'obResetFunc' => null,
-				'streamMimeFunc' => null
-			]
-		);
-
-		$res = $streamer->stream( $headers, true );
 	}
 
 	/**
@@ -74,6 +47,9 @@ class Image extends \BlueSpice\DynamicFileDispatcher\File {
 	 * @return string
 	 */
 	public function getMimeType() {
-		return 'image/png';
+		if ( $this->thumb instanceof ThumbnailImage ) {
+			return $this->thumb->getFile()->getMimeType();
+		}
+		return '';
 	}
 }
