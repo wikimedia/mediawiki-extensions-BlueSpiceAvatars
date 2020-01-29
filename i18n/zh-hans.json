@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Liuxinyu970226"
+			"Liuxinyu970226",
+			"Dimension"
 		]
 	},
 	"prefs-avatars": "头像",
@@ -25,5 +26,6 @@
 	"bs-avatars-file-upload-fieldset-title": "图片上传",
 	"bs-avatars-auto-generate-fieldset-title": "自动生成头像",
 	"apihelp-bs-avatars-tasks-description": "上传、生成与设置用户头像",
-	"apihelp-bs-avatars-tasks-summary": "上传、生成与设置用户头像"
+	"apihelp-bs-avatars-tasks-summary": "上传、生成与设置用户头像",
+	"bs-avatars-tag-profileimage-error-invalidusername": "用户名为空或无效"
 }
