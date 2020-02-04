@@ -20,7 +20,7 @@
 	"bs-avatars-upload-label": "Photo",
 	"bs-avatars-generate-new-label": "Générer un nouvel avatar",
 	"bs-avatars-warning-title": "Avertissement",
-	"bs-avatars-warning-text": "Vous avez défini une image utilisateur dans vos préférences. Utiliser des avatars effacera ce paramètre. Voulez-vous continuer ?",
+	"bs-avatars-warning-text": "Vous avez défini une image utilisateur dans vos préférences. Utiliser des avatars effacera ce paramètre. Voulez-vous continuer ?",
 	"bs-avatars-userimage-title": "Image du wiki ou URL de l’image",
 	"bs-avatars-userimage-help": "par ex. Picture.jpg ou http://localhost/Picture.gif",
 	"bs-avatars-userimage-alt": "Image du profil de l’utilisateur « $1 »",
