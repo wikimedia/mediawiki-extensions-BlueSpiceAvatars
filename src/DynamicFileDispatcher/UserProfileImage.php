@@ -59,17 +59,22 @@ class UserProfileImage extends UPI {
 	 * @return Image
 	 */
 	protected function getThumbnailImageFile( $file, $widthName, $heightName ) {
-		$params = [ 'width' => $this->params[ $widthName ] ];
-		if ( $file->getHeight() > $params[ 'width' ] ) {
+		$params = [ 'width' => (int)$this->params[$widthName] ];
+
+		if ( $file->getWidth() && $params[ 'width' ] >= $file->getWidth() ) {
 			$params[ 'width' ] = $file->getWidth() - 1;
 		}
-		$height = $this->params[ $heightName ];
+		$height = (int)$this->params[ $heightName ];
 		if ( $height != -1 ) {
 			$params['height'] = $height;
 		}
-		if ( isset( $params['height'] ) && $params['height'] > $file->getHeight() ) {
+		if (
+			isset( $params['height'] ) &&
+			$file->getHeight() && $params['height'] >= $file->getHeight()
+		) {
 			$params['height'] = $file->getHeight() - 1;
 		}
+
 		return new Image( $this, $file->transform( $params ) );
 	}
 }
