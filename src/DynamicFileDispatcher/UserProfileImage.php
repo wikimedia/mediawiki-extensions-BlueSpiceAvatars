@@ -24,7 +24,7 @@ class UserProfileImage extends UPI {
 		}
 
 		if ( wfParseUrl( $profileImage ) !== false ) {
-			return new ImageExternal( $this, $profileImage, $this->user );
+			return new ImageExternal( $this, false, $profileImage, $this->user );
 		}
 
 		$repoFile = \RepoGroup::singleton()->findFile( $profileImage );
