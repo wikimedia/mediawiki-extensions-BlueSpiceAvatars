@@ -75,8 +75,6 @@ class BSApiAvatarsTasksTest extends BSApiTasksTestBase {
 	 * @return type
 	 */
 	public function testUploadFile() {
-		$this->doLogin( 'uploader' );
-
 		// create example image
 		$extension = 'jpg';
 		$mimeType = 'image/jpg';
