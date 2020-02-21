@@ -133,7 +133,8 @@ class BSApiAvatarsTasksTest extends BSApiTasksTestBase {
 				$file,
 				$noOldArchive,
 				$comment,
-				$restrictDeletedVersions
+				$restrictDeletedVersions,
+				$this->getTestSysop()->getUser()
 			);
 
 			if ( !$status->isGood() ) {
