@@ -81,8 +81,8 @@ class ProfileImage extends \BlueSpice\Tag\Tag {
 			$processedArgs,
 			$parser,
 			$frame,
-			Services::getInstance()->getBSDynamicFileDispatcherUrlBuilder(),
-			Services::getInstance()->getBSRendererFactory()
+			Services::getInstance()->getService( 'BSDynamicFileDispatcherUrlBuilder' ),
+			Services::getInstance()->getService( 'BSRendererFactory' )
 		);
 	}
 

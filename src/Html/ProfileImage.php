@@ -9,7 +9,7 @@ use BlueSpice\Services;
 
 /**
  * DEPRECATED
- * @deprecated since version 3.1 - use Services::getInstance()->getBSRendererFactory()
+ * @deprecated since version 3.1 - use Services::getInstance()->getService( 'BSRendererFactory' )
  * ->get( 'userimage'... instead
  */
 class ProfileImage {
@@ -40,7 +40,7 @@ class ProfileImage {
 
 	/**
 	 * DEPRECATED
-	 * @deprecated since version 3.1 - use Services::getInstance()->getBSRendererFactory()
+	 * @deprecated since version 3.1 - use Services::getInstance()->getService( 'BSRendererFactory' )
 	 * ->get( 'userimage'... instead
 	 * @param \User $user
 	 * @param int $width
@@ -55,13 +55,13 @@ class ProfileImage {
 		$this->urlBuilder = $urlBuilder;
 		if ( $urlBuilder === null ) {
 			$this->urlBuilder = Services::getInstance()
-				->getBSDynamicFileDispatcherUrlBuilder();
+				->getService( 'BSDynamicFileDispatcherUrlBuilder' );
 		}
 	}
 
 	/**
 	 * DEPRECATED
-	 * @deprecated since version 3.1 - use Services::getInstance()->getBSRendererFactory()
+	 * @deprecated since version 3.1 - use Services::getInstance()->getService( 'BSRendererFactory' )
 	 * ->get( 'userimage'... instead
 	 * @return string
 	 */
@@ -74,7 +74,7 @@ class ProfileImage {
 			UserProfileImage::HEIGHT => $this->height
 		] );
 
-		$userHelper = Services::getInstance()->getBSUtilityFactory()
+		$userHelper = Services::getInstance()->getService( 'BSUtilityFactory' )
 			->getUserHelper( $this->user );
 		$displayUsername = $userHelper->getDisplayName();
 		$attribs = [
