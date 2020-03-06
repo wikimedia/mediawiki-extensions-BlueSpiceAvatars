@@ -16,7 +16,7 @@ class AddProfileImage extends PageHistoryLineEnding {
 		if ( $user instanceof \User === false ) {
 			return true;
 		}
-		$factory = $this->getServices()->getBSRendererFactory();
+		$factory = $this->getServices()->getService( 'BSRendererFactory' );
 		$params = [
 			DFDImage::PARAM_WIDTH => 32,
 			DFDImage::PARAM_HEIGHT => 32,

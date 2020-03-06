@@ -27,7 +27,7 @@ class UserImage extends \HTMLTextField {
 			'ext.bluespice.avatars.preferences.styles'
 		);
 
-		$factory = Services::getInstance()->getBSRendererFactory();
+		$factory = Services::getInstance()->getService( 'BSRendererFactory' );
 		$params = [
 			DFDImage::PARAM_WIDTH => 128,
 			DFDImage::PARAM_HEIGHT => 128,
