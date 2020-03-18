@@ -128,13 +128,14 @@ class BSApiAvatarsTasksTest extends BSApiTasksTestBase {
 			$noOldArchive = "";
 			$comment = "removing for test";
 			$restrictDeletedVersions = false;
+			$user = $this->getTestSysop()->getUser();
 			$status = FileDeleteForm::doDelete(
 				$title,
 				$file,
 				$noOldArchive,
 				$comment,
 				$restrictDeletedVersions,
-				$this->getTestSysop()->getUser()
+				$user
 			);
 
 			if ( !$status->isGood() ) {
@@ -142,7 +143,7 @@ class BSApiAvatarsTasksTest extends BSApiTasksTestBase {
 			}
 
 			$page = WikiPage::factory( $title );
-			$page->doDeleteArticle( "removing for test" );
+			$page->doDeleteArticleReal( "removing for test", $user );
 
 			// see if it now doesn't exist; reload
 			$title = Title::newFromText( $title->getText(), NS_FILE );
