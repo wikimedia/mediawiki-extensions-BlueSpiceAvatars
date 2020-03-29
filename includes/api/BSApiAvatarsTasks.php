@@ -2,6 +2,7 @@
 
 use BlueSpice\Api\Response\Standard;
 use BlueSpice\Avatars\Generator;
+use MediaWiki\MediaWikiServices;
 
 class BSApiAvatarsTasks extends BSApiTasksBase {
 
@@ -98,7 +99,7 @@ class BSApiAvatarsTasks extends BSApiTasksBase {
 		$oResponse = $this->makeStandardReturn();
 		$sUserImage = $oTaskData->userImage;
 		// check if string is URL or valid file
-		$oFile = wfFindFile( $sUserImage );
+		$oFile = MediaWikiServices::getInstance()->getRepoGroup()->findFile( $sUserImage );
 		$bIsImage = is_object( $oFile ) && $oFile->canRender();
 		if ( !wfParseUrl( $sUserImage ) && !$bIsImage ) {
 			$oResponse->message = $this->msg( 'bs-avatars-set-userimage-failed' )->plain();

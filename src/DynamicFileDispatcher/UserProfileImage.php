@@ -6,6 +6,7 @@ use BlueSpice\Avatars\Generator;
 use BlueSpice\DynamicFileDispatcher\UserProfileImage\AnonImage;
 use BlueSpice\DynamicFileDispatcher\UserProfileImage as UPI;
 use File;
+use MediaWiki\MediaWikiServices;
 
 class UserProfileImage extends UPI {
 
@@ -28,7 +29,7 @@ class UserProfileImage extends UPI {
 			return new ImageExternal( $this, false, $profileImage, $this->user );
 		}
 
-		$repoFile = \RepoGroup::singleton()->findFile( $profileImage );
+		$repoFile = MediaWikiServices::getInstance()->getRepoGroup()->findFile( $profileImage );
 		if ( $repoFile === false || !$repoFile->exists() ) {
 			return $this->getDefaultUserImageFile();
 		}

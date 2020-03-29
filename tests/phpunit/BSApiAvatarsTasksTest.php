@@ -1,6 +1,7 @@
 <?php
 
 use BlueSpice\Tests\BSApiTasksTestBase;
+use MediaWiki\MediaWikiServices;
 
 /*
  * Test BlueSpiceAvatars API Endpoints
@@ -123,7 +124,8 @@ class BSApiAvatarsTasksTest extends BSApiTasksTestBase {
 	 */
 	public function deleteFileByTitle( $title ) {
 		if ( $title->exists() ) {
-			$file = wfFindFile( $title, [ 'ignoreRedirect' => true ] );
+			$file = MediaWikiServices::getInstance()->getRepoGroup()
+				->findFile( $title, [ 'ignoreRedirect' => true ] );
 			// yes this really needs to be set this way
 			$noOldArchive = "";
 			$comment = "removing for test";
@@ -173,7 +175,7 @@ class BSApiAvatarsTasksTest extends BSApiTasksTestBase {
 	 */
 	public function deleteFileByContent( $filePath ) {
 		$hash = FSFile::getSha1Base36FromPath( $filePath );
-		$dupes = RepoGroup::singleton()->findBySha1( $hash );
+		$dupes = MediaWikiServices::getInstance()->getRepoGroup()->findBySha1( $hash );
 		$success = true;
 		foreach ( $dupes as $dupe ) {
 			$success &= $this->deleteFileByTitle( $dupe->getTitle() );
