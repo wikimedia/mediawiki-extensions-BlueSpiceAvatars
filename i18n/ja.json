@@ -3,7 +3,8 @@
 		"authors": [
 			"Shirayuki",
 			"S2KTS",
-			"Kkairri"
+			"Kkairri",
+			"Aefgh39622"
 		]
 	},
 	"prefs-avatars": "アバター",
@@ -25,5 +26,6 @@
 	"bs-avatars-set-userimage-saved": "利用者の画像を保存しました。",
 	"bs-avatars-file-upload-fieldset-title": "画像のアップロード",
 	"bs-avatars-auto-generate-fieldset-title": "アバターの自動生成",
-	"bs-avatars-userimage-alt": "利用者 \"$1\" のプロフィール画像"
+	"bs-avatars-userimage-alt": "利用者 \"$1\" のプロフィール画像",
+	"apihelp-bs-avatars-tasks-description": "ユーザーアバターのアップロード、生成、設定"
 }
