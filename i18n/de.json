@@ -1,12 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Marc Reymann <reymann@hallowelt.biz>",
-			"Stephan Muggli <muggli@hallowelt.biz>",
-			"Metalhead64",
-			"Kghbln",
 			"Hwboehm",
-			"Mglaser"
+			"Kghbln",
+			"Marc Reymann <reymann@hallowelt.biz>",
+			"Metalhead64",
+			"Mglaser",
+			"Stephan Muggli <muggli@hallowelt.biz>"
 		]
 	},
 	"prefs-avatars": "Benutzerbilder",
