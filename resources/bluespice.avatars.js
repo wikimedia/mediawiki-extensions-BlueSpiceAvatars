@@ -9,7 +9,6 @@
 		e.preventDefault();
 		mw.loader.using( [
 			"user.options",
-			'mediawiki.notify',
 			'ext.bluespice.extjs'
 		] ).done( function() {
 			Ext.onReady( function() {
