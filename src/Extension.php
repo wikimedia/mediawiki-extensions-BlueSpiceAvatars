@@ -29,6 +29,8 @@
 
 namespace BlueSpice\Avatars;
 
+use MediaWiki\MediaWikiServices;
+
 class Extension extends \BlueSpice\Extension {
 
 	/**
@@ -40,9 +42,7 @@ class Extension extends \BlueSpice\Extension {
 	 * @return boolean|\File
 	 */
 	public static function getAvatarFile( $iUserId ) {
-		$config = \BsExtensionManager::getExtension(
-			'BlueSpiceAvatars'
-		)->getConfig();
+		$config = MediaWikiServices::getInstance()->getConfigFactory()->makeConfig( 'bsg' );
 		$avatarGenerator = new \BlueSpice\Avatars\Generator( $config );
 		return $avatarGenerator->getAvatarFile( \User::newFromId( $iUserId ) );
 	}
@@ -68,9 +68,7 @@ class Extension extends \BlueSpice\Extension {
 	 */
 	public function generateAvatar( $oUser, $aParams = [], $bOverwrite = false ) {
 		wfDeprecated( __METHOD__, "3.0.0" );
-		$config = \BsExtensionManager::getExtension(
-			'BlueSpiceAvatars'
-		)->getConfig();
+		$config = MediaWikiServices::getInstance()->getConfigFactory()->makeConfig( 'bsg' );
 		$avatarGenerator = new \BlueSpice\Avatars\Generator( $config );
 
 		if ( $bOverwrite ) {
