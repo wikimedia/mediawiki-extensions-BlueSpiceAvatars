@@ -60,7 +60,6 @@ class BSApiAvatarsTasks extends BSApiTasksBase {
 		$oResponse = $this->makeStandardReturn();
 		$oUser = $this->getUser();
 		\BlueSpice\Avatars\Extension::unsetUserImage( $oUser );
-		$oAvatars = BsExtensionManager::getExtension( 'Avatars' );
 		$sAvatarFileName = Generator::FILE_PREFIX . $oUser->getId() . ".png";
 		$oStatus = BsFileSystemHelper::uploadAndConvertImage(
 			$this->getRequest()->getVal( 'name' ),
