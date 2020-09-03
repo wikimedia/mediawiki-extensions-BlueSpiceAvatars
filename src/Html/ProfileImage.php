@@ -5,7 +5,7 @@ namespace BlueSpice\Avatars\Html;
 use BlueSpice\Avatars\DynamicFileDispatcher\UserProfileImage;
 use BlueSpice\DynamicFileDispatcher\Params;
 use BlueSpice\DynamicFileDispatcher\UrlBuilder;
-use BlueSpice\Services;
+use MediaWiki\MediaWikiServices;
 
 /**
  * DEPRECATED
@@ -54,7 +54,7 @@ class ProfileImage {
 		$this->height = $height;
 		$this->urlBuilder = $urlBuilder;
 		if ( $urlBuilder === null ) {
-			$this->urlBuilder = Services::getInstance()
+			$this->urlBuilder = MediaWikiServices::getInstance()
 				->getService( 'BSDynamicFileDispatcherUrlBuilder' );
 		}
 	}
@@ -74,7 +74,7 @@ class ProfileImage {
 			UserProfileImage::HEIGHT => $this->height
 		] );
 
-		$userHelper = Services::getInstance()->getService( 'BSUtilityFactory' )
+		$userHelper = MediaWikiServices::getInstance()->getService( 'BSUtilityFactory' )
 			->getUserHelper( $this->user );
 		$displayUsername = $userHelper->getDisplayName();
 		$attribs = [

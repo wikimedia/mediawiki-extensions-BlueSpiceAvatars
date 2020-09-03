@@ -2,9 +2,9 @@
 
 namespace BlueSpice\Avatars\Tag;
 
-use BlueSpice\Services;
 use BlueSpice\Tag\MarkerType;
 use BlueSpice\Tag\MarkerType\NoWiki;
+use MediaWiki\MediaWikiServices;
 use Parser;
 use PPFrame;
 
@@ -81,8 +81,8 @@ class ProfileImage extends \BlueSpice\Tag\Tag {
 			$processedArgs,
 			$parser,
 			$frame,
-			Services::getInstance()->getService( 'BSDynamicFileDispatcherUrlBuilder' ),
-			Services::getInstance()->getService( 'BSRendererFactory' )
+			MediaWikiServices::getInstance()->getService( 'BSDynamicFileDispatcherUrlBuilder' ),
+			MediaWikiServices::getInstance()->getService( 'BSRendererFactory' )
 		);
 	}
 
