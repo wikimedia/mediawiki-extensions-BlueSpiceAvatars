@@ -4,7 +4,7 @@ namespace BlueSpice\Avatars\Html\FormField;
 
 use BlueSpice\Renderer\Params;
 use BlueSpice\Renderer\UserImage as DFDImage;
-use BlueSpice\Services;
+use MediaWiki\MediaWikiServices;
 use OOUI\ButtonInputWidget;
 
 class UserImage extends \HTMLTextField {
@@ -28,7 +28,7 @@ class UserImage extends \HTMLTextField {
 			'ext.bluespice.avatars.preferences.styles'
 		);
 
-		$factory = Services::getInstance()->getService( 'BSRendererFactory' );
+		$factory = MediaWikiServices::getInstance()->getService( 'BSRendererFactory' );
 		$params = [
 			DFDImage::PARAM_WIDTH => 128,
 			DFDImage::PARAM_HEIGHT => 128,
