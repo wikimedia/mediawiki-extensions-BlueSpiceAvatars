@@ -2,7 +2,6 @@
 
 namespace BlueSpice\Avatars\DynamicFileDispatcher;
 
-use BlueSpice\Avatars\Generator;
 use BlueSpice\DynamicFileDispatcher\UserProfileImage as UPI;
 use BlueSpice\DynamicFileDispatcher\UserProfileImage\AnonImage;
 use File;
@@ -43,7 +42,9 @@ class UserProfileImage extends UPI {
 	 * @return Image
 	 */
 	protected function getDefaultUserImageFile() {
-		$generator = new Generator( $this->getConfig() );
+		$generator = MediaWikiServices::getInstance()->getService(
+			'BSAvatarsAvatarGenerator'
+		);
 		$file = $generator->getAvatarFile( $this->user );
 		if ( !$file->exists() ) {
 			$generator->generate( $this->user );

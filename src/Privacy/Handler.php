@@ -50,8 +50,9 @@ class Handler implements IPrivacyHandler {
 		$user = User::newFromName( $oldUsername );
 		$user->setName( $newUsername );
 
-		$config = MediaWikiServices::getInstance()->getConfigFactory()->makeConfig( 'bsg' );
-		$generator = new Generator( $config );
+		$generator = MediaWikiServices::getInstance()->getService(
+			'BSAvatarsAvatarGenerator'
+		);
 		try {
 			$generator->generate( $user, [ Generator::PARAM_OVERWRITE => true ] );
 		} catch ( Exception $ex ) {
