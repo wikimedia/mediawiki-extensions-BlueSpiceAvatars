@@ -2,6 +2,8 @@
 
 namespace BlueSpice\Avatars\ConfigDefinition;
 
+use MediaWiki\MediaWikiServices;
+
 class AvatarsGenerator extends \BlueSpice\ConfigDefinition\ArraySetting {
 
 	/**
@@ -37,9 +39,14 @@ class AvatarsGenerator extends \BlueSpice\ConfigDefinition\ArraySetting {
 	 * @return array
 	 */
 	protected function getOptions() {
-		return [
-			'InstantAvatar' => 'InstantAvatar',
-			'Identicon' => 'Identicon',
-		];
+		$return = [];
+		$factory = MediaWikiServices::getInstance()->getService(
+			'BSAvatarsAvatarGeneratorFactory'
+		);
+		foreach ( $factory->getAllGenerators() as $generator ) {
+			// TODO: generators should return a label for ui
+			$return[$generator->getName()] = $generator->getName();
+		}
+		return $return;
 	}
 }
