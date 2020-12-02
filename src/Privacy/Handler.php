@@ -5,11 +5,11 @@ namespace BlueSpice\Avatars\Privacy;
 use BlueSpice\Avatars\Extension as Avatars;
 use BlueSpice\Avatars\Generator;
 use BlueSpice\Privacy\IPrivacyHandler;
-use BlueSpice\Services;
 use User;
 use Status;
 use Exception;
 use Database;
+use MediaWiki\MediaWikiServices;
 
 class Handler implements IPrivacyHandler {
 	protected $db;
@@ -50,8 +50,9 @@ class Handler implements IPrivacyHandler {
 		$user = User::newFromName( $oldUsername );
 		$user->setName( $newUsername );
 
-		$config = Services::getInstance()->getConfigFactory()->makeConfig( 'bsg' );
-		$generator = new Generator( $config );
+		$generator = MediaWikiServices::getInstance()->getService(
+			'BSAvatarsAvatarGenerator'
+		);
 		try {
 			$generator->generate( $user, [ Generator::PARAM_OVERWRITE => true ] );
 		} catch ( Exception $ex ) {
