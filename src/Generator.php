@@ -2,6 +2,9 @@
 
 namespace BlueSpice\Avatars;
 
+use Config;
+use MediaWiki\MediaWikiServices;
+
 class Generator {
 	const FILE_PREFIX = "BS_avatar_";
 
@@ -11,16 +14,32 @@ class Generator {
 
 	/**
 	 *
-	 * @var \Config
+	 * @var Config
 	 */
 	protected $config = null;
 
 	/**
 	 *
-	 * @param \Config $config
+	 * @var AvatarGeneratorFactory
 	 */
-	public function __construct( $config ) {
+	protected $factory = null;
+
+	/**
+	 *
+	 * @param Config $config
+	 * @param AvatarGeneratorFactory|null $factory
+	 */
+	public function __construct( Config $config, AvatarGeneratorFactory $factory = null ) {
 		$this->config = $config;
+		if ( !$factory ) {
+			// deprecated since version 3.1.13 - Use Service BSAvatarsAvatarGenerator
+			// to create this instance
+			wfDebugLog( 'bluespice-deprecations', __METHOD__, 'private' );
+			$factory = MediaWikiServices::getInstance()->getService(
+				'BSAvatarsAvatarGeneratorFactory'
+			);
+		}
+		$this->factory = $factory;
 	}
 
 	/**
@@ -38,24 +57,16 @@ class Generator {
 		}
 
 		if ( !$oFile->exists() || isset( $params[static::PARAM_OVERWRITE] ) ) {
-			switch ( $this->config->get( 'AvatarsGenerator' ) ) {
-				case 'Identicon':
-					$rawPNGAvatar = $this->generateIdention(
-						$user,
-						$defaultSize
-					);
-					break;
-				case 'InstantAvatar':
-					$rawPNGAvatar = $this->generateInstantAvatar(
-						$user,
-						$defaultSize
-					);
-					break;
-				default:
-					throw new \MWException(
-						'FATAL: Avatar generator not found!'
-					);
+			$generator = $this->factory->newFromName(
+				$this->config->get( 'AvatarsGenerator' )
+			);
+			if ( !$generator ) {
+				throw new \MWException(
+					"Avatar generator '{$this->config->get( 'AvatarsGenerator' )}' not found!"
+				);
 			}
+
+			$rawPNGAvatar = $generator->generate( $user, $defaultSize );
 
 			$status = \BsFileSystemHelper::saveToDataDirectory(
 				$oFile->getName(),
@@ -84,54 +95,6 @@ class Generator {
 
 			$user->invalidateCache();
 		}
-	}
-
-	/**
-	 *
-	 * @param \User $user
-	 * @param int $size
-	 * @return string
-	 */
-	protected function generateIdention( \User $user, $size ) {
-		require_once dirname( __DIR__ ) . "/includes/lib/Identicon/identicon.php";
-		return generateIdenticon( $user->getId(), $size );
-	}
-
-	/**
-	 *
-	 * @param \User $user
-	 * @param int $size
-	 * @return string
-	 */
-	protected function generateInstantAvatar( \User $user, $size ) {
-		$dir = dirname( __DIR__ ) . "/includes/lib/InstantAvatar";
-		require_once "$dir/instantavatar.php";
-
-		$instantAvatar = new \InstantAvatar(
-			"$dir/Comfortaa-Regular.ttf",
-			round( 18 / 40 * $size ),
-			$size,
-			$size,
-			2,
-			"$dir/glass.png"
-		);
-
-		if ( !empty( $user->getRealName() ) ) {
-			preg_match_all(
-				'#(^| )(.)#u',
-				$user->getRealName(),
-				$matches
-			);
-			$chars = implode( '', $matches[2] );
-			if ( mb_strlen( $chars ) < 2 ) {
-				$chars = $user->getRealName();
-			}
-		} else {
-			$chars = $user->getName();
-		}
-
-		$instantAvatar->generateRandom( $chars );
-		return $instantAvatar->getRawPNG();
 	}
 
 	/**

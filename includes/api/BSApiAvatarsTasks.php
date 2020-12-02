@@ -128,7 +128,7 @@ class BSApiAvatarsTasks extends BSApiTasksBase {
 
 		$oUser = $this->getUser();
 		\BlueSpice\Avatars\Extension::unsetUserImage( $oUser );
-		$generator = new Generator( $this->getConfig() );
+		$generator = $this->getServices()->getService( 'BSAvatarsAvatarGenerator' );
 		$generator->generate( $oUser, [ Generator::PARAM_OVERWRITE => true ] );
 
 		$oResponse->success = true;

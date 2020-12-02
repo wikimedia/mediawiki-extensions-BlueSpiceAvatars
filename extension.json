@@ -37,8 +37,17 @@
 			"Handlers": [
 				"\\BlueSpice\\Avatars\\Privacy\\Handler"
 			]
+		},
+		"BlueSpiceAvatars": {
+			"AvatarGeneratorRegistry": {
+				"Identicon": "\\BlueSpice\\Avatars\\AvatarGenerator\\Identicon::factory",
+				"InstantAvatar": "\\BlueSpice\\Avatars\\AvatarGenerator\\InstantAvatar::factory"
+			}
 		}
 	},
+	"ServiceWiringFiles": [
+		"includes/ServiceWiring.php"
+	],
 	"APIModules": {
 		"bs-avatars-tasks": "BSApiAvatarsTasks"
 	},
