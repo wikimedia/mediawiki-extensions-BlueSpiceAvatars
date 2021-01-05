@@ -18,6 +18,16 @@ use MediaWiki\MediaWikiServices;
  */
 class BSApiAvatarsTasksTest extends BSApiTasksTestBase {
 
+	/** @var array Used to fake $_FILES in tests and given to FauxRequest */
+	protected $requestDataFiles = [];
+
+	/** @inheritDoc */
+	protected function buildFauxRequest( $params, $session ) {
+		$request = parent::buildFauxRequest( $params, $session );
+		$request->setUploadData( $this->requestDataFiles );
+		return $request;
+	}
+
 	protected function getModuleName() {
 		return "bs-avatars-tasks";
 	}
@@ -208,7 +218,7 @@ class BSApiAvatarsTasksTest extends BSApiTasksTestBase {
 			throw new Exception( "couldn't stat $tmpName" );
 		}
 
-		$_FILES[$fieldName] = [
+		$this->requestDataFiles[$fieldName] = [
 			'name' => $fileName,
 			'type' => $type,
 			'tmp_name' => $tmpName,
@@ -232,7 +242,7 @@ class BSApiAvatarsTasksTest extends BSApiTasksTestBase {
 			throw new Exception( "couldn't stat $tmpName" );
 		}
 
-		$_FILES[$fieldName] = [
+		$this->requestDataFiles[$fieldName] = [
 			'name' => $fileName,
 			'type' => $type,
 			'tmp_name' => $tmpName,
