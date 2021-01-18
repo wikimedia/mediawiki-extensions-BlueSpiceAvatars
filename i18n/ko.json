@@ -9,6 +9,7 @@
 		]
 	},
 	"prefs-avatars": "아바타",
+	"bs-avatars-pref-generator": "생성자:",
 	"bs-avatars-pref-defaultsize": "픽셀의 기본 크기:",
 	"bs-avatars-pref-userimage": "사용자 그림:",
 	"bs-avatars-pref-userimage-img-alt": "현재 사용자 그림",
