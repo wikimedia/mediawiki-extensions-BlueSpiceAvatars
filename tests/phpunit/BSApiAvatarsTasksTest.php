@@ -27,7 +27,6 @@ class BSApiAvatarsTasksTest extends BSApiTasksTestBase {
 	 *	   'examples' => [],
 	 *	   'params' => []
 	 *	],
-	 * @return type
 	 */
 	public function testGenerateAvatar() {
 		$data = $this->executeTask(
@@ -52,7 +51,6 @@ class BSApiAvatarsTasksTest extends BSApiTasksTestBase {
 	 *		   ]
 	 *	   ]
 	 * ]
-	 * @return type
 	 * @group Broken
 	 * @see https://phabricator.wikimedia.org/T199710
 	 */
@@ -72,8 +70,6 @@ class BSApiAvatarsTasksTest extends BSApiTasksTestBase {
 	 *	   'examples' => [],
 	 *	   'params' => []
 	 * ],
-	 *
-	 * @return type
 	 */
 	public function testUploadFile() {
 		// create example image
