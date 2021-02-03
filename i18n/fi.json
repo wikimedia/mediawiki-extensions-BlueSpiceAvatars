@@ -1,10 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Stryn",
-			"Pyscowicz"
+			"Pyscowicz",
+			"Stryn"
 		]
 	},
 	"bs-avatars-upload-label": "Kuva",
-	"bs-avatars-warning-title": "Varoitus"
+	"bs-avatars-warning-title": "Varoitus",
+	"bs-avatars-upload-title": "Vaihda profiilikuva",
+	"bs-avatars-userimage-help": "esim. Kuva.jpg tai http://localhost/Kuva.gif"
 }

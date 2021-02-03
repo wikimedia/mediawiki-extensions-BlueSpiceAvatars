@@ -1,11 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Tyey",
-			"아라",
-			"Hwangjy9",
 			"HDNua",
-			"Ykhwong"
+			"Hwangjy9",
+			"Tyey",
+			"Ykhwong",
+			"아라"
 		]
 	},
 	"prefs-avatars": "아바타",
@@ -28,5 +28,6 @@
 	"bs-avatars-userimage-title": "위키 또는 사진 URL의 사진",
 	"apihelp-bs-avatars-tasks-description": "사용자 아바타의 업로드, 생성, 설정",
 	"apihelp-bs-avatars-tasks-summary": "사용자 아바타의 업로드, 생성, 설정",
-	"bs-avatars-tag-profileimage-error-invalidusername": "\"username\" 변수는 필수이며 유효한 사용자 이름이 포함되어야 합니다"
+	"bs-avatars-tag-profileimage-error-invalidusername": "\"username\" 변수는 필수이며 유효한 사용자 이름이 포함되어야 합니다",
+	"bs-avatars-pref-generator": "생성자:"
 }
