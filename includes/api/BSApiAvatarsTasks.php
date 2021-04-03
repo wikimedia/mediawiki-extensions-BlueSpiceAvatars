@@ -98,7 +98,8 @@ class BSApiAvatarsTasks extends BSApiTasksBase {
 		$oResponse = $this->makeStandardReturn();
 		$sUserImage = $oTaskData->userImage;
 		// check if string is URL or valid file
-		$oFile = MediaWikiServices::getInstance()->getRepoGroup()->findFile( $sUserImage );
+		$services = MediaWikiServices::getInstance();
+		$oFile = $services->getRepoGroup()->findFile( $sUserImage );
 		$bIsImage = is_object( $oFile ) && $oFile->canRender();
 		if ( !wfParseUrl( $sUserImage ) && !$bIsImage ) {
 			$oResponse->message = $this->msg( 'bs-avatars-set-userimage-failed' )->plain();
@@ -106,8 +107,9 @@ class BSApiAvatarsTasks extends BSApiTasksBase {
 		}
 
 		$oUser = $this->getUser();
-		$oUser->setOption( 'bs-avatars-profileimage', $sUserImage );
-		$oUser->saveSettings();
+		$userOptionsManager = $services->getUserOptionsManager();
+		$userOptionsManager->setOption( $oUser, 'bs-avatars-profileimage', $sUserImage );
+		$userOptionsManager->saveOptions( $oUser );
 
 		$oResponse->success = true;
 		$oResponse->message = $this->msg( 'bs-avatars-set-userimage-saved' )->plain();

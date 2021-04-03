@@ -53,8 +53,9 @@ class Extension extends \BlueSpice\Extension {
 	 */
 	public static function unsetUserImage( $oUser ) {
 		if ( $oUser->getOption( 'bs-avatars-profileimage' ) ) {
-			$oUser->setOption( 'bs-avatars-profileimage', false );
-			$oUser->saveSettings();
+			$userOptionsManager = MediaWikiServices::getInstance()->getUserOptionsManager();
+			$userOptionsManager->setOption( $oUser, 'bs-avatars-profileimage', false );
+			$userOptionsManager->saveOptions( $oUser );
 			$oUser->invalidateCache();
 		}
 	}
