@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"1917 Ekim Devrimi",
-			"Kumkumuk"
+			"Kumkumuk",
+			"Mirzali"
 		]
 	},
 	"prefs-avatars": "Avatati",
@@ -20,7 +21,7 @@
 	"bs-avatars-userimage-help": "Picture.jpg yana http://localhost/Picture.gif vs",
 	"bs-avatars-set-userimage-failed": "URL yana Wiki ra resim nêari ya.",
 	"bs-avatars-set-userimage-saved": "Resimê karberi stari ya.",
-	"bs-avatars-file-upload-fieldset-title": "Resim bar ke",
+	"bs-avatars-file-upload-fieldset-title": "Resım bar ke",
 	"bs-avatars-auto-generate-fieldset-title": "Otomatik avatar vıraz",
 	"bs-avatars-pref-userimage": "Resımê karberi:",
 	"bs-avatars-pref-userimage-img-alt": "Mewcud resımê karberi",
