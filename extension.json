@@ -20,11 +20,11 @@
 			"Extensions": {
 				"BlueSpiceAvatars": {
 					"className": "\\BlueSpice\\Avatars\\Extension",
-					"extPath": "/BlueSpiceAvatars",
-					"configDefinitions": {
-						"AvatarsGenerator": "\\BlueSpice\\Avatars\\ConfigDefinition\\AvatarsGenerator::getInstance"
-					}
+					"extPath": "/BlueSpiceAvatars"
 				}
+			},
+			"ConfigDefinitionRegistry": {
+				"AvatarsGenerator": "\\BlueSpice\\Avatars\\ConfigDefinition\\AvatarsGenerator::getInstance"
 			},
 			"DynamicFileRegistry": {
 				"userprofileimage": "\\BlueSpice\\Avatars\\DynamicFileDispatcher\\UserProfileImage"
