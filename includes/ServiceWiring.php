@@ -7,14 +7,14 @@ use MediaWiki\MediaWikiServices;
 
 return [
 
-	'BSAvatarsAvatarGenerator' => function ( MediaWikiServices $services ) {
+	'BSAvatarsAvatarGenerator' => static function ( MediaWikiServices $services ) {
 		return new Generator(
 			$services->getConfigFactory()->makeConfig( 'bsg' ),
 			$services->getService( 'BSAvatarsAvatarGeneratorFactory' )
 		);
 	},
 
-	'BSAvatarsAvatarGeneratorFactory' => function ( MediaWikiServices $services ) {
+	'BSAvatarsAvatarGeneratorFactory' => static function ( MediaWikiServices $services ) {
 		$registry = new ExtensionAttributeBasedRegistry(
 			'BlueSpiceAvatarsAvatarGeneratorRegistry'
 		);
