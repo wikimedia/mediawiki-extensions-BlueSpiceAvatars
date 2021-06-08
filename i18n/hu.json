@@ -1,11 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Misibacsi"
+			"Misibacsi",
+			"Tacsipacsi"
 		]
 	},
 	"bs-avatars-pref-defaultsize": "Alapértelmezett méret pixelben:",
-	"bs-avatars-upload-complete": "A kép feltöltése sikeres.",
+	"bs-avatars-upload-complete": "A kép feltöltve.",
 	"bs-avatars-generate-complete": "Új avatár jött létre.",
 	"bs-avatars-upload-title": "Profilkép módosítása",
 	"bs-avatars-upload-label": "Kép",
