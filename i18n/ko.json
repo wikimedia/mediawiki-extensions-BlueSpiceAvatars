@@ -28,5 +28,6 @@
 	"bs-avatars-auto-generate-fieldset-title": "아바타 자동 생성",
 	"apihelp-bs-avatars-tasks-description": "사용자 아바타의 업로드, 생성, 설정",
 	"apihelp-bs-avatars-tasks-summary": "사용자 아바타의 업로드, 생성, 설정",
-	"bs-avatars-tag-profileimage-error-invalidusername": "\"username\" 변수는 필수이며 유효한 사용자 이름이 포함되어야 합니다"
+	"bs-avatars-tag-profileimage-error-invalidusername": "\"username\" 변수는 필수이며 유효한 사용자 이름이 포함되어야 합니다",
+	"bs-avatars-pref-generator": "생성자:"
 }

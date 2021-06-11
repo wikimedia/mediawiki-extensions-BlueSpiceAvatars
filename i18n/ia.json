@@ -20,5 +20,11 @@
 	"bs-avatars-set-userimage-failed": "Isto non es un URL valide ni un imagine del wiki.",
 	"bs-avatars-set-userimage-saved": "Le imagine de usator ha essite salveguardate.",
 	"bs-avatars-file-upload-fieldset-title": "Imagine incargate",
-	"bs-avatars-auto-generate-fieldset-title": "Generar automaticamente un avatar"
+	"bs-avatars-auto-generate-fieldset-title": "Generar automaticamente un avatar",
+	"bs-avatars-pref-userimage": "Imagine del usator:",
+	"bs-avatars-pref-userimage-img-alt": "Tu imagine de usator actual",
+	"bs-avatars-userimage-alt": "Imagine de profilo del usator \"$1\"",
+	"apihelp-bs-avatars-tasks-description": "Incargar, generar e fixar avatares de usator",
+	"apihelp-bs-avatars-tasks-summary": "Incargar, generar e fixar avatares de usator",
+	"bs-avatars-tag-profileimage-error-invalidusername": "Le parametro \"username\" es obligatori e debe continer un nomine de usator valide"
 }
