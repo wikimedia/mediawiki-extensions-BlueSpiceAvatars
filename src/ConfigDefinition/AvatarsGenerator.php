@@ -49,4 +49,12 @@ class AvatarsGenerator extends \BlueSpice\ConfigDefinition\ArraySetting {
 		}
 		return $return;
 	}
+
+	/**
+	 *
+	 * @return string
+	 */
+	public function getHelpMessageKey() {
+		return 'bs-avatars-pref-generator-help';
+	}
 }
