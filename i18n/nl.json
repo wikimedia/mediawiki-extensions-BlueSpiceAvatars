@@ -31,5 +31,8 @@
 	"bs-avatars-set-userimage-failed": "Geen geldige URL of afbeelding van wiki.",
 	"bs-avatars-set-userimage-saved": "Profielfoto opgeslagen",
 	"bs-avatars-file-upload-fieldset-title": "Afbeelding uploaden",
-	"bs-avatars-auto-generate-fieldset-title": "Automatisch avatar genereren"
+	"bs-avatars-auto-generate-fieldset-title": "Automatisch avatar genereren",
+	"apihelp-bs-avatars-tasks-description": "Gebruikersavatars uploaden, genereren en instellen",
+	"apihelp-bs-avatars-tasks-summary": "Gebruikersavatars uploaden, genereren en instellen",
+	"bs-avatars-tag-profileimage-error-invalidusername": "Parameter \"username\" is vereist en moet een geldige gebruikersnaam bevatten"
 }
