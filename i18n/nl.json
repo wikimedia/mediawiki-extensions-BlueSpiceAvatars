@@ -31,5 +31,8 @@
 	"bs-avatars-auto-generate-fieldset-title": "Automatisch avatar genereren",
 	"bs-avatars-pref-userimage": "Gebruikersafbeelding:",
 	"bs-avatars-pref-userimage-img-alt": "Uw huidige gebruikersafbeelding",
-	"bs-avatars-userimage-alt": "Profielafbeelding van gebruiker \"$1\""
+	"bs-avatars-userimage-alt": "Profielafbeelding van gebruiker \"$1\"",
+	"apihelp-bs-avatars-tasks-description": "Gebruikersavatars uploaden, genereren en instellen",
+	"apihelp-bs-avatars-tasks-summary": "Gebruikersavatars uploaden, genereren en instellen",
+	"bs-avatars-tag-profileimage-error-invalidusername": "Parameter \"username\" is vereist en moet een geldige gebruikersnaam bevatten"
 }

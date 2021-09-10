@@ -6,5 +6,6 @@
 	},
 	"bs-avatars-upload-label": "Billede",
 	"bs-avatars-warning-title": "Advarsel",
-	"bs-avatars-upload-title": "Ændre profilbillede"
+	"bs-avatars-upload-title": "Ændre profilbillede",
+	"bs-avatars-pref-defaultsize": "Standardstørrelse i pixel:"
 }
