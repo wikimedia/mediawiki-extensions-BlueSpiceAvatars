@@ -9,11 +9,11 @@ use BlueSpice\DynamicFileDispatcher\UserProfileImage;
 use BlueSpice\Privacy\IPrivacyHandler;
 use BlueSpice\Privacy\Module\Transparency;
 use Exception;
-use IDatabase;
 use MediaWiki\MediaWikiServices;
 use Message;
 use Status;
 use User;
+use Wikimedia\Rdbms\IDatabase;
 
 class Handler implements IPrivacyHandler {
 	protected $db;
