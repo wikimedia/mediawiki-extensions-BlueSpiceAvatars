@@ -26,5 +26,6 @@
 	"bs-avatars-userimage-alt": "Imagine de profilo del usator \"$1\"",
 	"apihelp-bs-avatars-tasks-description": "Incargar, generar e fixar avatares de usator",
 	"apihelp-bs-avatars-tasks-summary": "Incargar, generar e fixar avatares de usator",
-	"bs-avatars-tag-profileimage-error-invalidusername": "Le parametro \"username\" es obligatori e debe continer un nomine de usator valide"
+	"bs-avatars-tag-profileimage-error-invalidusername": "Le parametro \"username\" es obligatori e debe continer un nomine de usator valide",
+	"bs-avatars-pref-generator-help": "Le imagine avatar se genera si un usator non incarga un imagine de profilo. InstantAvatar: Genera un imagine avatar a base del initiales del nomine real o del nomine de usator. Identicon: Genera un imagine avatar a base de partes del ID del usator."
 }

@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Dimension",
-			"Liuxinyu970226"
+			"Liuxinyu970226",
+			"Shimamura Sakura"
 		]
 	},
 	"prefs-avatars": "头像",
@@ -27,5 +28,6 @@
 	"bs-avatars-auto-generate-fieldset-title": "自动生成头像",
 	"apihelp-bs-avatars-tasks-description": "上传、生成与设置用户头像",
 	"apihelp-bs-avatars-tasks-summary": "上传、生成与设置用户头像",
-	"bs-avatars-tag-profileimage-error-invalidusername": "用户名为空或无效"
+	"bs-avatars-tag-profileimage-error-invalidusername": "用户名为空或无效",
+	"bs-avatars-pref-generator-help": "用户未上传头像时会自动生成头像。InstantAvatar: 基于用户真实姓名或用户名的首字母生成头像。Identicon: 基于用户的ID的一部分生成头像。"
 }
