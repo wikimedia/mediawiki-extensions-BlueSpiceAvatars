@@ -6,11 +6,11 @@ use Config;
 use MediaWiki\MediaWikiServices;
 
 class Generator {
-	const FILE_PREFIX = "BS_avatar_";
+	public const FILE_PREFIX = "BS_avatar_";
 
-	const PARAM_OVERWRITE = 'overwrite';
-	const PARAM_HEIGHT = 'height';
-	const PARAM_WIDTH = 'width';
+	public const PARAM_OVERWRITE = 'overwrite';
+	public const PARAM_HEIGHT = 'height';
+	public const PARAM_WIDTH = 'width';
 
 	/**
 	 *
