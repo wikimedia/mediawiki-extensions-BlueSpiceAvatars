@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Constructeur",
+			"DreZhsh",
 			"Gomoko",
 			"Thibaut120094",
 			"Urhixidur",
@@ -31,5 +32,6 @@
 	"bs-avatars-auto-generate-fieldset-title": "Générer un avatar  automatiquement",
 	"apihelp-bs-avatars-tasks-description": "Chargement, génération et installation des avatars utilisateur",
 	"apihelp-bs-avatars-tasks-summary": "Téléversement, génération et initialisation des avatars utilisateur",
-	"bs-avatars-tag-profileimage-error-invalidusername": "Le paramètre « username » est obligatoire et doit contenir un nom d’utilisateur valide"
+	"bs-avatars-tag-profileimage-error-invalidusername": "Le paramètre « username » est obligatoire et doit contenir un nom d’utilisateur valide",
+	"bs-avatars-pref-generator-help": "L'image avatar est générée lorsqu'un utilisateur ne télécharge pas de photo de profil. InstantAvatar : Génère une image avatar basée sur l'utilisation des initiales du nom réel ou des champs du nom d'utilisateur. Identicon : Génère une image avatar basée sur des parties de l'ID de l'utilisateur."
 }
