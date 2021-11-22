@@ -3,6 +3,7 @@
 		"authors": [
 			"Aefgh39622",
 			"Kkairri",
+			"RYOUMA1117",
 			"S2KTS",
 			"Shirayuki"
 		]
@@ -27,5 +28,7 @@
 	"bs-avatars-set-userimage-saved": "利用者の画像を保存しました。",
 	"bs-avatars-file-upload-fieldset-title": "画像のアップロード",
 	"bs-avatars-auto-generate-fieldset-title": "アバターの自動生成",
-	"apihelp-bs-avatars-tasks-description": "ユーザーアバターのアップロード、生成、設定"
+	"apihelp-bs-avatars-tasks-description": "ユーザーアバターのアップロード、生成、設定",
+	"apihelp-bs-avatars-tasks-summary": "ユーザーアバターのアップロード、生成、設定",
+	"bs-avatars-tag-profileimage-error-invalidusername": "「username」は必須であり、ユーザー名が含まれている必要があります"
 }
