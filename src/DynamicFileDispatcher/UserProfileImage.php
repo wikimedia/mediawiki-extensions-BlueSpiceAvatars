@@ -11,7 +11,7 @@ class UserProfileImage extends UPI {
 
 	/**
 	 *
-	 * @return Image|ImageExternal
+	 * @return Image
 	 */
 	public function getFile() {
 		$file = parent::getFile();
@@ -22,10 +22,6 @@ class UserProfileImage extends UPI {
 		$profileImage = $this->user->getOption( 'bs-avatars-profileimage' );
 		if ( empty( $profileImage ) ) {
 			return $this->getDefaultUserImageFile();
-		}
-
-		if ( wfParseUrl( $profileImage ) !== false ) {
-			return new ImageExternal( $this, false, $profileImage, $this->user );
 		}
 
 		$repoFile = MediaWikiServices::getInstance()->getRepoGroup()->findFile( $profileImage );
