@@ -3,6 +3,7 @@
 		"authors": [
 			"Aefgh39622",
 			"Kkairri",
+			"MathXplore",
 			"RYOUMA1117",
 			"S2KTS",
 			"Shirayuki"
@@ -21,10 +22,10 @@
 	"bs-avatars-generate-new-label": "新しいアバターを生成",
 	"bs-avatars-warning-title": "警告",
 	"bs-avatars-warning-text": "あなたは個人設定で利用者画像を設定しています。アバターを使用すると、この設定が消去されます。本当に続行しますか?",
-	"bs-avatars-userimage-title": "ウィキ内の画像名、または画像の URL",
-	"bs-avatars-userimage-help": "例: Picture.jpg または http://localhost/Picture.gif",
+	"bs-avatars-userimage-title": "ウィキ内の画像",
+	"bs-avatars-userimage-help": "例: Picture.jpg",
 	"bs-avatars-userimage-alt": "利用者 \"$1\" のプロフィール画像",
-	"bs-avatars-set-userimage-failed": "有効な URL ではないか、またはウィキ内の画像ではありません。",
+	"bs-avatars-set-userimage-failed": "ウィキ内の画像ではありません。",
 	"bs-avatars-set-userimage-saved": "利用者の画像を保存しました。",
 	"bs-avatars-file-upload-fieldset-title": "画像のアップロード",
 	"bs-avatars-auto-generate-fieldset-title": "アバターの自動生成",
