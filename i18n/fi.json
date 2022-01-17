@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"MITO",
 			"Pyscowicz",
 			"Stryn"
 		]
@@ -8,5 +9,5 @@
 	"bs-avatars-upload-title": "Vaihda profiilikuva",
 	"bs-avatars-upload-label": "Kuva",
 	"bs-avatars-warning-title": "Varoitus",
-	"bs-avatars-userimage-help": "esim. Kuva.jpg tai http://localhost/Kuva.gif"
+	"bs-avatars-userimage-help": "esim. Kuva.jpg"
 }

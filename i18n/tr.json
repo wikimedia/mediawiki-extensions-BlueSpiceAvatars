@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"BaRaN6161 TURK",
+			"Can",
 			"KediÇobanı",
 			"Sayginer"
 		]
@@ -19,10 +20,10 @@
 	"bs-avatars-generate-new-label": "Yeni avatar oluştur",
 	"bs-avatars-warning-title": "Uyarı",
 	"bs-avatars-warning-text": "Tercihlerinizde bir kullanıcı resmi belirlediniz. Avatarların kullanılması bu ayarı temizleyecektir. Devam etmek istiyor musunuz?",
-	"bs-avatars-userimage-title": "Viki veya resim URL'sinden resim",
-	"bs-avatars-userimage-help": "ör. Örnek.jpg veya http://localhost/Picture.gif",
+	"bs-avatars-userimage-title": "Wiki'den görsel",
+	"bs-avatars-userimage-help": "ör. Örnek.jpg",
 	"bs-avatars-userimage-alt": "\"$1\" adlı kullanıcının profil görüntüsü",
-	"bs-avatars-set-userimage-failed": "Vikiden geçerli bir URL veya resim değil.",
+	"bs-avatars-set-userimage-failed": "Vikiden geçerli bir görsel değil.",
 	"bs-avatars-set-userimage-saved": "Kullanıcı resmi kaydedildi.",
 	"bs-avatars-file-upload-fieldset-title": "Resim yükleme",
 	"bs-avatars-auto-generate-fieldset-title": "Otomatik avatar oluştur",
