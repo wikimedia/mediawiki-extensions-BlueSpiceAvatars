@@ -6,6 +6,7 @@
 			"Mar(c)",
 			"McDutchie",
 			"Ribert",
+			"Romaine",
 			"SPQRobin",
 			"Siebrand",
 			"Sjoerddebruin",
@@ -34,5 +35,6 @@
 	"bs-avatars-auto-generate-fieldset-title": "Automatisch avatar genereren",
 	"apihelp-bs-avatars-tasks-description": "Gebruikersavatars uploaden, genereren en instellen",
 	"apihelp-bs-avatars-tasks-summary": "Gebruikersavatars uploaden, genereren en instellen",
-	"bs-avatars-tag-profileimage-error-invalidusername": "Parameter \"username\" is vereist en moet een geldige gebruikersnaam bevatten"
+	"bs-avatars-tag-profileimage-error-invalidusername": "Parameter \"username\" is vereist en moet een geldige gebruikersnaam bevatten",
+	"bs-avatars-pref-generator-help": "De avatar-afbeelding wordt gegenereerd wanneer een gebruiker geen profielfoto uploadt. InstantAvatar genereert een avatar-afbeelding op basis van de initialen van de echte naam of de gebruikersnaamvelden. Identicon genereert een avatar-afbeelding op basis van delen van de identificatiecode van de gebruiker."
 }
