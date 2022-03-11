@@ -20,14 +20,15 @@
 	"bs-avatars-generate-new-label": "Gerar nova imagem de perfil",
 	"bs-avatars-warning-title": "Aviso",
 	"bs-avatars-warning-text": "Definiu uma imagem de utilizador nas suas preferências. Ao utilizar imagens de perfil vai redefinir essa configuração. Deseja continuar?",
-	"bs-avatars-userimage-title": "Imagem da wiki ou URL da imagem",
-	"bs-avatars-userimage-help": "ex. Imagem.jpg ou http://localhost/Imagem.gif",
+	"bs-avatars-userimage-title": "Imagem da wiki",
+	"bs-avatars-userimage-help": "ex. Imagem.jpg",
 	"bs-avatars-userimage-alt": "Imagem do perfil do utilizador \"$1\"",
-	"bs-avatars-set-userimage-failed": "Não é uma imagem da wiki ou um URL de imagem válido.",
+	"bs-avatars-set-userimage-failed": "Não é uma imagem da wiki válida.",
 	"bs-avatars-set-userimage-saved": "A imagem de utilizador foi gravada.",
 	"bs-avatars-file-upload-fieldset-title": "Carregamento de imagem",
 	"bs-avatars-auto-generate-fieldset-title": "Gerar automaticamente uma imagem de perfil",
 	"apihelp-bs-avatars-tasks-description": "Carregar, gerar e definir imagens de perfil dos utilizadores",
 	"apihelp-bs-avatars-tasks-summary": "Carregar, gerar e definir imagens de perfil dos utilizadores",
-	"bs-avatars-tag-profileimage-error-invalidusername": "O parâmetro \"username\" é obrigatório e tem de conter um nome de utilizador válido"
+	"bs-avatars-tag-profileimage-error-invalidusername": "O parâmetro \"username\" é obrigatório e tem de conter um nome de utilizador válido",
+	"bs-avatars-pref-generator-help": "A imagem de avatar é gerada quando um utilizador não carrega uma fotografia de perfil. InstantAvatar: gera uma imagem de avatar com base nas iniciais do nome real ou dos campos do nome de utilizador. Identicon: gera uma imagem de avatar baseada em partes do identificador do utilizador."
 }
