@@ -6,6 +6,7 @@
 			"Mar(c)",
 			"McDutchie",
 			"Ribert",
+			"Romaine",
 			"SPQRobin",
 			"Siebrand",
 			"Sjoerddebruin",
@@ -23,9 +24,9 @@
 	"bs-avatars-generate-new-label": "Nieuwe avatar genereren",
 	"bs-avatars-warning-title": "Waarschuwing",
 	"bs-avatars-warning-text": "U hebt een gebruikersafbeelding in uw voorkeuren ingesteld. Als u avatars gaat gebruiken, dan wordt deze instelling gewist. Wilt u doorgaan?",
-	"bs-avatars-userimage-title": "Foto van wiki of afbeeldings-URL",
-	"bs-avatars-userimage-help": "bijvoorbeeld Afbeelding.jpg of http://localhost/Afbeelding.gif",
-	"bs-avatars-set-userimage-failed": "Geen geldige URL of afbeelding van wiki.",
+	"bs-avatars-userimage-title": "Foto van wiki",
+	"bs-avatars-userimage-help": "bijvoorbeeld Afbeelding.jpg",
+	"bs-avatars-set-userimage-failed": "Dit is geen afbeelding van de wiki.",
 	"bs-avatars-set-userimage-saved": "Profielfoto opgeslagen",
 	"bs-avatars-file-upload-fieldset-title": "Afbeelding uploaden",
 	"bs-avatars-auto-generate-fieldset-title": "Automatisch avatar genereren",
@@ -34,5 +35,6 @@
 	"bs-avatars-userimage-alt": "Profielafbeelding van gebruiker \"$1\"",
 	"apihelp-bs-avatars-tasks-description": "Gebruikersavatars uploaden, genereren en instellen",
 	"apihelp-bs-avatars-tasks-summary": "Gebruikersavatars uploaden, genereren en instellen",
-	"bs-avatars-tag-profileimage-error-invalidusername": "Parameter \"username\" is vereist en moet een geldige gebruikersnaam bevatten"
+	"bs-avatars-tag-profileimage-error-invalidusername": "Parameter \"username\" is vereist en moet een geldige gebruikersnaam bevatten",
+	"bs-avatars-pref-generator-help": "De avatar-afbeelding wordt gegenereerd wanneer een gebruiker geen profielfoto uploadt. InstantAvatar genereert een avatar-afbeelding op basis van de initialen van de echte naam of de gebruikersnaamvelden. Identicon genereert een avatar-afbeelding op basis van delen van de identificatiecode van de gebruiker."
 }

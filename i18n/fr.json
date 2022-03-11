@@ -23,15 +23,15 @@
 	"bs-avatars-generate-new-label": "Générer un nouvel avatar",
 	"bs-avatars-warning-title": "Avertissement",
 	"bs-avatars-warning-text": "Vous avez défini une image utilisateur dans vos préférences. Utiliser des avatars effacera ce paramètre. Voulez-vous continuer ?",
-	"bs-avatars-userimage-title": "Image du wiki ou URL de l’image",
-	"bs-avatars-userimage-help": "par ex. Picture.jpg ou http://localhost/Picture.gif",
+	"bs-avatars-userimage-title": "Image du wiki",
+	"bs-avatars-userimage-help": "par ex. Picture.jpg",
 	"bs-avatars-userimage-alt": "Image du profil de l’utilisateur « $1 »",
-	"bs-avatars-set-userimage-failed": "URL ou image du wiki non valide.",
+	"bs-avatars-set-userimage-failed": "Ce n’est pas une image valide du wiki.",
 	"bs-avatars-set-userimage-saved": "L’image de l’utilisateur a été enregistrée.",
 	"bs-avatars-file-upload-fieldset-title": "Téléversement de l’image",
 	"bs-avatars-auto-generate-fieldset-title": "Générer un avatar  automatiquement",
 	"apihelp-bs-avatars-tasks-description": "Chargement, génération et installation des avatars utilisateur",
 	"apihelp-bs-avatars-tasks-summary": "Téléversement, génération et initialisation des avatars utilisateur",
 	"bs-avatars-tag-profileimage-error-invalidusername": "Le paramètre « username » est obligatoire et doit contenir un nom d’utilisateur valide",
-	"bs-avatars-pref-generator-help": "L'image avatar est générée lorsqu'un utilisateur ne télécharge pas de photo de profil. InstantAvatar : Génère une image avatar basée sur l'utilisation des initiales du nom réel ou des champs du nom d'utilisateur. Identicon : Génère une image avatar basée sur des parties de l'ID de l'utilisateur."
+	"bs-avatars-pref-generator-help": "L’image avatar est générée lorsqu’un utilisateur ne téléverse pas de photo de profil. InstantAvatar : génère une image avatar basée sur l’utilisation des initiales du nom réel ou des champs du nom d’utilisateur. Identicon : génère une image avatar basée sur des parties de l’identifiant de l’utilisateur."
 }
