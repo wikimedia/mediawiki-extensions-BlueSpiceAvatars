@@ -4,7 +4,8 @@
 			"Ajeje Brazorf",
 			"Beta16",
 			"PeppeAeco",
-			"Selven"
+			"Selven",
+			"GpieroMW"
 		]
 	},
 	"prefs-avatars": "Avatar",
@@ -27,5 +28,7 @@
 	"bs-avatars-set-userimage-saved": "L'immagine utente è stata salvata.",
 	"bs-avatars-file-upload-fieldset-title": "Caricamento immagine",
 	"bs-avatars-auto-generate-fieldset-title": "Generazione automatica avatar",
-	"apihelp-bs-avatars-tasks-description": "Carica, genera e configura gli avatar dell'utente"
+	"apihelp-bs-avatars-tasks-description": "Carica, genera e configura gli avatar dell'utente",
+	"apihelp-bs-avatars-tasks-summary": "Carica, genera e configura gli avatar dell'utente",
+	"bs-avatars-tag-profileimage-error-invalidusername": "Richiede il parametro «username» e deve contenere un nome di utente valido"
 }
