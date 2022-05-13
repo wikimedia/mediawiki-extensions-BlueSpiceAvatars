@@ -5,6 +5,7 @@
 			"Chrumps",
 			"Mateuszek045",
 			"Matma Rex",
+			"Msz2001",
 			"Rail"
 		]
 	},
@@ -21,10 +22,10 @@
 	"bs-avatars-generate-new-label": "Utwórz nowy awatar",
 	"bs-avatars-warning-title": "Ostrzeżenie",
 	"bs-avatars-warning-text": "Masz ustawiony obraz użytkownika w preferencjach. Używanie awataru wyczyści to ustawienie. Czy chcesz kontynuować?",
-	"bs-avatars-userimage-title": "Zdjęcie z wiki lub pod adresem URL",
-	"bs-avatars-userimage-help": "np. Picture.jpg lub http://localhost/Picture.gif",
+	"bs-avatars-userimage-title": "Zdjęcie z wiki",
+	"bs-avatars-userimage-help": "np. Obraz.jpg",
 	"bs-avatars-userimage-alt": "Obraz profilowy {{GENDER:$1|użytkownika|użytkowniczki}} „$1”",
-	"bs-avatars-set-userimage-failed": "Nieprawidłowy adres URL lub obraz z wiki.",
+	"bs-avatars-set-userimage-failed": "Nieprawidłowy obraz z wiki.",
 	"bs-avatars-set-userimage-saved": "Zdjęcie użytkownika zostało zapisane.",
 	"bs-avatars-file-upload-fieldset-title": "Ładowanie obrazu",
 	"bs-avatars-auto-generate-fieldset-title": "Automatyczne tworzenie awatara"
