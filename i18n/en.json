@@ -17,7 +17,7 @@
 	"bs-avatars-upload-label": "Picture",
 	"bs-avatars-generate-new-label": "Generate new avatar",
 	"bs-avatars-warning-title": "Warning",
-	"bs-avatars-warning-text": "You have set a user picture in your preferences. Using avatars will clear this setting. Do you want to proceed?",
+	"bs-avatars-warning-text": "You have set a user picture in your preferences. Using auto-generated avatars will clear this setting. Do you want to proceed?",
 	"bs-avatars-userimage-title": "Picture from wiki",
 	"bs-avatars-userimage-help": "e. g. Picture.jpg",
 	"bs-avatars-userimage-alt": "Profile image of user \"$1\"",
