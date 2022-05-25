@@ -21,7 +21,7 @@
 	"bs-avatars-upload-label": "Картинка",
 	"bs-avatars-generate-new-label": "Создать новый аватар",
 	"bs-avatars-warning-title": "Внимание",
-	"bs-avatars-warning-text": "Вы установили изображение пользователя в настройках. Использование аватара очистит этот параметр. Вы хотите продолжить?",
+	"bs-avatars-warning-text": "Вы установили изображение участника в настройках. Использование автогенерируемого аватара очистит этот параметр. Вы хотите продолжить?",
 	"bs-avatars-userimage-title": "Изображение из вики",
 	"bs-avatars-userimage-help": "например, Picture.jpg",
 	"bs-avatars-userimage-alt": "Изображение пользователя \"$1\"",

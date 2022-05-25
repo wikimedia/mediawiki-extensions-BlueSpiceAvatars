@@ -20,7 +20,7 @@
 	"bs-avatars-upload-label": "תמונה",
 	"bs-avatars-generate-new-label": "יצירת תמונה מייצגת חדשה",
 	"bs-avatars-warning-title": "אזהרה",
-	"bs-avatars-warning-text": "הגדרת תמונת משתמש בהעדפות שלך. שימוש בתמונה מייצגת ינקה ההגדרה הזאת. האם להמשיך?",
+	"bs-avatars-warning-text": "הגדרת תמונת משתמש בהעדפות שלך. שימוש בתמונה מייצגת אוטומטית ינקה את ההגדרה הזאת. האם להמשיך?",
 	"bs-avatars-userimage-title": "תמונה מוויקי",
 	"bs-avatars-userimage-help": "למשל Picture.jpg",
 	"bs-avatars-userimage-alt": "תמונת הפרופיל של המשתמש \"$1\"",
