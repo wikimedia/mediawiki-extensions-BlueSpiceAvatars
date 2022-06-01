@@ -3,6 +3,7 @@
 		"authors": [
 			"Agusbou2015",
 			"Fitoschido",
+			"Francodiaz7",
 			"Jakeukalane",
 			"Josecurioso",
 			"Julio Arturo Pérez Duarte",
@@ -23,7 +24,7 @@
 	"bs-avatars-upload-label": "Imagen",
 	"bs-avatars-generate-new-label": "Generar nuevo avatar",
 	"bs-avatars-warning-title": "Atención",
-	"bs-avatars-warning-text": "Has establecido una imagen de usuario en tus preferencias. El uso de avatares borrará este ajuste. ¿Quieres continuar?",
+	"bs-avatars-warning-text": "Has establecido una imagen de usuario en tus preferencias. El uso de avatares autogenerados borrará este ajuste. ¿Quieres continuar?",
 	"bs-avatars-userimage-title": "Imagen desde la wiki",
 	"bs-avatars-userimage-help": "p. ej., Imagen.jpg",
 	"bs-avatars-userimage-alt": "Imagen de perfil de «$1»",
