@@ -6,11 +6,11 @@
 			"Mar(c)",
 			"McDutchie",
 			"Ribert",
+			"Romaine",
 			"SPQRobin",
 			"Siebrand",
 			"Sjoerddebruin",
-			"Southparkfan",
-			"Romaine"
+			"Southparkfan"
 		]
 	},
 	"prefs-avatars": "Avatars",
@@ -25,7 +25,7 @@
 	"bs-avatars-upload-label": "Foto",
 	"bs-avatars-generate-new-label": "Nieuwe avatar genereren",
 	"bs-avatars-warning-title": "Waarschuwing",
-	"bs-avatars-warning-text": "U hebt een gebruikersafbeelding in uw voorkeuren ingesteld. Als u avatars gaat gebruiken, dan wordt deze instelling gewist. Wilt u doorgaan?",
+	"bs-avatars-warning-text": "U hebt een gebruikersafbeelding in uw voorkeuren ingesteld. Als u automatisch gegenereerde avatars gaat gebruiken, dan wordt deze instelling gewist. Wilt u doorgaan?",
 	"bs-avatars-userimage-title": "Foto van wiki",
 	"bs-avatars-userimage-help": "bijvoorbeeld Afbeelding.jpg",
 	"bs-avatars-userimage-alt": "Profielafbeelding van gebruiker \"$1\"",

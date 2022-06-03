@@ -3,9 +3,9 @@
 		"authors": [
 			"Ajeje Brazorf",
 			"Beta16",
+			"GpieroMW",
 			"PeppeAeco",
-			"Selven",
-			"GpieroMW"
+			"Selven"
 		]
 	},
 	"prefs-avatars": "Avatar",
@@ -20,7 +20,7 @@
 	"bs-avatars-upload-label": "Immagine",
 	"bs-avatars-generate-new-label": "Genera un nuovo avatar",
 	"bs-avatars-warning-title": "Attenzione",
-	"bs-avatars-warning-text": "È necessario impostare un immagine utente nelle preferenze. Utilizzare gli avatar annullerà questa impostazione. Sicuro di voler continuare?",
+	"bs-avatars-warning-text": "Hai impostato un immagine utente nelle preferenze. Utilizzando gli avatar auto-generati annullerai questa impostazione. Sicuro di voler continuare?",
 	"bs-avatars-userimage-title": "Immagine da wiki",
 	"bs-avatars-userimage-help": "ad esempio Picture.jpg",
 	"bs-avatars-userimage-alt": "Immagine del profilo per l'utente \"$1\"",

@@ -16,7 +16,7 @@
 	"bs-avatars-upload-label": "Imagine",
 	"bs-avatars-generate-new-label": "Generar nove avatar",
 	"bs-avatars-warning-title": "Advertimento",
-	"bs-avatars-warning-text": "Tu ha definite un imagine de usator in tu preferentias. Si tu usa un avatar, iste imagine essera removite. Vole tu continuar?",
+	"bs-avatars-warning-text": "Tu ha definite un imagine de usator in tu preferentias. Si tu usa un avatar automaticamente generate, iste imagine essera removite. Vole tu continuar?",
 	"bs-avatars-userimage-title": "Un imagine del wiki",
 	"bs-avatars-userimage-help": "p.ex. imagine.jpg",
 	"bs-avatars-userimage-alt": "Imagine de profilo del usator \"$1\"",
