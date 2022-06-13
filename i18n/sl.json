@@ -15,7 +15,7 @@
 	"bs-avatars-upload-label": "Slika",
 	"bs-avatars-generate-new-label": "Ustvari nov avatar",
 	"bs-avatars-warning-title": "Opozorilo",
-	"bs-avatars-warning-text": "V nastavitvah ste že nastavili sliko uporabnika. Uporaba avatarja bo izbrisala to nastavitev. Ali želite nadaljevati?",
+	"bs-avatars-warning-text": "V nastavitvah ste že nastavili sliko uporabnika. Uporaba samodejno ustvarjenega avatarja bo izbrisala to nastavitev. Ali želite nadaljevati?",
 	"bs-avatars-userimage-title": "Slika z wikija",
 	"bs-avatars-userimage-help": "npr. Slika.jpg",
 	"bs-avatars-set-userimage-failed": "Ni veljavna slika z wikija.",
