@@ -4,7 +4,8 @@
 			"Alirezaaa",
 			"FarsiNevis",
 			"LordProfo",
-			"Rtemis"
+			"Rtemis",
+			"Jeeputer"
 		]
 	},
 	"prefs-avatars": "آواتارها",
@@ -19,7 +20,7 @@
 	"bs-avatars-upload-label": "تصویر",
 	"bs-avatars-generate-new-label": "ایجاد آواتار جدید",
 	"bs-avatars-warning-title": "هشدار",
-	"bs-avatars-warning-text": "شما برای خودتان تصویری در ترجیحات تعیین کرده اند. آواتار آن را پاک می‌کند. می خواهید ادامه دهید؟",
+	"bs-avatars-warning-text": "شما برای خودتان تصویری در ترجیحات تعیین کرده‌اید. استفاده از آواتارهایی که به‌صورت خودکار تولید می‌شوند، این تنظیمات را پاک خواهد کرد. آیا می‌خواهید ادامه دهید؟",
 	"bs-avatars-userimage-title": "تصویر از ویکی",
 	"bs-avatars-userimage-help": "به عنوان مثال Picture.jpg",
 	"bs-avatars-userimage-alt": "تصویر نمایهٔ کاربر «$1»",
