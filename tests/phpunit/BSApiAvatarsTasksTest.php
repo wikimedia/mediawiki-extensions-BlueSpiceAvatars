@@ -150,7 +150,7 @@ class BSApiAvatarsTasksTest extends BSApiTasksTestBase {
 				return false;
 			}
 
-			$page = WikiPage::factory( $title );
+			$page = MediaWikiServices::getInstance()->getWikiPageFactory()->newFromTitle( $title );
 			$page->doDeleteArticleReal( "removing for test", $user );
 
 			// see if it now doesn't exist; reload
