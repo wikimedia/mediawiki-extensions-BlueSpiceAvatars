@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Duke of Wikipädia",
 			"Eduardo Addad de Oliveira",
 			"Eduardoaddad",
 			"Felipe L. Ewald",
@@ -19,7 +20,7 @@
 	"bs-avatars-upload-label": "Imagem",
 	"bs-avatars-generate-new-label": "Gerar novo avatar",
 	"bs-avatars-warning-title": "Aviso",
-	"bs-avatars-warning-text": "Definiu uma imagem de utilizador nas suas preferências. Ao utilizar imagens de perfil vai redefinir essa configuração. Deseja continuar?",
+	"bs-avatars-warning-text": "Você definiu uma imagem de usuário em suas preferências. O uso de avatares gerados automaticamente limpará essa configuração. Você quer prosseguir?",
 	"bs-avatars-userimage-title": "Imagem da wiki",
 	"bs-avatars-userimage-help": "ex. Imagem.jpg",
 	"bs-avatars-userimage-alt": "Imagem de perfil do usuário \"$1\"",
