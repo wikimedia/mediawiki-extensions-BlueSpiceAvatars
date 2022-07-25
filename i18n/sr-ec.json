@@ -20,7 +20,7 @@
 	"bs-avatars-upload-label": "Слика",
 	"bs-avatars-generate-new-label": "Генериши нови аватар",
 	"bs-avatars-warning-title": "Упозорење",
-	"bs-avatars-warning-text": "Поставили сте корисничку слику у вашим подешавањима. Коришћење аватара ће очистити ово подешавања. Да ли желите да наставите?",
+	"bs-avatars-warning-text": "Поставили сте корисничку слику у вашим подешавањима. Коришћење аутоматски генерисаног аватара ће очистити ово подешавања. Да ли желите да наставите?",
 	"bs-avatars-userimage-title": "Слика са викија",
 	"bs-avatars-userimage-help": "на пример, Slika.jpg",
 	"bs-avatars-userimage-alt": "Профилна слика корисника \"$1\".",
