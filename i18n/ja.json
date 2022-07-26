@@ -4,6 +4,7 @@
 			"Aefgh39622",
 			"Kkairri",
 			"MathXplore",
+			"Mugenpman",
 			"RYOUMA1117",
 			"S2KTS",
 			"Shirayuki"
@@ -21,7 +22,7 @@
 	"bs-avatars-upload-label": "画像",
 	"bs-avatars-generate-new-label": "新しいアバターを生成",
 	"bs-avatars-warning-title": "警告",
-	"bs-avatars-warning-text": "あなたは個人設定で利用者画像を設定しています。アバターを使用すると、この設定が消去されます。本当に続行しますか?",
+	"bs-avatars-warning-text": "あなたは個人設定で利用者画像を設定しています。自動生成されたアバターを使用すると、この設定が消去されます。本当に続行しますか?",
 	"bs-avatars-userimage-title": "ウィキ内の画像",
 	"bs-avatars-userimage-help": "例: Picture.jpg",
 	"bs-avatars-userimage-alt": "利用者 \"$1\" のプロフィール画像",
