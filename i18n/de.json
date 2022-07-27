@@ -22,7 +22,7 @@
 	"bs-avatars-upload-label": "Bild",
 	"bs-avatars-generate-new-label": "Neues Benutzerbild generieren",
 	"bs-avatars-warning-title": "Warnung",
-	"bs-avatars-warning-text": "Du hast bereits ein Benutzerbild in deinen Einstellungen hinterlegt. Wenn du diese Funktion nutzt, wird es entfernt. Möchtest du fortfahren?",
+	"bs-avatars-warning-text": "Du hast bereits ein Benutzerbild in deinen Einstellungen hinterlegt. Durch die Verwendung automatisch generierter Avatare wird diese Einstellung gelöscht. Möchtest du fortfahren?",
 	"bs-avatars-userimage-title": "Ein Bild auf dem Wiki",
 	"bs-avatars-userimage-help": "bspw. „MeinBild.jpg“",
 	"bs-avatars-userimage-alt": "Profilbild des Benutzers „$1“",
