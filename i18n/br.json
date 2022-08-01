@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Fohanno",
+			"Huñvreüs",
 			"Y-M D"
 		]
 	},
@@ -14,8 +15,8 @@
 	"bs-avatars-upload-label": "Skeudenn",
 	"bs-avatars-generate-new-label": "Krouiñ un avatar nevez",
 	"bs-avatars-warning-title": "Diwallit",
-	"bs-avatars-userimage-title": "Skeudenn eus ar wiki pe URL ar skeudenn",
-	"bs-avatars-userimage-help": "da sk. Skeudenn.jpg or http://localhost/Skeudenn.gif",
-	"bs-avatars-set-userimage-saved": "Enrollet skeudenn an implijer evel ma oa dleet.",
+	"bs-avatars-userimage-title": "Skeudenn eus ar wiki",
+	"bs-avatars-userimage-help": "da sk. Skeudenn.jpg",
+	"bs-avatars-set-userimage-saved": "Enrollet eo bet skeudenn an implijer.",
 	"bs-avatars-file-upload-fieldset-title": "Ezporzhiadur skeudenn"
 }
