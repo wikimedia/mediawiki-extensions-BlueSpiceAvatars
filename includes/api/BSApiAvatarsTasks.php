@@ -106,7 +106,8 @@ class BSApiAvatarsTasks extends BSApiTasksBase {
 		}
 
 		$oUser = $this->getUser();
-		$oUser->setOption( 'bs-avatars-profileimage', $sUserImage );
+		$this->getServices()->getUserOptionsManager()
+			->setOption( $oUser, 'bs-avatars-profileimage', $sUserImage );
 		$oUser->saveSettings();
 
 		$oResponse->success = true;
