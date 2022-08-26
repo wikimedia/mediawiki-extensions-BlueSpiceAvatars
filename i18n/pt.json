@@ -19,7 +19,7 @@
 	"bs-avatars-upload-label": "Imagem",
 	"bs-avatars-generate-new-label": "Gerar nova imagem de perfil",
 	"bs-avatars-warning-title": "Aviso",
-	"bs-avatars-warning-text": "Definiu uma imagem de utilizador nas suas preferências. Ao utilizar imagens de perfil vai redefinir essa configuração. Deseja continuar?",
+	"bs-avatars-warning-text": "Definiu uma imagem de utilizador nas suas preferências. Usar avatares gerados automaticamente irá desfazer essa definição. Deseja continuar?",
 	"bs-avatars-userimage-title": "Imagem da wiki",
 	"bs-avatars-userimage-help": "ex. Imagem.jpg",
 	"bs-avatars-userimage-alt": "Imagem do perfil do utilizador \"$1\"",
