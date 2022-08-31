@@ -1,5 +1,7 @@
 <?php
 
+use MediaWiki\MediaWikiServices;
+
 require_once __DIR__ . '/Maintenance.php';
 
 /**
@@ -31,9 +33,10 @@ class CreateAvatarHTML extends Maintenance {
 		$result = $dbr->select( 'user', [ 'user_id' ], [], __METHOD__
 		);
 
+		$userFactory = MediaWikiServices::getInstance()->getUserFactory();
 		foreach ( $result as $id ) {
 
-			$user = User::newFromId( $id->user_id );
+			$user = $userFactory->newFromId( $id->user_id );
 
 			if ( !is_object( $user ) ) {
 				$this->error( "invalid username.", true );
