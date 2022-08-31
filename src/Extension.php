@@ -42,9 +42,10 @@ class Extension extends \BlueSpice\Extension {
 	 * @return boolean|\File
 	 */
 	public static function getAvatarFile( $iUserId ) {
-		$config = MediaWikiServices::getInstance()->getConfigFactory()->makeConfig( 'bsg' );
+		$services = MediaWikiServices::getInstance();
+		$config = $services->getConfigFactory()->makeConfig( 'bsg' );
 		$avatarGenerator = new \BlueSpice\Avatars\Generator( $config );
-		return $avatarGenerator->getAvatarFile( \User::newFromId( $iUserId ) );
+		return $avatarGenerator->getAvatarFile( $services->getUserFactory()->newFromId( $iUserId ) );
 	}
 
 	/**
