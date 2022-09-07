@@ -19,12 +19,14 @@ class UserProfileImage extends UPI {
 			return $file;
 		}
 
-		$profileImage = $this->user->getOption( 'bs-avatars-profileimage' );
+		$services = MediaWikiServices::getInstance();
+		$profileImage = $services->getUserOptionsLookup()
+			->getOption( $this->user, 'bs-avatars-profileimage' );
 		if ( empty( $profileImage ) ) {
 			return $this->getDefaultUserImageFile();
 		}
 
-		$repoFile = MediaWikiServices::getInstance()->getRepoGroup()->findFile( $profileImage );
+		$repoFile = $services->getRepoGroup()->findFile( $profileImage );
 		if ( $repoFile === false || !$repoFile->exists() ) {
 			return $this->getDefaultUserImageFile();
 		}
