@@ -70,7 +70,7 @@ class Extension extends \BlueSpice\Extension {
 	 */
 	public function generateAvatar( $oUser, $aParams = [], $bOverwrite = false ) {
 		wfDeprecated( __METHOD__, "3.0.0" );
-		$config = MediaWikiServices::getInstance()->getConfigFactory()->makeConfig( 'bsg' );
+		$config = $this->services->getConfigFactory()->makeConfig( 'bsg' );
 		$avatarGenerator = new \BlueSpice\Avatars\Generator( $config );
 
 		if ( $bOverwrite ) {
