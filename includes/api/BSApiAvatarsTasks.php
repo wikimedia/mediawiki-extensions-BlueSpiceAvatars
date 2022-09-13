@@ -2,7 +2,6 @@
 
 use BlueSpice\Api\Response\Standard;
 use BlueSpice\Avatars\Generator;
-use MediaWiki\MediaWikiServices;
 
 class BSApiAvatarsTasks extends BSApiTasksBase {
 
@@ -98,8 +97,7 @@ class BSApiAvatarsTasks extends BSApiTasksBase {
 		$oResponse = $this->makeStandardReturn();
 		$sUserImage = $oTaskData->userImage;
 		// check if string is URL or valid file
-		$services = MediaWikiServices::getInstance();
-		$oFile = $services->getRepoGroup()->findFile( $sUserImage );
+		$oFile = $this->services->getRepoGroup()->findFile( $sUserImage );
 		$bIsImage = is_object( $oFile ) && $oFile->canRender();
 		if ( !wfParseUrl( $sUserImage ) && !$bIsImage ) {
 			$oResponse->message = $this->msg( 'bs-avatars-set-userimage-failed' )->plain();
@@ -107,9 +105,9 @@ class BSApiAvatarsTasks extends BSApiTasksBase {
 		}
 
 		$oUser = $this->getUser();
-		$userOptionsManager = $services->getUserOptionsManager();
-		$userOptionsManager->setOption( $oUser, 'bs-avatars-profileimage', $sUserImage );
-		$userOptionsManager->saveOptions( $oUser );
+		$this->services->getUserOptionsManager()
+			->setOption( $oUser, 'bs-avatars-profileimage', $sUserImage );
+		$oUser->saveSettings();
 
 		$oResponse->success = true;
 		$oResponse->message = $this->msg( 'bs-avatars-set-userimage-saved' )->plain();
@@ -130,7 +128,7 @@ class BSApiAvatarsTasks extends BSApiTasksBase {
 
 		$oUser = $this->getUser();
 		\BlueSpice\Avatars\Extension::unsetUserImage( $oUser );
-		$generator = $this->getServices()->getService( 'BSAvatarsAvatarGenerator' );
+		$generator = $this->services->getService( 'BSAvatarsAvatarGenerator' );
 		$generator->generate( $oUser, [ Generator::PARAM_OVERWRITE => true ] );
 
 		$oResponse->success = true;
