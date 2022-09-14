@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"ديفيد",
-			"محمد أحمد عبد الفتاح"
+			"محمد أحمد عبد الفتاح",
+			"Dr-Taher"
 		]
 	},
 	"prefs-avatars": "الصور الرمزية",
@@ -18,10 +19,10 @@
 	"bs-avatars-generate-new-label": "توليد صورة رمزية جديدة",
 	"bs-avatars-warning-title": "تحذير",
 	"bs-avatars-warning-text": "لقد قمت بتعيين صورة مستخدم في تفضيلاتك، سيؤدي استخدام الصور الرمزية إلى مسح هذا الإعدا، هل تريد المتابعة؟",
-	"bs-avatars-userimage-title": "صورة من موقع ويكي أو مسار صورة",
-	"bs-avatars-userimage-help": "على سبيل المثال Picture.jpg أو http://localhost/Picture.gif",
+	"bs-avatars-userimage-title": "صورة من ويكي",
+	"bs-avatars-userimage-help": "على سبيل المثال Picture.jpg",
 	"bs-avatars-userimage-alt": "صورة الملف الشخصي للمستخدم \"$1\"",
-	"bs-avatars-set-userimage-failed": "ليس مسارا أو صورة من ويكي صالحة.",
+	"bs-avatars-set-userimage-failed": "ليست صورة صالحة من ويكي.",
 	"bs-avatars-set-userimage-saved": "حفظت صورة المستخدم",
 	"bs-avatars-file-upload-fieldset-title": "رفع الصورة",
 	"bs-avatars-auto-generate-fieldset-title": "توليد تلقائي للصورة الرمزية",
