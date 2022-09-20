@@ -10,11 +10,11 @@ use BlueSpice\Renderer\UserImage;
 use BlueSpice\RendererFactory;
 use BlueSpice\Tag\Handler;
 use Html;
+use MediaWiki\MediaWikiServices;
 use Message;
 use MWException;
 use Parser;
 use PPFrame;
-use User;
 
 class ProfileImageHandler extends Handler {
 
@@ -68,7 +68,8 @@ class ProfileImageHandler extends Handler {
 		if ( $this->processedArgs['raw'] === true ) {
 			return $this->handleRaw();
 		}
-		$user = User::newFromName( $this->processedArgs['username'] );
+		$user = MediaWikiServices::getInstance()->getUserFactory()
+			->newFromName( $this->processedArgs['username'] );
 		if ( !$user ) {
 			$msg = Message::newFromKey(
 				'bs-avatars-tag-profileimage-error-invalidusername'

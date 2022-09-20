@@ -12,11 +12,12 @@ class AddProfileImage extends PageHistoryLineEnding {
 			'ext.bluespice.avatars.history.styles'
 		);
 
-		$user = \User::newFromName( $this->row->rev_user_text );
+		$services = $this->getServices();
+		$user = $services->getUserFactory()->newFromName( $this->row->rev_user_text );
 		if ( $user instanceof \User === false ) {
 			return true;
 		}
-		$factory = $this->getServices()->getService( 'BSRendererFactory' );
+		$factory = $services->getService( 'BSRendererFactory' );
 		$params = [
 			DFDImage::PARAM_WIDTH => 32,
 			DFDImage::PARAM_HEIGHT => 32,
