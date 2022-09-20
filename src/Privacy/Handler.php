@@ -18,11 +18,15 @@ use User;
 class Handler implements IPrivacyHandler {
 	protected $db;
 
+	/** @var MediaWikiServices */
+	protected $services = null;
+
 	/**
 	 * @param IDatabase $db
 	 */
 	public function __construct( IDatabase $db ) {
 		$this->db = $db;
+		$this->services = MediaWikiServices::getInstance();
 	}
 
 	/**
@@ -49,10 +53,8 @@ class Handler implements IPrivacyHandler {
 			UserProfileImage::HEIGHT => 200
 		];
 
-		$config = MediaWikiServices::getInstance()->getConfigFactory()->makeConfig( 'bsg' );
-		$dfdUrlBuilder = MediaWikiServices::getInstance()->getService(
-			'BSDynamicFileDispatcherUrlBuilder'
-		);
+		$config = $this->services->getConfigFactory()->makeConfig( 'bsg' );
+		$dfdUrlBuilder = $this->services->getService( 'BSDynamicFileDispatcherUrlBuilder' );
 		$url = $dfdUrlBuilder->build( new Params( $params ) );
 		$label = Message::newFromKey( 'bs-avatars-upload-label' );
 		return Status::newGood( [
@@ -68,12 +70,10 @@ class Handler implements IPrivacyHandler {
 	 * @return Status
 	 */
 	public function anonymize( $oldUsername, $newUsername ) {
-		$user = User::newFromName( $oldUsername );
+		$user = $this->services->getUserFactory()->newFromName( $oldUsername );
 		$user->setName( $newUsername );
 
-		$generator = MediaWikiServices::getInstance()->getService(
-			'BSAvatarsAvatarGenerator'
-		);
+		$generator = $this->services->getService( 'BSAvatarsAvatarGenerator' );
 		try {
 			$generator->generate( $user, [ Generator::PARAM_OVERWRITE => true ] );
 		} catch ( Exception $ex ) {

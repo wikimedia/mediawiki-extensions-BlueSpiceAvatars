@@ -18,7 +18,7 @@ class PreventUserImageOverwrite extends \BlueSpice\Hook\UploadVerifyFile {
 
 		$userName = substr( $fileName, 0, $fileExt );
 
-		$user = \User::newFromName( $userName );
+		$user = $this->getServices()->getUserFactory()->newFromName( $userName );
 		if ( !$user instanceof \User || $user->isAnon() ) {
 			return true;
 		}
