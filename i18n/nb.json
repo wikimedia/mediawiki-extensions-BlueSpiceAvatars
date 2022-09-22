@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Jon Harald Søby"
+			"Jon Harald Søby",
+			"EdoAug"
 		]
 	},
 	"prefs-avatars": "Avatarer",
@@ -16,7 +17,7 @@
 	"bs-avatars-upload-label": "Bilde",
 	"bs-avatars-generate-new-label": "Generer ny avatar",
 	"bs-avatars-warning-title": "Advarsel",
-	"bs-avatars-warning-text": "Du har satt et brukerbilde i innstillingene dine. Hvis du bruker avatarer vil dette bildet fjernes. Ønsker du å fortsette?",
+	"bs-avatars-warning-text": "Du har satt et brukerbilde i innstillingene dine. Hvis du bruker avatarer som blir automatisk generert, vil dette bildet fjernes. Ønsker du å fortsette?",
 	"bs-avatars-userimage-title": "Bilde fra wikien",
 	"bs-avatars-userimage-help": "f.eks. Bilde.jpg",
 	"bs-avatars-userimage-alt": "Profilbildet til brukeren «$1»",
