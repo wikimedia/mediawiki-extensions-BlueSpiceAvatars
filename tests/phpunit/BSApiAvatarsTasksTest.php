@@ -130,7 +130,8 @@ class BSApiAvatarsTasksTest extends BSApiTasksTestBase {
 	 */
 	public function deleteFileByTitle( $title ) {
 		if ( $title->exists() ) {
-			$file = MediaWikiServices::getInstance()->getRepoGroup()
+			$services = MediaWikiServices::getInstance();
+			$file = $services->getRepoGroup()
 				->findFile( $title, [ 'ignoreRedirect' => true ] );
 			// yes this really needs to be set this way
 			$noOldArchive = "";
@@ -150,8 +151,9 @@ class BSApiAvatarsTasksTest extends BSApiTasksTestBase {
 				return false;
 			}
 
-			$page = MediaWikiServices::getInstance()->getWikiPageFactory()->newFromTitle( $title );
-			$page->doDeleteArticleReal( "removing for test", $user );
+			$page = $services->getWikiPageFactory()->newFromTitle( $title );
+			$deletePage = $services->getDeletePageFactory()->newDeletePage( $page, $user );
+			$deletePage->deleteIfAllowed( 'removing for test' );
 
 			// see if it now doesn't exist; reload
 			$title = Title::newFromText( $title->getText(), NS_FILE );
