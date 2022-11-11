@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Dbc334",
+			"Eleassar",
 			"Skalcaa"
 		]
 	},
@@ -16,10 +17,17 @@
 	"bs-avatars-generate-new-label": "Ustvari nov avatar",
 	"bs-avatars-warning-title": "Opozorilo",
 	"bs-avatars-warning-text": "V nastavitvah ste že nastavili sliko uporabnika. Uporaba samodejno ustvarjenega avatarja bo izbrisala to nastavitev. Ali želite nadaljevati?",
-	"bs-avatars-userimage-title": "Slika z wikija",
+	"bs-avatars-userimage-title": "Slika z vikija",
 	"bs-avatars-userimage-help": "npr. Slika.jpg",
-	"bs-avatars-set-userimage-failed": "Ni veljavna slika z wikija.",
+	"bs-avatars-set-userimage-failed": "Ni veljavna slika iz vikija.",
 	"bs-avatars-set-userimage-saved": "Sliko uporabnika smo shranili.",
 	"bs-avatars-file-upload-fieldset-title": "Nalaganje slike",
-	"bs-avatars-auto-generate-fieldset-title": "Samodejno ustvari avatar"
+	"bs-avatars-auto-generate-fieldset-title": "Samodejno ustvari avatar",
+	"bs-avatars-pref-userimage": "Slika uporabnika:",
+	"bs-avatars-pref-userimage-img-alt": "Vaša trenutna uporabniška slika",
+	"bs-avatars-userimage-alt": "Profilna slika uporabnika »$1«",
+	"apihelp-bs-avatars-tasks-description": "Nalaganje, generiranje in nastavitev uporabniških avatarjev",
+	"apihelp-bs-avatars-tasks-summary": "Nalaganje, generiranje in nastavitev uporabniških avatarjev",
+	"bs-avatars-tag-profileimage-error-invalidusername": "Parameter »uporabniško ime« je obvezen in mora vsebovati veljavno uporabniško ime",
+	"bs-avatars-pref-generator-help": "Slika avatarja se ustvari, ko uporabnik ne naloži slike profila. InstantAvatar: ustvari sliko avatarja z uporabo začetnic pravega imena ali polj uporabniškega imena. Identicon: ustvari sliko avatarja na podlagi delov uporabnikovega identifikatorja."
 }
