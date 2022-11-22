@@ -23,7 +23,7 @@
 	"bs-avatars-userimage-help": "npr. Slika.jpg",
 	"bs-avatars-userimage-alt": "Profilna slika uporabnika »$1«",
 	"bs-avatars-set-userimage-failed": "Ni veljavna slika iz vikija.",
-	"bs-avatars-set-userimage-saved": "Sliko uporabnika smo shranili.",
+	"bs-avatars-set-userimage-saved": "Uporabniška slika je shranjena.",
 	"bs-avatars-file-upload-fieldset-title": "Nalaganje slike",
 	"bs-avatars-auto-generate-fieldset-title": "Samodejno ustvari avatar",
 	"apihelp-bs-avatars-tasks-description": "Nalaganje, generiranje in nastavitev uporabniških avatarjev",
