@@ -37,6 +37,7 @@ Ext.define('BS.Avatars.SettingsWindow', {
 		});
 		this.bUserImage = Ext.create('Ext.Button', {
 			text: mw.message('bs-extjs-save').plain(),
+			ariaLabel: mw.message('bs-extjs-save').plain(),
 			flex:0.5
 		});
 		this.bUserImage.on('click', this.tfUserImageClick, this);
@@ -61,6 +62,7 @@ Ext.define('BS.Avatars.SettingsWindow', {
 		});
 		this.bGenerateNew = Ext.create('Ext.Button', {
 			text: mw.message('bs-avatars-generate-new-label').plain(),
+			ariaLabel: mw.message('bs-avatars-generate-new-label').plain(),
 					//height: 50,
 					width: "100%",
 					margin: "0 0 10 0"
@@ -75,7 +77,8 @@ Ext.define('BS.Avatars.SettingsWindow', {
 			]
 		});
 		this.bCancel = Ext.create('Ext.Button', {
-			text: mw.message('bs-extjs-cancel').plain()
+			text: mw.message('bs-extjs-cancel').plain(),
+			ariaLabel: mw.message('bs-extjs-cancel').plain()
 		});
 		this.bCancel.on('click', this.btnCancelClick, this);
 		this.items = [
