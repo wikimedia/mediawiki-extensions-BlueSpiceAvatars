@@ -62,6 +62,9 @@
 	"AutoloadNamespaces": {
 		"BlueSpice\\Avatars\\": "src/"
 	},
+	"TestAutoloadNamespaces": {
+		"BlueSpice\\Avatars\\Test\\": "tests/phpunit/"
+	},
 	"ResourceModules": {
 		"ext.bluespice.avatars.js": {
 			"scripts": [
