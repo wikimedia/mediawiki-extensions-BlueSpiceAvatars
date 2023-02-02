@@ -48,7 +48,7 @@ class CreateAvatarHTML extends Maintenance {
 
 			$this->output( "<img src=\"/SWPedia/index.php?action=ajax&title=-"
 					. "&rs=SecureFileStore::getFile"
-					. "&f=/bluespice/Avatars/BS_avatar_${user_id}.png\" />\n" );
+					. "&f=/bluespice/Avatars/BS_avatar_{$user_id}.png\" />\n" );
 			$this->output( " $user_id, $user_name, $user_real_name\n" );
 			$this->output( "<br />\n" );
 		}
