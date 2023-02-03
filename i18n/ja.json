@@ -7,7 +7,8 @@
 			"Mugenpman",
 			"RYOUMA1117",
 			"S2KTS",
-			"Shirayuki"
+			"Shirayuki",
+			"背番号4のエース"
 		]
 	},
 	"prefs-avatars": "アバター",
@@ -32,5 +33,6 @@
 	"bs-avatars-auto-generate-fieldset-title": "アバターの自動生成",
 	"apihelp-bs-avatars-tasks-description": "ユーザーアバターのアップロード、生成、設定",
 	"apihelp-bs-avatars-tasks-summary": "ユーザーアバターのアップロード、生成、設定",
-	"bs-avatars-tag-profileimage-error-invalidusername": "「username」は必須であり、ユーザー名が含まれている必要があります"
+	"bs-avatars-tag-profileimage-error-invalidusername": "「username」は必須であり、ユーザー名が含まれている必要があります",
+	"bs-avatars-pref-generator-help": "アバター画像は、ユーザーがプロフィール写真をアップロードしない場合に生成されます。 InstantAvatar: 本名のイニシャルまたはユーザー名フィールドの使用に基づいてアバター画像を生成します。 Identicon: ユーザーの ID の一部に基づいてアバター画像を生成します。"
 }
