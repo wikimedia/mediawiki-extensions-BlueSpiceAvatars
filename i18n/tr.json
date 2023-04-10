@@ -4,7 +4,8 @@
 			"BaRaN6161 TURK",
 			"Can",
 			"KediÇobanı",
-			"Sayginer"
+			"Sayginer",
+			"ToprakM"
 		]
 	},
 	"prefs-avatars": "Avatarlar",
@@ -19,7 +20,7 @@
 	"bs-avatars-upload-label": "Resim",
 	"bs-avatars-generate-new-label": "Yeni avatar oluştur",
 	"bs-avatars-warning-title": "Uyarı",
-	"bs-avatars-warning-text": "Tercihlerinizde bir kullanıcı resmi belirlediniz. Avatarların kullanılması bu ayarı temizleyecektir. Devam etmek istiyor musunuz?",
+	"bs-avatars-warning-text": "Tercihlerinizde bir kullanıcı resmi belirlediniz. Otomatik oluşturulan avatarların kullanılması bu ayarı temizleyecektir. Devam etmek istiyor musunuz?",
 	"bs-avatars-userimage-title": "Wiki'den görsel",
 	"bs-avatars-userimage-help": "ör. Örnek.jpg",
 	"bs-avatars-userimage-alt": "\"$1\" adlı kullanıcının profil görüntüsü",
