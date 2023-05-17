@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Jimkats",
 			"NikosLikomitros",
 			"Nikosgranturismogt"
 		]
@@ -17,5 +18,5 @@
 	"bs-avatars-upload-label": "εικόνα",
 	"bs-avatars-generate-new-label": "Δημιουργία νέου άβαταρ",
 	"bs-avatars-warning-title": "Προειδοποίηση",
-	"bs-avatars-userimage-help": "e. g. Εικόνα.jpg ή http://localhost/Εικόνα.gif"
+	"bs-avatars-userimage-help": "π.χ. Εικόνα.jpg"
 }
