@@ -25,7 +25,6 @@
 	"bs-avatars-set-userimage-saved": "Brukerbildet ble lagret.",
 	"bs-avatars-file-upload-fieldset-title": "Bildeopplasting",
 	"bs-avatars-auto-generate-fieldset-title": "Autogenerer avatar",
-	"apihelp-bs-avatars-tasks-description": "Laster opp, genererer og setter brukeravatarer",
 	"apihelp-bs-avatars-tasks-summary": "Laster opp, genererer og setter brukeravatarer",
 	"bs-avatars-tag-profileimage-error-invalidusername": "Parameteren «username» er påkrevd og må inneholde et gyldig brukernavn",
 	"bs-avatars-pref-generator-help": "Avatarbildet genereres når en bruker ikke laster opp et profilbilde. InstantAvatar: Genererer et avatarbilde basert på initialene i feltet for virkelig navn eller brukernavn. Identicon: Genererer et avatarbilde basert på deler av brukerens ID."

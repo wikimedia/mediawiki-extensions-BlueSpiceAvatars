@@ -28,7 +28,6 @@
 	"bs-avatars-set-userimage-saved": "Kullanıcı resmi kaydedildi.",
 	"bs-avatars-file-upload-fieldset-title": "Resim yükleme",
 	"bs-avatars-auto-generate-fieldset-title": "Otomatik avatar oluştur",
-	"apihelp-bs-avatars-tasks-description": "Kullanıcı avatarlarını yükleme, oluşturma ve ayarlama",
 	"apihelp-bs-avatars-tasks-summary": "Kullanıcı avatarlarını yükleme, oluşturma ve ayarlama",
 	"bs-avatars-tag-profileimage-error-invalidusername": "\"Kullanıcı adı\" parametresi gerekli ve geçerli bir kullanıcı adı içermelidir"
 }

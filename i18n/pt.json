@@ -27,7 +27,6 @@
 	"bs-avatars-set-userimage-saved": "A imagem de utilizador foi gravada.",
 	"bs-avatars-file-upload-fieldset-title": "Carregamento de imagem",
 	"bs-avatars-auto-generate-fieldset-title": "Gerar automaticamente uma imagem de perfil",
-	"apihelp-bs-avatars-tasks-description": "Carregar, gerar e definir imagens de perfil dos utilizadores",
 	"apihelp-bs-avatars-tasks-summary": "Carregar, gerar e definir imagens de perfil dos utilizadores",
 	"bs-avatars-tag-profileimage-error-invalidusername": "O parâmetro \"username\" é obrigatório e tem de conter um nome de utilizador válido",
 	"bs-avatars-pref-generator-help": "A imagem de avatar é gerada quando um utilizador não carrega uma fotografia de perfil. InstantAvatar: gera uma imagem de avatar com base nas iniciais do nome real ou dos campos do nome de utilizador. Identicon: gera uma imagem de avatar baseada em partes do identificador do utilizador."

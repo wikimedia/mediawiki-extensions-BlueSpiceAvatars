@@ -24,7 +24,6 @@
 	"bs-avatars-set-userimage-saved": "Profilna slika je sačuvana.",
 	"bs-avatars-file-upload-fieldset-title": "Otpremanje slika",
 	"bs-avatars-auto-generate-fieldset-title": "Automatsko generisanje avatara",
-	"apihelp-bs-avatars-tasks-description": "Otpremanje, generisanje i postavljanje korisnike slike",
 	"apihelp-bs-avatars-tasks-summary": "Otpremanje, generisanje i postavljanje korisnike slike",
 	"bs-avatars-tag-profileimage-error-invalidusername": "Parametar \"username\" je preporučen i mora da sadrži validno korisničko ime."
 }

@@ -24,7 +24,6 @@
 	"bs-avatars-set-userimage-saved": "'A fote de l'utende ha state reggìstrate.",
 	"bs-avatars-file-upload-fieldset-title": "Fote carecate",
 	"bs-avatars-auto-generate-fieldset-title": "Stemme auto generate",
-	"apihelp-bs-avatars-tasks-description": "Carecamende, generazione e 'mbostazione de l'avatar de l'utende",
 	"apihelp-bs-avatars-tasks-summary": "Carecamende, generazione e 'mbostazione de l'avatar de l'utende",
 	"bs-avatars-tag-profileimage-error-invalidusername": "Parametre \"username\" jè richieste e adda tenè 'nu nome utende valide",
 	"bs-avatars-pref-generator-help": "L'immaggine avatar jè generate quanne 'n'utende non ge careche 'na fote d'u profile. InstantAvatar: genere 'n'immaggine avatar ca se base sus a l'ause de le iniziale d'u nome reale o de le cambe d'u nome utende. Identicon: genere 'n'immaggine avatar ca se base sus a le stuèzze de l'ID de l'utende."

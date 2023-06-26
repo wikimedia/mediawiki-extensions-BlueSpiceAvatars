@@ -26,7 +26,6 @@
 	"bs-avatars-set-userimage-saved": "Uporabniška slika je shranjena.",
 	"bs-avatars-file-upload-fieldset-title": "Nalaganje slike",
 	"bs-avatars-auto-generate-fieldset-title": "Samodejno ustvari avatar",
-	"apihelp-bs-avatars-tasks-description": "Nalaganje, generiranje in nastavitev uporabniških avatarjev",
 	"apihelp-bs-avatars-tasks-summary": "Nalaganje, generiranje in nastavitev uporabniških avatarjev",
 	"bs-avatars-tag-profileimage-error-invalidusername": "Parameter »uporabniško ime« je obvezen in mora vsebovati veljavno uporabniško ime",
 	"bs-avatars-pref-generator-help": "Slika avatarja se ustvari, ko uporabnik ne naloži slike profila. InstantAvatar: ustvari sliko avatarja z uporabo začetnic pravega imena ali polj uporabniškega imena. Identicon: ustvari sliko avatarja na podlagi delov uporabnikovega identifikatorja."
