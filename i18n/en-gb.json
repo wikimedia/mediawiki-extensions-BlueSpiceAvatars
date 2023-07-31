@@ -1,9 +1,0 @@
-{
-	"@metadata": {
-		"authors": [
-			"Piano1forte2"
-		]
-	},
-	"bs-avatars-userimage-alt": "Profile image of user '$1'",
-	"bs-avatars-tag-profileimage-error-invalidusername": "Parameter 'username' is required and must contain a valid username"
-}
