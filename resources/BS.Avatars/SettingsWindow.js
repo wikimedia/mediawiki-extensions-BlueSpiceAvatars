@@ -121,10 +121,12 @@ Ext.define('BS.Avatars.SettingsWindow', {
 	},
 	tfUserImageClick: function() {
 		var me = this;
+		var userInput = this.tfUserImage.getValue();
+		var escapedInput = Ext.util.Format.htmlEncode( userInput );
 		bs.api.tasks.exec(
 			'avatars',
 			'setUserImage',
-			{ userImage: this.tfUserImage.getValue() }
+			{ userImage: escapedInput }
 		).done( function( response ) {
 			location.reload();
 		});
