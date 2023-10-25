@@ -1,12 +1,17 @@
 {
 	"@metadata": {
 		"authors": [
-			"Cedric31"
+			"Cedric31",
+			"Nicolas Eynaud"
 		]
 	},
 	"prefs-avatars": "Avatars",
 	"bs-avatars-pref-generator": "Generador",
 	"bs-avatars-pref-defaultsize": "Talha per defaut en pixèls :",
+	"bs-avatars-pref-userimage": "Imatge utilizaire :",
+	"bs-avatars-pref-userimage-img-alt": "La vòstra imatge utilizaire actuala",
+	"bs-avatars-upload-complete": "L'imatge es estat telecargat.",
+	"bs-avatars-upload-title": "Modificar l'imatge dau perfieu",
 	"bs-avatars-upload-label": "Fòto",
 	"bs-avatars-warning-title": "Avertiment"
 }
