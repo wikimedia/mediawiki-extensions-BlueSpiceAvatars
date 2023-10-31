@@ -30,7 +30,7 @@ Ext.define('BS.Avatars.SettingsWindow', {
 		this.tfUserImage = Ext.create('Ext.form.field.Text', {
 			name: 'uimg',
 			blankText: mw.message('bs-avatars-userimage-help').plain(),
-			emptyText: mw.user.options.get( 'bs-avatars-profileimage' ),
+			value: mw.user.options.get( 'bs-avatars-profileimage' ),
 			allowBlank: false,
 			labelWidth: 150,
 			padding: "0 5 0 0"
