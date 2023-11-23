@@ -3,7 +3,8 @@
 		"authors": [
 			"Arifin.wijaya",
 			"Diki Ananta",
-			"Sumbukompor"
+			"Sumbukompor",
+			"Veracious"
 		]
 	},
 	"prefs-avatars": "Avatar",
@@ -22,5 +23,8 @@
 	"bs-avatars-set-userimage-failed": "Bukan URL yang valid atau gambar dari wiki.",
 	"bs-avatars-set-userimage-saved": "Gambar pengguna telah disimpan.",
 	"bs-avatars-file-upload-fieldset-title": "Unggah gambar",
-	"bs-avatars-auto-generate-fieldset-title": "Hasilkan avatar secara otomatis"
+	"bs-avatars-auto-generate-fieldset-title": "Hasilkan avatar secara otomatis",
+	"bs-avatars-pref-userimage": "Gambar pengguna:",
+	"bs-avatars-pref-userimage-img-alt": "Gambar pengguna Anda saat ini",
+	"bs-avatars-userimage-alt": "Gambar profil pengguna \"$1\""
 }
