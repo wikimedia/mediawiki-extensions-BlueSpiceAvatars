@@ -6,7 +6,8 @@
 			"Kareyac",
 			"Mailman",
 			"Movses",
-			"Okras"
+			"Okras",
+			"Vlad5250"
 		]
 	},
 	"prefs-avatars": "Аватары",
@@ -31,5 +32,6 @@
 	"bs-avatars-auto-generate-fieldset-title": "Создать аватар автоматически",
 	"apihelp-bs-avatars-tasks-description": "Загружаемые, генерируемые и устанавливаемые пользовательские аватары",
 	"apihelp-bs-avatars-tasks-summary": "Загружаемые, генерируемые и устанавливаемые пользовательские аватары",
-	"bs-avatars-tag-profileimage-error-invalidusername": "Параметр «username» обязательный и должен содержать корректное имя участника"
+	"bs-avatars-tag-profileimage-error-invalidusername": "Параметр «username» обязательный и должен содержать корректное имя участника",
+	"bs-avatars-pref-generator-help": "Изображение аватара генерируется, когда пользователь не загружает фотографию профиля. InstantAvatar: генерирует изображение аватара на основе использования инициалов настоящего имени или полей имени пользователя. Identicon: генерирует изображение аватара на основе частей идентификатора пользователя."
 }
