@@ -13,5 +13,6 @@
 	"bs-avatars-pref-userimage": "Imatge utilizaire :",
 	"bs-avatars-pref-userimage-img-alt": "La vòstra imatge utilizaire actuala",
 	"bs-avatars-upload-complete": "L'imatge es estat telecargat.",
-	"bs-avatars-upload-title": "Modificar l'imatge dau perfieu"
+	"bs-avatars-upload-title": "Modificar l'imatge dau perfieu",
+	"bs-avatars-file-upload-fieldset-title": "Telecargar l'imatge"
 }
