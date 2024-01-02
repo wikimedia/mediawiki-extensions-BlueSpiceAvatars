@@ -13,5 +13,6 @@
 	"bs-avatars-upload-complete": "L'imatge es estat telecargat.",
 	"bs-avatars-upload-title": "Modificar l'imatge dau perfieu",
 	"bs-avatars-upload-label": "Fòto",
-	"bs-avatars-warning-title": "Avertiment"
+	"bs-avatars-warning-title": "Avertiment",
+	"bs-avatars-file-upload-fieldset-title": "Telecargar l'imatge"
 }
