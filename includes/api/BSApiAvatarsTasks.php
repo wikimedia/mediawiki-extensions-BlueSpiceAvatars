@@ -94,12 +94,13 @@ class BSApiAvatarsTasks extends BSApiTasksBase {
 	 */
 	public function task_setUserImage( $oTaskData, $aParams ) {
 		// phpcs:enable
+		$urlUtils = $this->services->getUrlUtils();
 		$oResponse = $this->makeStandardReturn();
 		$sUserImage = $oTaskData->userImage;
 		// check if string is URL or valid file
 		$oFile = $this->services->getRepoGroup()->findFile( $sUserImage );
 		$bIsImage = is_object( $oFile ) && $oFile->canRender();
-		if ( !wfParseUrl( $sUserImage ) && !$bIsImage ) {
+		if ( !$urlUtils->parse( $sUserImage ) && !$bIsImage ) {
 			$oResponse->message = $this->msg( 'bs-avatars-set-userimage-failed' )->plain();
 			return $oResponse;
 		}
