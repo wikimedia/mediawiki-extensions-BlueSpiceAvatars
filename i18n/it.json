@@ -14,8 +14,8 @@
 	"bs-avatars-pref-defaultsize": "Dimensioni predefinite, pixel:",
 	"bs-avatars-pref-userimage": "Immagine utente:",
 	"bs-avatars-pref-userimage-img-alt": "La tua immagine utente attuale",
-	"bs-avatars-upload-complete": "L'immagine \u00e8 stata caricata.",
-	"bs-avatars-generate-complete": "Un nuovo avatar \u00e8 stato generato.",
+	"bs-avatars-upload-complete": "L'immagine è stata caricata.",
+	"bs-avatars-generate-complete": "Un nuovo avatar è stato generato.",
 	"bs-avatars-upload-title": "Cambia immagine del profilo",
 	"bs-avatars-upload-label": "Immagine",
 	"bs-avatars-generate-new-label": "Genera un nuovo avatar",
@@ -24,11 +24,11 @@
 	"bs-avatars-userimage-title": "Immagine da wiki",
 	"bs-avatars-userimage-help": "ad esempio Picture.jpg",
 	"bs-avatars-userimage-alt": "Immagine del profilo per l'utente \"$1\"",
-	"bs-avatars-set-userimage-failed": "Non \u00e8 un'immagine da wiki.",
-	"bs-avatars-set-userimage-saved": "L'immagine utente \u00e8 stata salvata.",
+	"bs-avatars-set-userimage-failed": "Non è un'immagine da wiki.",
+	"bs-avatars-set-userimage-saved": "L'immagine utente è stata salvata.",
 	"bs-avatars-file-upload-fieldset-title": "Caricamento immagine",
 	"bs-avatars-auto-generate-fieldset-title": "Generazione automatica avatar",
 	"apihelp-bs-avatars-tasks-description": "Carica, genera e configura gli avatar dell'utente",
 	"apihelp-bs-avatars-tasks-summary": "Carica, genera e configura gli avatar dell'utente",
-	"bs-avatars-tag-profileimage-error-invalidusername": "Richiede il parametro \u00abusername\u00bb e deve contenere un nome di utente valido"
+	"bs-avatars-tag-profileimage-error-invalidusername": "Richiede il parametro «username» e deve contenere un nome di utente valido"
 }

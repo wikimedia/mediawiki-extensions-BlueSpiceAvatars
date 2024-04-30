@@ -2,31 +2,31 @@
 	"@metadata": {
 		"authors": [
 			"EdoAug",
-			"Jon Harald S\u00f8by"
+			"Jon Harald Søby"
 		]
 	},
 	"prefs-avatars": "Avatarer",
 	"bs-avatars-desc": "Tilbyr generiske og individuelle brukerbilder",
 	"bs-avatars-pref-generator": "Generator:",
-	"bs-avatars-pref-defaultsize": "Standardst\u00f8rrelse i piksler:",
+	"bs-avatars-pref-defaultsize": "Standardstørrelse i piksler:",
 	"bs-avatars-pref-userimage": "Brukerbilde:",
-	"bs-avatars-pref-userimage-img-alt": "Ditt n\u00e5v\u00e6rende brukerbilde",
+	"bs-avatars-pref-userimage-img-alt": "Ditt nåværende brukerbilde",
 	"bs-avatars-upload-complete": "Bildet ble lastet opp.",
 	"bs-avatars-generate-complete": "En ny avatar ble generert.",
 	"bs-avatars-upload-title": "Endre profilbilde",
 	"bs-avatars-upload-label": "Bilde",
 	"bs-avatars-generate-new-label": "Generer ny avatar",
 	"bs-avatars-warning-title": "Advarsel",
-	"bs-avatars-warning-text": "Du har satt et brukerbilde i innstillingene dine. Hvis du bruker avatarer som blir automatisk generert, vil dette bildet fjernes. \u00d8nsker du \u00e5 fortsette?",
+	"bs-avatars-warning-text": "Du har satt et brukerbilde i innstillingene dine. Hvis du bruker avatarer som blir automatisk generert, vil dette bildet fjernes. Ønsker du å fortsette?",
 	"bs-avatars-userimage-title": "Bilde fra wikien",
 	"bs-avatars-userimage-help": "f.eks. Bilde.jpg",
-	"bs-avatars-userimage-alt": "Profilbildet til brukeren \u00ab$1\u00bb",
+	"bs-avatars-userimage-alt": "Profilbildet til brukeren «$1»",
 	"bs-avatars-set-userimage-failed": "Ikke et gyldig bilde fra wikien.",
 	"bs-avatars-set-userimage-saved": "Brukerbildet ble lagret.",
 	"bs-avatars-file-upload-fieldset-title": "Bildeopplasting",
 	"bs-avatars-auto-generate-fieldset-title": "Autogenerer avatar",
 	"apihelp-bs-avatars-tasks-description": "Laster opp, genererer og setter brukeravatarer",
 	"apihelp-bs-avatars-tasks-summary": "Laster opp, genererer og setter brukeravatarer",
-	"bs-avatars-tag-profileimage-error-invalidusername": "Parameteren \u00abusername\u00bb er p\u00e5krevd og m\u00e5 inneholde et gyldig brukernavn",
-	"bs-avatars-pref-generator-help": "Avatarbildet genereres n\u00e5r en bruker ikke laster opp et profilbilde. InstantAvatar: Genererer et avatarbilde basert p\u00e5 initialene i feltet for virkelig navn eller brukernavn. Identicon: Genererer et avatarbilde basert p\u00e5 deler av brukerens ID."
+	"bs-avatars-tag-profileimage-error-invalidusername": "Parameteren «username» er påkrevd og må inneholde et gyldig brukernavn",
+	"bs-avatars-pref-generator-help": "Avatarbildet genereres når en bruker ikke laster opp et profilbilde. InstantAvatar: Genererer et avatarbilde basert på initialene i feltet for virkelig navn eller brukernavn. Identicon: Genererer et avatarbilde basert på deler av brukerens ID."
 }

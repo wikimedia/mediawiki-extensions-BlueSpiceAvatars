@@ -3,13 +3,13 @@
 		"authors": [
 			"Banjo",
 			"Elisardojm",
-			"Toli\u00f1o"
+			"Toliño"
 		]
 	},
 	"prefs-avatars": "Avatares",
-	"bs-avatars-desc": "Proporciona imaxes de usuario xen\u00e9ricas e individuais",
+	"bs-avatars-desc": "Proporciona imaxes de usuario xenéricas e individuais",
 	"bs-avatars-pref-generator": "Xerador:",
-	"bs-avatars-pref-defaultsize": "Tama\u00f1o predeterminado en p\u00edxeles:",
+	"bs-avatars-pref-defaultsize": "Tamaño predeterminado en píxeles:",
 	"bs-avatars-pref-userimage": "Imaxe de usuario:",
 	"bs-avatars-upload-complete": "A imaxe subiuse.",
 	"bs-avatars-generate-complete": "Xerouse unha nova imaxe de perfil.",
@@ -17,10 +17,10 @@
 	"bs-avatars-upload-label": "Imaxe",
 	"bs-avatars-generate-new-label": "Xerar unha nova imaxe de perfil",
 	"bs-avatars-warning-title": "Aviso",
-	"bs-avatars-warning-text": "Definiu unha imaxe de usuario nas s\u00faas preferencias. Se usa un avatar borrar\u00e1 esa configuraci\u00f3n. Quere continuar?",
+	"bs-avatars-warning-text": "Definiu unha imaxe de usuario nas súas preferencias. Se usa un avatar borrará esa configuración. Quere continuar?",
 	"bs-avatars-userimage-title": "Imaxe do wiki",
 	"bs-avatars-userimage-help": "por exemplo, Imaxe.jpg",
-	"bs-avatars-set-userimage-failed": "A imaxe do wiki non \u00e9 v\u00e1lida.",
+	"bs-avatars-set-userimage-failed": "A imaxe do wiki non é válida.",
 	"bs-avatars-set-userimage-saved": "Gardouse a imaxe de usuario.",
 	"bs-avatars-file-upload-fieldset-title": "Carga de imaxe",
 	"bs-avatars-auto-generate-fieldset-title": "Xerar o avatar automaticamente",
