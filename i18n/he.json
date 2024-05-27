@@ -26,7 +26,7 @@
 	"bs-avatars-userimage-alt": "תמונת הפרופיל של המשתמש \"$1\"",
 	"bs-avatars-set-userimage-failed": "לא תמונה תקינה מוויקי.",
 	"bs-avatars-set-userimage-saved": "תמונת המשתמש נשמרה בהצלחה.",
-	"bs-avatars-file-upload-fieldset-title": "העלאת התמונות",
+	"bs-avatars-file-upload-fieldset-title": "העלאת תמונה",
 	"bs-avatars-auto-generate-fieldset-title": "לחולל תמונת מייצגת אוטומטית",
 	"apihelp-bs-avatars-tasks-description": "העלאה, יצירה, והגדרה של תמונות מייצגות",
 	"apihelp-bs-avatars-tasks-summary": "העלאה, חילול, והגדרה של תמונות משתמש",
