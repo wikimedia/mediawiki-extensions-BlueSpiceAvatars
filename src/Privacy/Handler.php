@@ -16,6 +16,7 @@ use User;
 use Wikimedia\Rdbms\IDatabase;
 
 class Handler implements IPrivacyHandler {
+	/** @var IDatabase */
 	protected $db;
 
 	/** @var MediaWikiServices */

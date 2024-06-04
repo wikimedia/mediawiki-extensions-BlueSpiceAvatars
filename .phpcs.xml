@@ -2,10 +2,8 @@
 <ruleset>
 	<rule ref="./vendor/mediawiki/mediawiki-codesniffer/MediaWiki">
 		<exclude name="MediaWiki.Commenting.FunctionComment.TypeTypeHintParam" />
-		<exclude name="MediaWiki.Commenting.PropertyDocumentation.MissingDocumentationProtected" />
 	</rule>
 	<file>.</file>
-	<arg name="bootstrap" value="./vendor/mediawiki/mediawiki-codesniffer/utils/bootstrap-ci.php"/>
 	<arg name="extensions" value="php"/>
 	<arg name="encoding" value="UTF-8"/>
 	<exclude-pattern type="relative">^includes/lib/*</exclude-pattern>
