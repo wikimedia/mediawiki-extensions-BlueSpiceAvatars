@@ -10,7 +10,7 @@ class AddForeignFileRepo extends \BlueSpice\Hook\SetupAfterCache {
 	protected function doProcess() {
 		global $wgForeignFileRepos;
 		$wgForeignFileRepos[] = [
-			'class' => 'FileRepo',
+			'class' => \FileRepo::class,
 			'name' => 'Avatars',
 			'backend' => 'Avatars-backend',
 			'directory' => BS_DATA_DIR . '/Avatars/',
