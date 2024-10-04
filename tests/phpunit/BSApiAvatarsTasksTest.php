@@ -47,34 +47,6 @@ class BSApiAvatarsTasksTest extends BSApiTasksTestBase {
 	}
 
 	/**
-	 * 'setUserImage' => [
-	 *	   'examples' => [
-	 *		   [
-	 *			   'userImage' => 'ProfileImage.png'
-	 *		   ]
-	 *	   ],
-	 *	   'params' => [
-	 *		   'userImage' => [
-	 *			   'desc' => 'Name of the image to set',
-	 *			   'type' => 'string',
-	 *			   'required' => true
-	 *		   ]
-	 *	   ]
-	 * ]
-	 * @group Broken
-	 * @see https://phabricator.wikimedia.org/T199710
-	 */
-	public function testSetUserImage() {
-		$data = $this->executeTask(
-		  'setUserImage', [
-				"userImage" => "File:DummyFile.png"
-		  ]
-		);
-
-		$this->assertTrue( $data->success, "Couldn't set user imag!\n" );
-	}
-
-	/**
 	 *
 	 * 'uploadFile' => [
 	 *	   'examples' => [],
