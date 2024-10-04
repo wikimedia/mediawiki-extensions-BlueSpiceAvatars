@@ -17,20 +17,6 @@ class BSApiAvatarsTasks extends BSApiTasksBase {
 		'generateAvatar' => [
 			'examples' => [],
 			'params' => []
-		],
-		'setUserImage' => [
-			'examples' => [
-				[
-					'userImage' => 'ProfileImage.png'
-				]
-			],
-			'params' => [
-				'userImage' => [
-					'desc' => 'Name of the image to set',
-					'type' => 'string',
-					'required' => true
-				]
-			]
 		]
 	];
 
@@ -40,9 +26,8 @@ class BSApiAvatarsTasks extends BSApiTasksBase {
 	 */
 	protected function getRequiredTaskPermissions() {
 		return [
-			'uploadFile' => [ 'read' ],
+			'uploadFile' => [ 'upload' ],
 			'generateAvatar' => [ 'read' ],
-			'setUserImage' => [ 'read' ]
 		];
 	}
 
@@ -81,37 +66,6 @@ class BSApiAvatarsTasks extends BSApiTasksBase {
 
 		$oResponse->message = $this->msg( 'bs-avatars-upload-complete' )->plain();
 		$oResponse->success = true;
-		return $oResponse;
-	}
-
-	// phpcs:disable
-	/**
-	 *
-	 * @param stdClass $oTaskData
-	 * @param array $aParams
-	 * @return Standard
-	 * @throws MWException
-	 */
-	public function task_setUserImage( $oTaskData, $aParams ) {
-		// phpcs:enable
-		$urlUtils = $this->services->getUrlUtils();
-		$oResponse = $this->makeStandardReturn();
-		$sUserImage = $oTaskData->userImage;
-		// check if string is URL or valid file
-		$oFile = $this->services->getRepoGroup()->findFile( $sUserImage );
-		$bIsImage = is_object( $oFile ) && $oFile->canRender();
-		if ( !$urlUtils->parse( $sUserImage ) && !$bIsImage ) {
-			$oResponse->message = $this->msg( 'bs-avatars-set-userimage-failed' )->plain();
-			return $oResponse;
-		}
-
-		$oUser = $this->getUser();
-		$this->services->getUserOptionsManager()
-			->setOption( $oUser, 'bs-avatars-profileimage', $sUserImage );
-		$oUser->saveSettings();
-
-		$oResponse->success = true;
-		$oResponse->message = $this->msg( 'bs-avatars-set-userimage-saved' )->plain();
 		return $oResponse;
 	}
 

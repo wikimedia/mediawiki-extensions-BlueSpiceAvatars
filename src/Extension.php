@@ -29,53 +29,24 @@
 
 namespace BlueSpice\Avatars;
 
+use MediaWiki\Extension\UserProfile\ProfileImage\ProfileImageProviderFactory;
 use MediaWiki\MediaWikiServices;
+use User;
 
 class Extension extends \BlueSpice\Extension {
-
-	/**
-	 * DEPRECATED - Use new \BlueSpice\Avatars\Generator()->getAvatarFile()
-	 * instead
-	 * Gets Avatar file from user ID
-	 * @deprecated since version 3.0.0
-	 * @param int $iUserId
-	 * @return boolean|\File
-	 */
-	public static function getAvatarFile( $iUserId ) {
-		$services = MediaWikiServices::getInstance();
-		$config = $services->getConfigFactory()->makeConfig( 'bsg' );
-		$avatarGenerator = new \BlueSpice\Avatars\Generator( $config );
-		return $avatarGenerator->getAvatarFile( $services->getUserFactory()->newFromId( $iUserId ) );
-	}
 
 	/**
 	 * Clears a user's UserImage setting
 	 * @param User $oUser
 	 */
 	public static function unsetUserImage( $oUser ) {
-		$userOptionsManager = MediaWikiServices::getInstance()->getUserOptionsManager();
-		if ( $userOptionsManager->getOption( $oUser, 'bs-avatars-profileimage' ) ) {
-			$userOptionsManager->setOption( $oUser, 'bs-avatars-profileimage', false );
-			$userOptionsManager->saveOptions( $oUser );
-			$oUser->invalidateCache();
+		/** @var ProfileImageProviderFactory $userOptionsManager */
+		$userOptionsManager = MediaWikiServices::getInstance()->getService( 'UserProfile.ImageProviderFactory' );
+		foreach ( $userOptionsManager->getAll() as $provider ) {
+			if ( $provider instanceof AvatarProvider ) {
+				continue;
+			}
+			$provider->unset( $oUser );
 		}
-	}
-
-	/**
-	 * DEPRECATED - Use new \BlueSpice\Avatars\Generator()->generate() instead
-	 * Generate an avatar image
-	 * @deprecated since version 3.0.0
-	 * @param User $oUser
-	 * @return string Relative URL to avatar image
-	 */
-	public function generateAvatar( $oUser, $aParams = [], $bOverwrite = false ) {
-		wfDeprecated( __METHOD__, "3.0.0" );
-		$config = $this->services->getConfigFactory()->makeConfig( 'bsg' );
-		$avatarGenerator = new \BlueSpice\Avatars\Generator( $config );
-
-		if ( $bOverwrite ) {
-			$aParams[\BlueSpice\Avatars\Generator::PARAM_OVERWRITE] = true;
-		}
-		return $avatarGenerator->generate( $oUser, $aParams );
 	}
 }
