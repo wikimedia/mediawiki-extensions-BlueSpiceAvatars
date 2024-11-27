@@ -4,8 +4,6 @@ namespace BlueSpice\Avatars\Privacy;
 
 use BlueSpice\Avatars\Extension as Avatars;
 use BlueSpice\Avatars\Generator;
-use BlueSpice\DynamicFileDispatcher\Params;
-use BlueSpice\DynamicFileDispatcher\UserProfileImage;
 use BlueSpice\Privacy\IPrivacyHandler;
 use BlueSpice\Privacy\Module\Transparency;
 use Exception;
@@ -47,16 +45,18 @@ class Handler implements IPrivacyHandler {
 	 * @return Status
 	 */
 	public function exportData( array $types, $format, User $user ) {
-		$params = [
-			Params::MODULE => UserProfileImage::MODULE_NAME,
-			UserProfileImage::USERNAME => $user->getName(),
-			UserProfileImage::WIDTH => 200,
-			UserProfileImage::HEIGHT => 200
-		];
-
 		$config = $this->services->getConfigFactory()->makeConfig( 'bsg' );
-		$dfdUrlBuilder = $this->services->getService( 'BSDynamicFileDispatcherUrlBuilder' );
-		$url = $dfdUrlBuilder->build( new Params( $params ) );
+		$dfdUrlBuilder = $this->services->getService(
+			'MWStake.DynamicFileDispatcher.Factory'
+		);
+		$url = $dfdUrlBuilder->getUrl(
+			'userprofileimage',
+			[
+				'username' => $user->getName(),
+				'width' => 200,
+				'height' => 52000,
+			]
+		);
 		$label = Message::newFromKey( 'bs-avatars-upload-label' );
 		return Status::newGood( [
 			Transparency::DATA_TYPE_PERSONAL => [

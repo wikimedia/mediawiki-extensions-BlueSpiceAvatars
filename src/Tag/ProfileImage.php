@@ -81,7 +81,7 @@ class ProfileImage extends \BlueSpice\Tag\Tag {
 			$processedArgs,
 			$parser,
 			$frame,
-			MediaWikiServices::getInstance()->getService( 'BSDynamicFileDispatcherUrlBuilder' ),
+			MediaWikiServices::getInstance()->getService( 'MWStake.DynamicFileDispatcher.Factory' ),
 			MediaWikiServices::getInstance()->getService( 'BSRendererFactory' )
 		);
 	}

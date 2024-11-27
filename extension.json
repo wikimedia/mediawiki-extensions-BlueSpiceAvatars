@@ -26,9 +26,6 @@
 			"ConfigDefinitionRegistry": {
 				"AvatarsGenerator": "\\BlueSpice\\Avatars\\ConfigDefinition\\AvatarsGenerator::getInstance"
 			},
-			"DynamicFileRegistry": {
-				"userprofileimage": "\\BlueSpice\\Avatars\\DynamicFileDispatcher\\UserProfileImage"
-			},
 			"TagRegistry": {
 				"profileimage": "\\BlueSpice\\Avatars\\Tag\\ProfileImage"
 			}
@@ -112,6 +109,10 @@
 		"export": {
 			"class": "\\BlueSpice\\Avatars\\Hook\\BSUEModulePDFFindFiles\\AddProfileImage",
 			"services": [ "UrlUtils", "UserFactory", "UserOptionsLookup", "BSAvatarsAvatarGenerator", "RepoGroup" ]
+		},
+		"registerDynamicFileModule": {
+			"class": "\\BlueSpice\\Avatars\\Hook\\RegisterDynamicFileModule",
+			"services": [ "RepoGroup", "UserOptionsLookup", "BSAvatarsAvatarGenerator" ]
 		}
 	},
 	"Hooks": {
@@ -123,7 +124,8 @@
 		"SetupAfterCache": "\\BlueSpice\\Avatars\\Hook\\SetupAfterCache\\AddForeignFileRepo::callback",
 		"BSUEModulePDFFindFiles": [
 			"export"
-		]
+		],
+		"MWStakeDynamicFileDispatcherRegisterModule": "registerDynamicFileModule"
 	},
 	"manifest_version": 2
 }

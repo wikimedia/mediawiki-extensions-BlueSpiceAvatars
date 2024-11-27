@@ -2,9 +2,6 @@
 
 namespace BlueSpice\Avatars\Tag;
 
-use BlueSpice\Avatars\DynamicFileDispatcher\UserProfileImage;
-use BlueSpice\DynamicFileDispatcher\Params as DFDParams;
-use BlueSpice\DynamicFileDispatcher\UrlBuilder;
 use BlueSpice\Renderer\Params;
 use BlueSpice\Renderer\UserImage;
 use BlueSpice\RendererFactory;
@@ -13,6 +10,7 @@ use Html;
 use MediaWiki\MediaWikiServices;
 use Message;
 use MWException;
+use MWStake\MediaWiki\Component\DynamicFileDispatcher\DynamicFileDispatcherFactory;
 use Parser;
 use PPFrame;
 
@@ -20,9 +18,9 @@ class ProfileImageHandler extends Handler {
 
 	/**
 	 *
-	 * @var UrlBuilder
+	 * @var DynamicFileDispatcherFactory
 	 */
-	protected $dfdUrlBuilder = null;
+	protected $dfdFactory = null;
 
 	/**
 	 *
@@ -36,13 +34,13 @@ class ProfileImageHandler extends Handler {
 	 * @param array $processedArgs
 	 * @param Parser $parser
 	 * @param PPFrame $frame
-	 * @param UrlBuilder $dfdUrlBuilder
+	 * @param DynamicFileDispatcherFactory $dfdFactory
 	 * @param RendererFactory $rendererFactory
 	 */
 	public function __construct( $processedInput, array $processedArgs, Parser $parser,
-		PPFrame $frame, UrlBuilder $dfdUrlBuilder, RendererFactory $rendererFactory ) {
+		PPFrame $frame, DynamicFileDispatcherFactory $dfdFactory, RendererFactory $rendererFactory ) {
 		parent::__construct( $processedInput, $processedArgs, $parser, $frame );
-		$this->dfdUrlBuilder = $dfdUrlBuilder;
+		$this->dfdFactory = $dfdFactory;
 		$this->rendererFactory = $rendererFactory;
 	}
 
@@ -93,16 +91,13 @@ class ProfileImageHandler extends Handler {
 	 * @return string
 	 */
 	protected function handleRaw() {
-		$params = [
-			DFDParams::MODULE => UserProfileImage::MODULE_NAME,
-			UserProfileImage::USERNAME => $this->processedArgs['username'],
-			UserProfileImage::WIDTH => $this->processedArgs['width'],
-			UserProfileImage::HEIGHT => $this->processedArgs['height']
-		];
+		$url = $this->dfdFactory->getUrl( 'userprofileimage', [
+			'username' => $this->processedArgs['username'],
+			'width' => $this->processedArgs['width'],
+			'height' => $this->processedArgs['height']
+		] );
 
-		$url = $this->dfdUrlBuilder->build( new DFDParams( $params ) );
-
-		$html = Html::element( 'img', [
+		return Html::element( 'img', [
 			'src' => $url,
 			'alt' => Message::newFromKey(
 				'bs-avatars-tag-userimage-img-alt',
@@ -112,7 +107,5 @@ class ProfileImageHandler extends Handler {
 			'width' => $this->processedArgs['width'],
 			'height' => $this->processedArgs['height']
 		] );
-
-		return $html;
 	}
 }

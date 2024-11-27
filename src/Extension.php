@@ -30,6 +30,7 @@
 namespace BlueSpice\Avatars;
 
 use MediaWiki\MediaWikiServices;
+use User;
 
 class Extension extends \BlueSpice\Extension {
 

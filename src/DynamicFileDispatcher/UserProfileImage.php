@@ -2,69 +2,101 @@
 
 namespace BlueSpice\Avatars\DynamicFileDispatcher;
 
-use BlueSpice\DynamicFileDispatcher\UserProfileImage as UPI;
-use BlueSpice\DynamicFileDispatcher\UserProfileImage\AnonImage;
+use BlueSpice\Avatars\Generator;
 use File;
-use MediaWiki\MediaWikiServices;
+use MediaWiki\Permissions\Authority;
+use MediaWiki\User\UserOptionsLookup;
+use MWException;
+use MWStake\MediaWiki\Component\DynamicFileDispatcher\IDynamicFile;
+use MWStake\MediaWiki\Component\DynamicFileDispatcher\Module\UserProfileImage as DefaultImageModule;
+use RepoGroup;
+use ThumbnailImage;
+use User;
 
-class UserProfileImage extends UPI {
+class UserProfileImage extends DefaultImageModule {
+
+	/** @var User|null */
+	private $user = null;
+
+	/** @var UserOptionsLookup */
+	private $optionsLookup;
+
+	/** @var RepoGroup */
+	private $repoGroup;
+
+	/** @var Generator */
+	private $generator;
 
 	/**
-	 *
-	 * @return Image
+	 * @param UserOptionsLookup $optionsLookup
+	 * @param RepoGroup $repoGroup
+	 * @param Generator $generator
 	 */
-	public function getFile() {
-		$file = parent::getFile();
-		if ( $file instanceof AnonImage ) {
-			return $file;
+	public function __construct( UserOptionsLookup $optionsLookup, RepoGroup $repoGroup, Generator $generator ) {
+		$this->optionsLookup = $optionsLookup;
+		$this->repoGroup = $repoGroup;
+		$this->generator = $generator;
+	}
+
+	public function isAuthorized( Authority $user, array $params ): bool {
+		$this->user = $user->getUser();
+		return parent::isAuthorized( $user, $params );
+	}
+
+	/**
+	 * @param array $params
+	 * @return IDynamicFile|null
+	 * @throws MWException
+	 */
+	public function getFile( array $params ): ?IDynamicFile {
+		if ( !$this->user->isRegistered() ) {
+			return parent::getFile( $params );
+		}
+		$setImage = $this->optionsLookup->getOption( $this->user, 'bs-avatars-profileimage' );
+		if ( empty( $setImage ) ) {
+			return $this->getDefaultUserImageFile( $params );
 		}
 
-		$services = MediaWikiServices::getInstance();
-		$profileImage = $services->getUserOptionsLookup()
-			->getOption( $this->user, 'bs-avatars-profileimage' );
-		if ( empty( $profileImage ) ) {
-			return $this->getDefaultUserImageFile();
-		}
-
-		$repoFile = $services->getRepoGroup()->findFile( $profileImage );
+		$repoFile = $this->repoGroup->findFile( $setImage );
 		if ( $repoFile === false || !$repoFile->exists() ) {
-			return $this->getDefaultUserImageFile();
+			return $this->getDefaultUserImageFile( $params );
 		}
 
 		return $this->getThumbnailImageFile(
-			$repoFile, static::WIDTH, static::HEIGHT );
+			$repoFile, $params['width'] ?? 32, $params['height'] ?? 32
+		);
 	}
 
 	/**
 	 *
-	 * @return Image
+	 * @param array $params
+	 * @return IDynamicFile|null
+	 * @throws MWException
 	 */
-	protected function getDefaultUserImageFile() {
-		$generator = MediaWikiServices::getInstance()->getService(
-			'BSAvatarsAvatarGenerator'
-		);
-		$file = $generator->getAvatarFile( $this->user );
+	protected function getDefaultUserImageFile( array $params ): ?IDynamicFile {
+		$file = $this->generator->getAvatarFile( $this->user );
 		if ( !$file->exists() ) {
-			$generator->generate( $this->user );
+			$this->generator->generate( $this->user );
 		}
 
 		return $this->getThumbnailImageFile(
-			$file, UPI::WIDTH, UPI::HEIGHT );
+			$file, $params['width'] ?? 32, $params['height'] ?? 32
+		);
 	}
 
 	/**
 	 * @param File $file
-	 * @param string $widthName
-	 * @param string $heightName
-	 * @return Image
+	 * @param mixed $width
+	 * @param mixed $height
+	 * @return IDynamicFile|null
 	 */
-	protected function getThumbnailImageFile( $file, $widthName, $heightName ) {
-		$params = [ 'width' => (int)$this->params[$widthName] ];
+	protected function getThumbnailImageFile( File $file, $width, $height ): ?IDynamicFile {
+		$params = [ 'width' => (int)$width ];
 
 		if ( $file->getWidth() && $params[ 'width' ] >= $file->getWidth() ) {
-			$params[ 'width' ] = $file->getWidth() - 1;
+			$params['width'] = $file->getWidth() - 1;
 		}
-		$height = (int)$this->params[ $heightName ];
+		$height = (int)$height;
 		if ( $height != -1 ) {
 			$params['height'] = $height;
 		}
@@ -75,6 +107,12 @@ class UserProfileImage extends UPI {
 			$params['height'] = $file->getHeight() - 1;
 		}
 
-		return new Image( $this, $file->transform( $params ) );
+		$transformation = $file->transform( $params );
+
+		if ( !( $transformation instanceof ThumbnailImage ) ) {
+			return null;
+		}
+
+		return new AvatarDynamicImage( $transformation );
 	}
 }
