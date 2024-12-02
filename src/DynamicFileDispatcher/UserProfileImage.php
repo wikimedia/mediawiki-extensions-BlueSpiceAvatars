@@ -5,18 +5,109 @@ namespace BlueSpice\Avatars\DynamicFileDispatcher;
 use BlueSpice\DynamicFileDispatcher\UserProfileImage as UPI;
 use BlueSpice\DynamicFileDispatcher\UserProfileImage\AnonImage;
 use File;
+<<<<<<< HEAD   (cf9df2 Localisation updates from https://translatewiki.net.)
 use MediaWiki\MediaWikiServices;
+||||||| BASE
+use MediaWiki\Permissions\Authority;
+use MediaWiki\User\UserOptionsLookup;
+use MWException;
+use MWStake\MediaWiki\Component\DynamicFileDispatcher\IDynamicFile;
+use MWStake\MediaWiki\Component\DynamicFileDispatcher\Module\UserProfileImage as DefaultImageModule;
+use RepoGroup;
+use ThumbnailImage;
+use User;
+=======
+use MediaWiki\Permissions\Authority;
+use MediaWiki\User\UserFactory;
+use MediaWiki\User\UserOptionsLookup;
+use MWException;
+use MWStake\MediaWiki\Component\DynamicFileDispatcher\IDynamicFile;
+use MWStake\MediaWiki\Component\DynamicFileDispatcher\Module\UserProfileImage as DefaultImageModule;
+use RepoGroup;
+use ThumbnailImage;
+use User;
+>>>>>>> CHANGE (b5c075 Fix getting image for other users)
 
 class UserProfileImage extends UPI {
 
+	/** @var UserFactory */
+	private $userFactory;
+
 	/**
+<<<<<<< HEAD   (cf9df2 Localisation updates from https://translatewiki.net.)
 	 *
 	 * @return Image
+||||||| BASE
+	 * @param UserOptionsLookup $optionsLookup
+	 * @param RepoGroup $repoGroup
+	 * @param Generator $generator
+=======
+	 * @param UserOptionsLookup $optionsLookup
+	 * @param RepoGroup $repoGroup
+	 * @param Generator $generator
+	 * @param UserFactory $userFactory
+>>>>>>> CHANGE (b5c075 Fix getting image for other users)
 	 */
+<<<<<<< HEAD   (cf9df2 Localisation updates from https://translatewiki.net.)
 	public function getFile() {
 		$file = parent::getFile();
 		if ( $file instanceof AnonImage ) {
 			return $file;
+||||||| BASE
+	public function __construct( UserOptionsLookup $optionsLookup, RepoGroup $repoGroup, Generator $generator ) {
+		$this->optionsLookup = $optionsLookup;
+		$this->repoGroup = $repoGroup;
+		$this->generator = $generator;
+	}
+
+	public function isAuthorized( Authority $user, array $params ): bool {
+		$this->user = $user->getUser();
+		return parent::isAuthorized( $user, $params );
+	}
+
+	/**
+	 * @param array $params
+	 * @return IDynamicFile|null
+	 * @throws MWException
+	 */
+	public function getFile( array $params ): ?IDynamicFile {
+		if ( !$this->user->isRegistered() ) {
+			return parent::getFile( $params );
+		}
+		$setImage = $this->optionsLookup->getOption( $this->user, 'bs-avatars-profileimage' );
+		if ( empty( $setImage ) ) {
+			return $this->getDefaultUserImageFile( $params );
+=======
+	public function __construct(
+		UserOptionsLookup $optionsLookup, RepoGroup $repoGroup, Generator $generator, UserFactory $userFactory
+	) {
+		$this->optionsLookup = $optionsLookup;
+		$this->repoGroup = $repoGroup;
+		$this->generator = $generator;
+		$this->userFactory = $userFactory;
+	}
+
+	public function isAuthorized( Authority $user, array $params ): bool {
+		$this->user = $user->getUser();
+		return parent::isAuthorized( $user, $params );
+	}
+
+	/**
+	 * @param array $params
+	 * @return IDynamicFile|null
+	 * @throws MWException
+	 */
+	public function getFile( array $params ): ?IDynamicFile {
+		if ( $params['username'] ) {
+			$this->user = $this->userFactory->newFromName( $params['username'] );
+		}
+		if ( !$this->user || !$this->user->isRegistered() ) {
+			return parent::getFile( $params );
+		}
+		$setImage = $this->optionsLookup->getOption( $this->user, 'bs-avatars-profileimage' );
+		if ( empty( $setImage ) ) {
+			return $this->getDefaultUserImageFile( $params );
+>>>>>>> CHANGE (b5c075 Fix getting image for other users)
 		}
 
 		$services = MediaWikiServices::getInstance();
