@@ -5,6 +5,7 @@ namespace BlueSpice\Avatars\DynamicFileDispatcher;
 use BlueSpice\Avatars\Generator;
 use File;
 use MediaWiki\Permissions\Authority;
+use MediaWiki\User\UserFactory;
 use MediaWiki\User\UserOptionsLookup;
 use MWException;
 use MWStake\MediaWiki\Component\DynamicFileDispatcher\IDynamicFile;
@@ -27,15 +28,22 @@ class UserProfileImage extends DefaultImageModule {
 	/** @var Generator */
 	private $generator;
 
+	/** @var UserFactory */
+	private $userFactory;
+
 	/**
 	 * @param UserOptionsLookup $optionsLookup
 	 * @param RepoGroup $repoGroup
 	 * @param Generator $generator
+	 * @param UserFactory $userFactory
 	 */
-	public function __construct( UserOptionsLookup $optionsLookup, RepoGroup $repoGroup, Generator $generator ) {
+	public function __construct(
+		UserOptionsLookup $optionsLookup, RepoGroup $repoGroup, Generator $generator, UserFactory $userFactory
+	) {
 		$this->optionsLookup = $optionsLookup;
 		$this->repoGroup = $repoGroup;
 		$this->generator = $generator;
+		$this->userFactory = $userFactory;
 	}
 
 	public function isAuthorized( Authority $user, array $params ): bool {
@@ -49,7 +57,10 @@ class UserProfileImage extends DefaultImageModule {
 	 * @throws MWException
 	 */
 	public function getFile( array $params ): ?IDynamicFile {
-		if ( !$this->user->isRegistered() ) {
+		if ( $params['username'] ) {
+			$this->user = $this->userFactory->newFromName( $params['username'] );
+		}
+		if ( !$this->user || !$this->user->isRegistered() ) {
 			return parent::getFile( $params );
 		}
 		$setImage = $this->optionsLookup->getOption( $this->user, 'bs-avatars-profileimage' );

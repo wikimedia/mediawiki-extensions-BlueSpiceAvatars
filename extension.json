@@ -112,7 +112,7 @@
 		},
 		"registerDynamicFileModule": {
 			"class": "\\BlueSpice\\Avatars\\Hook\\RegisterDynamicFileModule",
-			"services": [ "RepoGroup", "UserOptionsLookup", "BSAvatarsAvatarGenerator" ]
+			"services": [ "RepoGroup", "UserOptionsLookup", "BSAvatarsAvatarGenerator", "UserFactory" ]
 		}
 	},
 	"Hooks": {
