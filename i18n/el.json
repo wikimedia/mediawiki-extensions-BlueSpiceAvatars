@@ -6,17 +6,11 @@
 			"Nikosgranturismogt"
 		]
 	},
-	"prefs-avatars": "Άβαταρ",
 	"bs-avatars-desc": "Παρέχει γενικές και ατομικές εικόνες χρήστη",
 	"bs-avatars-pref-generator": "Δημιουργός:",
-	"bs-avatars-pref-defaultsize": "Προεπιλεγμένο μέγεθος σε εικονοστοιχεία:",
-	"bs-avatars-pref-userimage": "Εικόνα χρήστη:",
 	"bs-avatars-pref-userimage-img-alt": "Η τρέχουσα εικόνα χρήστη σας",
 	"bs-avatars-upload-complete": "Η εικόνα ανεβάστηκε.",
 	"bs-avatars-generate-complete": "Δημιουργήθηκε ένα νέο άβαταρ.",
-	"bs-avatars-upload-title": "Αλλαγή εικόνας προφίλ",
 	"bs-avatars-upload-label": "εικόνα",
-	"bs-avatars-generate-new-label": "Δημιουργία νέου άβαταρ",
-	"bs-avatars-warning-title": "Προειδοποίηση",
-	"bs-avatars-userimage-help": "π.χ. Εικόνα.jpg"
+	"bs-avatars-generate-new-label": "Δημιουργία νέου άβαταρ"
 }

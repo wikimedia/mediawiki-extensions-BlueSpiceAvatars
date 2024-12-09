@@ -4,12 +4,6 @@
 			"Ajeje Brazorf"
 		]
 	},
-	"bs-avatars-pref-userimage": "Mmàggini utenti:",
 	"bs-avatars-pref-userimage-img-alt": "La tò mmàggini utenti attuali",
-	"bs-avatars-upload-title": "Cancia mmàggini dû prufilu",
-	"bs-avatars-upload-label": "Mmàggini",
-	"bs-avatars-warning-title": "Accura",
-	"bs-avatars-userimage-help": "p'asempiu Picture.jpg",
-	"bs-avatars-userimage-alt": "Mmàggini dû prufilu di l'utenti \"$1\"",
-	"bs-avatars-set-userimage-saved": "La mmàggini utenti fu sarvata."
+	"bs-avatars-upload-label": "Mmàggini"
 }
