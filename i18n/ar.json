@@ -14,7 +14,7 @@
 	"bs-avatars-generate-complete": "تم إنشاء صورة رمزية جديدة.",
 	"bs-avatars-upload-label": "الصورة",
 	"bs-avatars-generate-new-label": "توليد صورة رمزية جديدة",
-	"bs-avatars-file-upload-fieldset-title": "رفع الصورة",
+	"bs-avatars-file-upload-fieldset-title": "رفع صورة جديدة",
 	"bs-avatars-auto-generate-fieldset-title": "توليد تلقائي للصورة الرمزية",
 	"apihelp-bs-avatars-tasks-summary": "رفع وتوليد وإعداد الصور الرمزية للمستخدم",
 	"bs-avatars-tag-profileimage-error-invalidusername": "الوسيط \"اسم المستخدم\" مطلوب ويجب أن يحتوي على اسم مستخدم صالح",
