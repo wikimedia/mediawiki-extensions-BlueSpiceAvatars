@@ -5,8 +5,5 @@
 		]
 	},
 	"bs-avatars-pref-generator": "Generador:",
-	"bs-avatars-pref-defaultsize": "Mida per defecte en píxels:",
-	"bs-avatars-pref-userimage": "Imatge d’usuari:",
-	"bs-avatars-pref-userimage-img-alt": "La vostra imatge de perfil actual",
-	"bs-avatars-userimage-alt": "Imatge de perfil de l’usuari «$1»"
+	"bs-avatars-pref-userimage-img-alt": "La vostra imatge de perfil actual"
 }

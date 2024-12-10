@@ -4,10 +4,5 @@
 			"Saederup92"
 		]
 	},
-	"bs-avatars-pref-defaultsize": "Standardstørrelse i pixel:",
-	"bs-avatars-upload-title": "Ændre profilbillede",
-	"bs-avatars-upload-label": "Billede",
-	"bs-avatars-warning-title": "Advarsel",
-	"bs-avatars-userimage-title": "Billede fra wiki",
-	"bs-avatars-userimage-help": "f.eks. Billede.jpg"
+	"bs-avatars-upload-label": "Billede"
 }
