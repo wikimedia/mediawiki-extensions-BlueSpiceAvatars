@@ -11,7 +11,7 @@
 	"bs-avatars-generate-complete": "Un nove avatar ha essite generate.",
 	"bs-avatars-upload-label": "Imagine",
 	"bs-avatars-generate-new-label": "Generar nove avatar",
-	"bs-avatars-file-upload-fieldset-title": "Imagine incargate",
+	"bs-avatars-file-upload-fieldset-title": "Incargar un nove imagine",
 	"bs-avatars-auto-generate-fieldset-title": "Generar automaticamente un avatar",
 	"apihelp-bs-avatars-tasks-summary": "Incargar, generar e fixar avatares de usator",
 	"bs-avatars-tag-profileimage-error-invalidusername": "Le parametro \"username\" es obligatori e debe continer un nomine de usator valide",
