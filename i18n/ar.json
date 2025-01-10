@@ -18,5 +18,7 @@
 	"bs-avatars-auto-generate-fieldset-title": "توليد تلقائي للصورة الرمزية",
 	"apihelp-bs-avatars-tasks-summary": "رفع وتوليد وإعداد الصور الرمزية للمستخدم",
 	"bs-avatars-tag-profileimage-error-invalidusername": "الوسيط \"اسم المستخدم\" مطلوب ويجب أن يحتوي على اسم مستخدم صالح",
-	"bs-avatars-pref-generator-help": "يتم إنشاء الصورة الرمزية عندما لا يقوم المستخدم بتحميل صورة الملف الشخصي. InstantAvatar: يولد صورة رمزية بناءً على استخدام الأحرف الأولى من الاسم الحقيقي أو حقول اسم المستخدم. Identicon: يولد صورة رمزية بناء على أجزاء من هوية المستخدم."
+	"bs-avatars-pref-generator-help": "يتم إنشاء الصورة الرمزية عندما لا يقوم المستخدم بتحميل صورة الملف الشخصي. InstantAvatar: يولد صورة رمزية بناءً على استخدام الأحرف الأولى من الاسم الحقيقي أو حقول اسم المستخدم. Identicon: يولد صورة رمزية بناء على أجزاء من هوية المستخدم.",
+	"bs-avatars-upload-button": "رفع",
+	"bs-avatars-generate-button": "إنشاء"
 }
