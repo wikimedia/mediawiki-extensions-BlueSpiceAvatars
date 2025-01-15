@@ -26,10 +26,12 @@
 	"bs-avatars-userimage-alt": "תמונת הפרופיל של המשתמש \"$1\"",
 	"bs-avatars-set-userimage-failed": "לא תמונה תקינה מוויקי.",
 	"bs-avatars-set-userimage-saved": "תמונת המשתמש נשמרה בהצלחה.",
-	"bs-avatars-file-upload-fieldset-title": "העלאת תמונה",
+	"bs-avatars-file-upload-fieldset-title": "העלאת תמונה חדשה",
 	"bs-avatars-auto-generate-fieldset-title": "לחולל תמונת מייצגת אוטומטית",
 	"apihelp-bs-avatars-tasks-description": "העלאה, יצירה, והגדרה של תמונות מייצגות",
 	"apihelp-bs-avatars-tasks-summary": "העלאה, חילול, והגדרה של תמונות משתמש",
 	"bs-avatars-tag-profileimage-error-invalidusername": "הפרמטר \"username\" נדרש וחייב להכיל שם משתמש תקין",
-	"bs-avatars-pref-generator-help": "התמונה המייצגת מחוללת כאשר משתמש לא מעלה תמונת פרופיל. InstantAvatar: מייצר תמונה מייצגת על סמך ראשי התיבות של השם האמיתי או של שם המשתמש. Identicon: מייצר תמונה מייצגת על סמך חלקים של מזהה המשתמש."
+	"bs-avatars-pref-generator-help": "התמונה המייצגת מחוללת כאשר משתמש לא מעלה תמונת פרופיל. InstantAvatar: מייצר תמונה מייצגת על סמך ראשי התיבות של השם האמיתי או של שם המשתמש. Identicon: מייצר תמונה מייצגת על סמך חלקים של מזהה המשתמש.",
+	"bs-avatars-upload-button": "העלאה",
+	"bs-avatars-generate-button": "חילול"
 }

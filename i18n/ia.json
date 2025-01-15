@@ -22,7 +22,7 @@
 	"bs-avatars-userimage-alt": "Imagine de profilo del usator \"$1\"",
 	"bs-avatars-set-userimage-failed": "Isto non es un imagine del wiki.",
 	"bs-avatars-set-userimage-saved": "Le imagine de usator ha essite salveguardate.",
-	"bs-avatars-file-upload-fieldset-title": "Imagine incargate",
+	"bs-avatars-file-upload-fieldset-title": "Incargar un nove imagine",
 	"bs-avatars-auto-generate-fieldset-title": "Generar automaticamente un avatar",
 	"apihelp-bs-avatars-tasks-description": "Incargar, generar e fixar avatares de usator",
 	"apihelp-bs-avatars-tasks-summary": "Incargar, generar e fixar avatares de usator",
