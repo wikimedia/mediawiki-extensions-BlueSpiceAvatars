@@ -28,5 +28,7 @@
 	"apihelp-bs-avatars-tasks-description": "{{doc-apihelp-description|bs-avatars-tasks}}",
 	"apihelp-bs-avatars-tasks-summary": "{{doc-apihelp-summary|bs-avatars-tasks}}",
 	"bs-avatars-tag-profileimage-error-invalidusername": "Error message when tag parameter \"username\" is either empty or contains an invalid username",
-	"bs-avatars-pref-generator-help": "Description for config variable \"AvatarsGenerator\""
+	"bs-avatars-pref-generator-help": "Description for config variable \"AvatarsGenerator\"",
+	"bs-avatars-upload-button": "Label for the upload button",
+	"bs-avatars-generate-button": "Label for the button to generate an avatar"
 }
