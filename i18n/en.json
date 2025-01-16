@@ -30,5 +30,7 @@
 	"bs-avatars-tag-profileimage-error-invalidusername": "Parameter \"username\" is required and must contain a valid username",
 	"bs-avatars-pref-generator-help": "The avatar image is generated when a user does not upload a profile picture. InstantAvatar: Generates an avatar image based on using the initials of the real name or the username fields. Identicon: Generates an avatar image based on parts of the user's ID.",
 	"bs-avatars-upload-button": "Upload",
-	"bs-avatars-generate-button": "Generate"
+	"bs-avatars-generate-button": "Generate",
+	"bs-avatars-generic-cancel": "Cancel",
+	"bs-avatars-generate-description": "Generate new automatic avatar. This will permanently replace any uploaded profile image (if set)"
 }
