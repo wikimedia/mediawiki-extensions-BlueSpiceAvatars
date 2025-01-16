@@ -44,8 +44,12 @@
 		},
 		"UserProfile": {
 			"ImageProviders": {
-				"bs-avatars": {
-					"class": "\\BlueSpice\\Avatars\\AvatarProvider",
+				"generate-image": {
+					"class": "\\BlueSpice\\Avatars\\UserProfile\\ImageProvider\\GenerateImage",
+					"services": [ "BSAvatarsAvatarGenerator" ]
+				},
+				"upload-image": {
+					"class": "\\BlueSpice\\Avatars\\UserProfile\\ImageProvider\\UploadImage",
 					"services": [ "BSAvatarsAvatarGenerator" ]
 				}
 			}
@@ -72,22 +76,28 @@
 		"BlueSpice\\Avatars\\Test\\": "tests/phpunit/"
 	},
 	"ResourceModules": {
-		"ext.bluespice.avatarProvider": {
+		"ext.bluespice.userProfile.generateImageProvider": {
 			"scripts": [
-				"ui/GenerateAvatarPage.js",
-				"ui/UploadImagePage.js",
-				"ui/AvatarProvider.js",
-				"ui/UploadProvider.js"
+				"ui/GenerateAvatarDialog.js",
+				"ui/GenerateProvider.js"
 			],
 			"messages": [
 				"bs-avatars-generate-button",
 				"bs-avatars-generate-new-label",
+				"bs-avatars-generic-cancel",
+				"bs-avatars-generate-description"
+			]
+		},
+		"ext.bluespice.userProfile.uploadImageProvider": {
+			"scripts": [
+				"ui/UploadImageDialog.js",
+				"ui/UploadProvider.js"
+			],
+			"messages": [
+				"bs-avatars-generic-cancel",
 				"bs-avatars-upload-button",
 				"bs-avatars-file-upload-fieldset-title"
 			]
-		},
-		"ext.bluespice.avatars.preferences.styles": {
-			"styles": "ext.bluespice.avatars.preferences.css"
 		}
 	},
 	"ResourceFileModulePaths": {
