@@ -8,9 +8,9 @@ use BlueSpice\Privacy\IPrivacyHandler;
 use BlueSpice\Privacy\Module\Transparency;
 use Exception;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\User\User;
 use Message;
 use Status;
-use User;
 use Wikimedia\Rdbms\IDatabase;
 
 class Handler implements IPrivacyHandler {

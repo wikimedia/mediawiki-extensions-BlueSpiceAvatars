@@ -2,7 +2,7 @@
 
 namespace BlueSpice\Avatars;
 
-use User;
+use MediaWiki\User\User;
 
 interface IAvatarGenerator {
 	/**

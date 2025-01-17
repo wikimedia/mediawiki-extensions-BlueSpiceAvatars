@@ -31,7 +31,7 @@ namespace BlueSpice\Avatars;
 
 use MediaWiki\Extension\UserProfile\ProfileImage\ProfileImageProviderFactory;
 use MediaWiki\MediaWikiServices;
-use User;
+use MediaWiki\User\User;
 
 class Extension extends \BlueSpice\Extension {
 

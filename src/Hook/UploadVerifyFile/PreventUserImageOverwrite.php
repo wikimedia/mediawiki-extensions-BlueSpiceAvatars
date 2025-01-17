@@ -2,6 +2,8 @@
 
 namespace BlueSpice\Avatars\Hook\UploadVerifyFile;
 
+use MediaWiki\User\User;
+
 class PreventUserImageOverwrite extends \BlueSpice\Hook\UploadVerifyFile {
 
 	protected function skipProcessing() {
@@ -19,7 +21,7 @@ class PreventUserImageOverwrite extends \BlueSpice\Hook\UploadVerifyFile {
 		$userName = substr( $fileName, 0, $fileExt );
 
 		$user = $this->getServices()->getUserFactory()->newFromName( $userName );
-		if ( !$user instanceof \User || $user->isAnon() ) {
+		if ( !$user instanceof User || $user->isAnon() ) {
 			return true;
 		}
 
