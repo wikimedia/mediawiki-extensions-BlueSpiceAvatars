@@ -18,5 +18,6 @@
 	"bs-avatars-file-upload-fieldset-title": "Отпреми нову слику",
 	"bs-avatars-auto-generate-fieldset-title": "Аутоматско генерисање аватара",
 	"apihelp-bs-avatars-tasks-summary": "Отпремање, генерисање и постављање кориснике слике",
-	"bs-avatars-tag-profileimage-error-invalidusername": "Параметар \"username\" је препоручен и мора да садржи валидно корисничко име."
+	"bs-avatars-tag-profileimage-error-invalidusername": "Параметар \"username\" је препоручен и мора да садржи валидно корисничко име.",
+	"bs-avatars-generic-cancel": "Откажи"
 }
