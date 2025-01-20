@@ -21,5 +21,6 @@
 	"bs-avatars-set-userimage-failed": "Bild vun der Wiki net valabel.",
 	"bs-avatars-set-userimage-saved": "D'Benotzer-Bild gouf gespäichert.",
 	"bs-avatars-file-upload-fieldset-title": "En neit Bild eroplueden",
-	"bs-avatars-upload-button": "Eroplueden"
+	"bs-avatars-upload-button": "Eroplueden",
+	"bs-avatars-generic-cancel": "Ofbriechen"
 }
