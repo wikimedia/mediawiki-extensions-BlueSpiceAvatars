@@ -10,9 +10,9 @@
 	"descriptionmsg": "bs-avatars-desc",
 	"type": "bluespice",
 	"requires": {
-		"MediaWiki": ">= 1.39.0",
+		"MediaWiki": ">= 1.43.0",
 		"extensions": {
-			"BlueSpiceFoundation": ">= 4.3",
+			"BlueSpiceFoundation": ">= 4.5",
 			"UserProfile": "*"
 		}
 	},
