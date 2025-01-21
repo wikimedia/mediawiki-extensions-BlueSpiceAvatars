@@ -8,7 +8,7 @@ use BlueSpice\RendererFactory;
 use BlueSpice\Tag\Handler;
 use Html;
 use MediaWiki\MediaWikiServices;
-use Message;
+use MediaWiki\Message\Message;
 use MWException;
 use MWStake\MediaWiki\Component\DynamicFileDispatcher\DynamicFileDispatcherFactory;
 use Parser;
