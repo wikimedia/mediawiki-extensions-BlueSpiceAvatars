@@ -21,5 +21,7 @@
 	"bs-avatars-tag-profileimage-error-invalidusername": "הפרמטר \"username\" נדרש וחייב להכיל שם משתמש תקין",
 	"bs-avatars-pref-generator-help": "התמונה המייצגת מחוללת כאשר משתמש לא מעלה תמונת פרופיל. InstantAvatar: מייצר תמונה מייצגת על סמך ראשי התיבות של השם האמיתי או של שם המשתמש. Identicon: מייצר תמונה מייצגת על סמך חלקים של מזהה המשתמש.",
 	"bs-avatars-upload-button": "העלאה",
-	"bs-avatars-generate-button": "חילול"
+	"bs-avatars-generate-button": "חילול",
+	"bs-avatars-generic-cancel": "ביטול",
+	"bs-avatars-generate-description": "יצירת תמונה מייצגת אוטומטית חדשה. זה יחליף לצמיתות כל תמונת פרופיל שהועלתה (אם הוגדרה)"
 }

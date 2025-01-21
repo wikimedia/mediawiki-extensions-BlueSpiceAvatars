@@ -11,5 +11,6 @@
 	"bs-avatars-generate-complete": "En neien Avatar gouf generéiert.",
 	"bs-avatars-upload-label": "Bild",
 	"bs-avatars-file-upload-fieldset-title": "En neit Bild eroplueden",
-	"bs-avatars-upload-button": "Eroplueden"
+	"bs-avatars-upload-button": "Eroplueden",
+	"bs-avatars-generic-cancel": "Ofbriechen"
 }
