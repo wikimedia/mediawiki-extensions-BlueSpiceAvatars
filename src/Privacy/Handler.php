@@ -8,8 +8,8 @@ use BlueSpice\Privacy\IPrivacyHandler;
 use BlueSpice\Privacy\Module\Transparency;
 use Exception;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Message\Message;
 use MediaWiki\User\User;
-use Message;
 use Status;
 use Wikimedia\Rdbms\IDatabase;
 
