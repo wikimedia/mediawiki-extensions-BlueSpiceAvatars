@@ -12,7 +12,7 @@
 	"requires": {
 		"MediaWiki": ">= 1.43.0",
 		"extensions": {
-			"BlueSpiceFoundation": ">= 4.5",
+			"BlueSpiceFoundation": ">= 5.0.0",
 			"UserProfile": "*"
 		}
 	},
