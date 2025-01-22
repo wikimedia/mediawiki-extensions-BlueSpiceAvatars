@@ -36,5 +36,6 @@
 	"bs-avatars-tag-profileimage-error-invalidusername": "Le paramètre « username » est obligatoire et doit contenir un nom d’utilisateur valide",
 	"bs-avatars-pref-generator-help": "L’image avatar est générée lorsqu’un utilisateur ne téléverse pas de photo de profil. InstantAvatar : génère une image avatar basée sur l’utilisation des initiales du nom réel ou des champs du nom d’utilisateur. Identicon : génère une image avatar basée sur des parties de l’identifiant de l’utilisateur.",
 	"bs-avatars-upload-button": "Téléverser",
-	"bs-avatars-generate-button": "Générer"
+	"bs-avatars-generate-button": "Générer",
+	"bs-avatars-generic-cancel": "Annuler"
 }
