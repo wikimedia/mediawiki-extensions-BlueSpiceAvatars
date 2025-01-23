@@ -2,7 +2,7 @@
 
 namespace BlueSpice\Avatars;
 
-use Config;
+use MediaWiki\Config\Config;
 
 abstract class AvatarGenerator implements IAvatarGenerator {
 	/**

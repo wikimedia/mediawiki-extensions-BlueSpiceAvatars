@@ -2,7 +2,7 @@
 
 namespace BlueSpice\Avatars;
 
-use Config;
+use MediaWiki\Config\Config;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\User\User;
 
