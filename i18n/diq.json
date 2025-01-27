@@ -16,5 +16,6 @@
 	"bs-avatars-file-upload-fieldset-title": "Resım bar ke",
 	"bs-avatars-auto-generate-fieldset-title": "Otomatik avatar vıraz",
 	"apihelp-bs-avatars-tasks-summary": "Avatarê karberi barkerdış, vıraştış u eyar kerdış",
-	"bs-avatars-tag-profileimage-error-invalidusername": "Parametrey \"namey karberi \" lazımo u ravêrde yew namey karberi ihtiwa wa bıkero."
+	"bs-avatars-tag-profileimage-error-invalidusername": "Parametrey \"namey karberi \" lazımo u ravêrde yew namey karberi ihtiwa wa bıkero.",
+	"bs-avatars-generic-cancel": "Bıtexelne"
 }
