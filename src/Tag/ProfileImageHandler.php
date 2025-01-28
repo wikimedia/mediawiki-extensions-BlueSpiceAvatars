@@ -6,7 +6,7 @@ use BlueSpice\Renderer\Params;
 use BlueSpice\Renderer\UserImage;
 use BlueSpice\RendererFactory;
 use BlueSpice\Tag\Handler;
-use Html;
+use MediaWiki\Html\Html;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Message\Message;
 use MWException;
