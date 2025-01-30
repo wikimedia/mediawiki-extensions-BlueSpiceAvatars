@@ -26,7 +26,7 @@
 	"bs-avatars-userimage-alt": "Зображення профілю користувача «$1»",
 	"bs-avatars-set-userimage-failed": "Неприпустиме зображення з вікі.",
 	"bs-avatars-set-userimage-saved": "Зображення користувача збережено.",
-	"bs-avatars-file-upload-fieldset-title": "Завантажити зображення",
+	"bs-avatars-file-upload-fieldset-title": "Завантажити нове зображення",
 	"bs-avatars-auto-generate-fieldset-title": "Автоматичне створення аватара",
 	"apihelp-bs-avatars-tasks-description": "Завантаження, генерування і налаштування користувацьких аватарів",
 	"apihelp-bs-avatars-tasks-summary": "Завантаження, генерування і налаштування користувацьких аватарів",
