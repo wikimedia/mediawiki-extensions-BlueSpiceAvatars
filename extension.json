@@ -53,6 +53,17 @@
 					"services": [ "BSAvatarsAvatarGenerator" ]
 				}
 			}
+		},
+		"PDFCreator": {
+			"PreProcessors": {
+				"BSProfileImage": {
+					"class": "BlueSpice\\Avatars\\Integration\\PDFCreator\\PreProcessor\\ImageProcessor",
+					"services": [
+						"UrlUtils", "UserFactory",
+						"UserProfile.ImageProviderFactory", "TitleFactory"
+					]
+				}
+			}
 		}
 	},
 	"ServiceWiringFiles": [
@@ -111,15 +122,10 @@
 		}
 	},
 	"HookHandlers": {
-		"export": {
-			"class": "\\BlueSpice\\Avatars\\Hook\\BSUEModulePDFFindFiles\\AddProfileImage",
-			"services": [ "UrlUtils", "UserFactory", "UserProfile.ImageProviderFactory" ]
-		}
 	},
 	"Hooks": {
 		"UploadVerifyFile": "\\BlueSpice\\Avatars\\Hook\\UploadVerifyFile\\PreventUserImageOverwrite::callback",
-		"SetupAfterCache": "\\BlueSpice\\Avatars\\Hook\\SetupAfterCache\\AddForeignFileRepo::callback",
-		"BSUEModulePDFFindFiles": "export"
+		"SetupAfterCache": "\\BlueSpice\\Avatars\\Hook\\SetupAfterCache\\AddForeignFileRepo::callback"
 	},
 	"manifest_version": 2
 }
