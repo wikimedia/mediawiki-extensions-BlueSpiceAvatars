@@ -5,7 +5,7 @@ namespace BlueSpice\Avatars\Tag;
 use BlueSpice\Tag\MarkerType;
 use BlueSpice\Tag\MarkerType\NoWiki;
 use MediaWiki\MediaWikiServices;
-use Parser;
+use MediaWiki\Parser\Parser;
 use PPFrame;
 
 class ProfileImage extends \BlueSpice\Tag\Tag {

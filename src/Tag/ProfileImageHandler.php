@@ -9,9 +9,9 @@ use BlueSpice\Tag\Handler;
 use MediaWiki\Html\Html;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Message\Message;
+use MediaWiki\Parser\Parser;
 use MWException;
 use MWStake\MediaWiki\Component\DynamicFileDispatcher\DynamicFileDispatcherFactory;
-use Parser;
 use PPFrame;
 
 class ProfileImageHandler extends Handler {
