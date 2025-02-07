@@ -6,7 +6,7 @@ use BlueSpice\Tag\MarkerType;
 use BlueSpice\Tag\MarkerType\NoWiki;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Parser\Parser;
-use PPFrame;
+use MediaWiki\Parser\PPFrame;
 
 class ProfileImage extends \BlueSpice\Tag\Tag {
 
