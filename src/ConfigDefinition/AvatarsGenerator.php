@@ -2,6 +2,7 @@
 
 namespace BlueSpice\Avatars\ConfigDefinition;
 
+use MediaWiki\HTMLForm\Field\HTMLSelectField;
 use MediaWiki\MediaWikiServices;
 
 class AvatarsGenerator extends \BlueSpice\ConfigDefinition\ArraySetting {
@@ -23,7 +24,7 @@ class AvatarsGenerator extends \BlueSpice\ConfigDefinition\ArraySetting {
 	 * @return \HTMLFormField
 	 */
 	public function getHtmlFormField() {
-		return new \HTMLSelectField( $this->makeFormFieldParams() );
+		return new HTMLSelectField( $this->makeFormFieldParams() );
 	}
 
 	/**
