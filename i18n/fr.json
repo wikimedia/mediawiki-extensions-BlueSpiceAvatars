@@ -8,7 +8,8 @@
 			"Thibaut120094",
 			"Urhixidur",
 			"Verdy p",
-			"Wladek92"
+			"Wladek92",
+			"JLTRY"
 		]
 	},
 	"prefs-avatars": "Avatars",
@@ -37,5 +38,6 @@
 	"bs-avatars-pref-generator-help": "L’image avatar est générée lorsqu’un utilisateur ne téléverse pas de photo de profil. InstantAvatar : génère une image avatar basée sur l’utilisation des initiales du nom réel ou des champs du nom d’utilisateur. Identicon : génère une image avatar basée sur des parties de l’identifiant de l’utilisateur.",
 	"bs-avatars-upload-button": "Téléverser",
 	"bs-avatars-generate-button": "Générer",
-	"bs-avatars-generic-cancel": "Annuler"
+	"bs-avatars-generic-cancel": "Annuler",
+	"bs-avatars-generate-description": "Générer un nouvel avatar automatique. Cela remplacera définitivement toute image de profil téléchargée (si définie)"
 }
