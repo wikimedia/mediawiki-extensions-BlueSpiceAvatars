@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Hwboehm",
+			"Justman10000",
 			"Kghbln",
 			"Marc Reymann <reymann@hallowelt.biz>",
 			"Metalhead64",
@@ -28,10 +29,14 @@
 	"bs-avatars-userimage-alt": "Profilbild des Benutzers „$1“",
 	"bs-avatars-set-userimage-failed": "Das Bild ist nicht auf dem Wiki vorhanden.",
 	"bs-avatars-set-userimage-saved": "Das Benutzerbild wurde gespeichert.",
-	"bs-avatars-file-upload-fieldset-title": "Bild hochladen",
+	"bs-avatars-file-upload-fieldset-title": "Ein neues Bild hochladen",
 	"bs-avatars-auto-generate-fieldset-title": "Benutzerbild automatisch generieren",
 	"apihelp-bs-avatars-tasks-description": "Hochladen, Erstellen und Festlegen von Benutzerbildern",
 	"apihelp-bs-avatars-tasks-summary": "Hochladen, Erstellen und Festlegen von Benutzerbildern",
 	"bs-avatars-tag-profileimage-error-invalidusername": "Der Parameter \"username\" muss angegeben werden und einen gültige Benutzernamen enthalten",
-	"bs-avatars-pref-generator-help": "Das Avatar-Bild wird generiert, wenn ein Benutzer kein Profilbild hochlädt. InstantAvatar: Erzeugt ein Avatar-Bild basierend auf den Initialen des echten Namens oder des Benutzernamens. Identicon: Erzeugt ein Avatar-Bild basierend auf der ID des Benutzers."
+	"bs-avatars-pref-generator-help": "Das Avatar-Bild wird generiert, wenn ein Benutzer kein Profilbild hochlädt. InstantAvatar: Erzeugt ein Avatar-Bild basierend auf den Initialen des echten Namens oder des Benutzernamens. Identicon: Erzeugt ein Avatar-Bild basierend auf der ID des Benutzers.",
+	"bs-avatars-upload-button": "Hochladen",
+	"bs-avatars-generate-button": "Generieren",
+	"bs-avatars-generic-cancel": "Abbrechen",
+	"bs-avatars-generate-description": "Erstelle einen neuen automatischen Avatar. Dieser ersetzt dauerhaft jedes hochgeladene Profilbild (falls festgelegt)"
 }
