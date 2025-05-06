@@ -1,8 +1,8 @@
 bs.util.registerNamespace( 'bs.avatars.ui' );
 
-bs.avatars.ui.GenerateAvatarDialog = function( cfg ) {
+bs.avatars.ui.GenerateAvatarDialog = function ( cfg ) {
 	cfg = cfg || {};
-	bs.avatars.ui.GenerateAvatarDialog.parent.call( this, $.extend( {
+	bs.avatars.ui.GenerateAvatarDialog.parent.call( this, Object.assign( {
 		size: 'medium'
 	}, cfg ) );
 
@@ -26,7 +26,7 @@ bs.avatars.ui.GenerateAvatarDialog.static.actions = [
 	}
 ];
 
-bs.avatars.ui.GenerateAvatarDialog.prototype.initialize = function() {
+bs.avatars.ui.GenerateAvatarDialog.prototype.initialize = function () {
 	bs.avatars.ui.GenerateAvatarDialog.parent.prototype.initialize.call( this );
 
 	this.panel = new OO.ui.PanelLayout( {
@@ -39,21 +39,21 @@ bs.avatars.ui.GenerateAvatarDialog.prototype.initialize = function() {
 	this.$body.append( this.panel.$element );
 };
 
-bs.avatars.ui.GenerateAvatarDialog.prototype.getActionProcess = function( action ) {
+bs.avatars.ui.GenerateAvatarDialog.prototype.getActionProcess = function ( action ) {
 	return bs.avatars.ui.GenerateAvatarDialog.parent.prototype.getActionProcess.call( this, action ).next(
 		function () {
 			if ( action === 'generate' ) {
-				var dfd = $.Deferred();
+				const dfd = $.Deferred();
 				new mw.Api().postWithToken( 'csrf', {
 					action: 'bs-avatars-tasks',
 					task: 'generateAvatar'
-				} ).done( function( r ) {
+				} ).done( ( r ) => {
 					if ( r.hasOwnProperty( 'success' ) && r.success ) {
 						this.close( { reload: true } );
 					} else {
 						dfd.reject();
 					}
-				}.bind( this ) ).fail( function( e ) {
+				} ).fail( () => {
 					dfd.reject();
 				} );
 				return dfd.promise();

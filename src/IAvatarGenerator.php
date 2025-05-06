@@ -13,7 +13,7 @@ interface IAvatarGenerator {
 	/**
 	 *
 	 * @param User $user
-	 * @param type $size
+	 * @param int $size
 	 * @param array $params
 	 * @return string
 	 */
