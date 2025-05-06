@@ -30,7 +30,7 @@ class Generator {
 	 * @param Config $config
 	 * @param AvatarGeneratorFactory|null $factory
 	 */
-	public function __construct( Config $config, AvatarGeneratorFactory $factory = null ) {
+	public function __construct( Config $config, ?AvatarGeneratorFactory $factory = null ) {
 		$this->config = $config;
 		if ( !$factory ) {
 			// deprecated since version 3.1.13 - Use Service BSAvatarsAvatarGenerator

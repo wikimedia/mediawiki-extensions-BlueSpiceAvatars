@@ -1,8 +1,8 @@
 bs.util.registerNamespace( 'bs.avatars.ui' );
 
-bs.avatars.ui.UploadImageDialog = function( cfg ) {
+bs.avatars.ui.UploadImageDialog = function ( cfg ) {
 	cfg = cfg || {};
-	bs.avatars.ui.UploadImageDialog.parent.call( this, $.extend( {
+	bs.avatars.ui.UploadImageDialog.parent.call( this, Object.assign( {
 		size: 'medium'
 	}, cfg ) );
 
@@ -26,21 +26,21 @@ bs.avatars.ui.UploadImageDialog.static.actions = [
 	}
 ];
 
-bs.avatars.ui.UploadImageDialog.prototype.getReadyProcess = function() {
+bs.avatars.ui.UploadImageDialog.prototype.getReadyProcess = function () {
 	return bs.avatars.ui.UploadImageDialog.parent.prototype.getReadyProcess.call( this )
-	.next( function () {
-		this.actions.setAbilities( { upload: false } );
-	}.bind( this ) );
+		.next( () => {
+			this.actions.setAbilities( { upload: false } );
+		} );
 };
 
-bs.avatars.ui.UploadImageDialog.prototype.initialize = function() {
+bs.avatars.ui.UploadImageDialog.prototype.initialize = function () {
 	bs.avatars.ui.UploadImageDialog.parent.prototype.initialize.call( this );
 	this.selector = new OO.ui.SelectFileWidget( {
 		multiple: false,
 		droppable: true,
 		accept: [ 'image/*' ],
 		classes: [ 'bs-avatars-upload-selector' ],
-		showDropTarget: true,
+		showDropTarget: true
 	} );
 	this.selector.connect( this, {
 		change: 'onFileSelect'
@@ -54,7 +54,7 @@ bs.avatars.ui.UploadImageDialog.prototype.initialize = function() {
 	this.$body.append( this.panel.$element );
 };
 
-bs.avatars.ui.UploadImageDialog.prototype.onFileSelect = function( file ) {
+bs.avatars.ui.UploadImageDialog.prototype.onFileSelect = function ( file ) {
 	if ( file.length > 0 ) {
 		file = file[ 0 ];
 	} else {
@@ -64,7 +64,7 @@ bs.avatars.ui.UploadImageDialog.prototype.onFileSelect = function( file ) {
 	this.file = file;
 };
 
-bs.avatars.ui.UploadImageDialog.prototype.getActionProcess = function( action ) {
+bs.avatars.ui.UploadImageDialog.prototype.getActionProcess = function ( action ) {
 	return bs.avatars.ui.UploadImageDialog.parent.prototype.getActionProcess.call( this, action ).next(
 		function () {
 			if ( action === 'upload' ) {
@@ -72,11 +72,11 @@ bs.avatars.ui.UploadImageDialog.prototype.getActionProcess = function( action ) 
 					return;
 				}
 
-				var dfd = $.Deferred();
-				var url = mw.util.wikiScript( 'api' ) + '?action=bs-avatars-tasks&task=uploadFile';
+				const dfd = $.Deferred();
+				const url = mw.util.wikiScript( 'api' ) + '?action=bs-avatars-tasks&task=uploadFile';
 
 				// POST multipart/form-data
-				var formData = new FormData();
+				const formData = new FormData();
 				formData.append( 'avatars', this.file );
 				formData.append( 'name', 'avatars' );
 				formData.append( 'token', mw.user.tokens.get( 'csrfToken' ) );
@@ -87,11 +87,11 @@ bs.avatars.ui.UploadImageDialog.prototype.getActionProcess = function( action ) 
 					data: formData,
 					processData: false,
 					contentType: false
-				} ).done( function( data ) {
+				} ).done( () => {
 					this.close( { reload: true } );
-				}.bind( this ) ).fail( function( err ) {
+				} ).fail( ( err ) => {
 					dfd.reject( new OO.ui.Error( err ) );
-				}.bind( this ) );
+				} );
 
 				return dfd.promise();
 			}
