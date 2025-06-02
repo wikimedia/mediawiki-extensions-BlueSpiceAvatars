@@ -24,7 +24,7 @@
 	"bs-avatars-userimage-alt": "\"$1\" felhasználó profilképe",
 	"bs-avatars-set-userimage-failed": "Nem érvényes kép a wikiből.",
 	"bs-avatars-set-userimage-saved": "A felhasználói kép mentése megtörtént.",
-	"bs-avatars-file-upload-fieldset-title": "Kép feltöltése",
+	"bs-avatars-file-upload-fieldset-title": "Új kép feltöltése",
 	"bs-avatars-auto-generate-fieldset-title": "Avatar automatikus generálása",
 	"apihelp-bs-avatars-tasks-summary": "Felhasználói avatarok feltöltése, generálása és beállítása",
 	"bs-avatars-tag-profileimage-error-invalidusername": "A \"felhasználónév\" paraméter megadása kötelező, és érvényes felhasználónevet kell tartalmaznia",
