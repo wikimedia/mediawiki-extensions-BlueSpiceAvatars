@@ -2,6 +2,7 @@
 
 use BlueSpice\Tests\BSApiTasksTestBase;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Title\Title;
 
 /*
  * Test BlueSpiceAvatars API Endpoints
