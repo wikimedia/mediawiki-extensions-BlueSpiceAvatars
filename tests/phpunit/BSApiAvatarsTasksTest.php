@@ -1,7 +1,6 @@
 <?php
 
 use BlueSpice\Tests\BSApiTasksTestBase;
-use MediaWiki\MediaWikiServices;
 use MediaWiki\Title\Title;
 
 /*
@@ -103,7 +102,7 @@ class BSApiAvatarsTasksTest extends BSApiTasksTestBase {
 	 */
 	public function deleteFileByTitle( $title ) {
 		if ( $title->exists() ) {
-			$services = MediaWikiServices::getInstance();
+			$services = $this->getServiceContainer();
 			$file = $services->getRepoGroup()
 				->findFile( $title, [ 'ignoreRedirect' => true ] );
 			// yes this really needs to be set this way
@@ -156,7 +155,7 @@ class BSApiAvatarsTasksTest extends BSApiTasksTestBase {
 	 */
 	public function deleteFileByContent( $filePath ) {
 		$hash = FSFile::getSha1Base36FromPath( $filePath );
-		$dupes = MediaWikiServices::getInstance()->getRepoGroup()->findBySha1( $hash );
+		$dupes = $this->getServiceContainer()->getRepoGroup()->findBySha1( $hash );
 		$success = true;
 		foreach ( $dupes as $dupe ) {
 			$success &= $this->deleteFileByTitle( $dupe->getTitle() );
