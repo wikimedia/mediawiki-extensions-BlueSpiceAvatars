@@ -1,11 +1,25 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ahmed-Najib-Biabani-Ibrahimkhel"
+			"Ahmed-Najib-Biabani-Ibrahimkhel",
+			"شاه زمان پټان"
 		]
 	},
+	"bs-avatars-desc": "د کارن ټوليز او ځاني انځورونه چمتو کوي",
+	"bs-avatars-pref-generator": "زېږوونکی:",
+	"bs-avatars-pref-userimage-img-alt": "ستاسو اوسنی کارن انځور",
+	"bs-avatars-upload-complete": "انځور راپورته‌شو.",
+	"bs-avatars-generate-complete": "يو نوې ځان‌بڼه وزېږولې شوه.",
 	"bs-avatars-upload-title": "پېژنليک انځور بدلول",
 	"bs-avatars-upload-label": "انځور",
+	"bs-avatars-generate-new-label": "نوې ځان‌بڼه زېږول",
 	"bs-avatars-warning-title": "گواښنه",
-	"bs-avatars-generic-cancel": "ناگارل"
+	"bs-avatars-file-upload-fieldset-title": "نوی انځور راپورته‌کول",
+	"bs-avatars-auto-generate-fieldset-title": "د ځان‌بڼې خپلکاري زېږون",
+	"apihelp-bs-avatars-tasks-summary": "د کارن ځان‌بڼې راپورته‌کول، زېږول او اوڼل",
+	"bs-avatars-tag-profileimage-error-invalidusername": "\"کارن‌نوم\" پاراميتر اړين دی او بايد يو باوري کارن‌نوم ولري",
+	"bs-avatars-upload-button": "راپورته‌کول",
+	"bs-avatars-generate-button": "زېږول",
+	"bs-avatars-generic-cancel": "ناگارل",
+	"bs-avatars-generate-description": "يو نوې خپلکاري ځان‌بڼه جوړول. دا به د هر يو راپورته‌شوي پېژنيال انځور ځايناستی شي (که واوڼل شي)"
 }
