@@ -2,9 +2,11 @@
 
 namespace BlueSpice\Avatars;
 
+use File;
 use MediaWiki\Config\Config;
-use MediaWiki\MediaWikiServices;
+use MediaWiki\Message\Message;
 use MediaWiki\User\User;
+use MWStake\MediaWiki\Component\FileStorageUtilities\StorageHandler;
 use RuntimeException;
 
 class Generator {
@@ -16,47 +18,29 @@ class Generator {
 
 	/**
 	 *
-	 * @var Config
-	 */
-	protected $config = null;
-
-	/**
-	 *
-	 * @var AvatarGeneratorFactory
-	 */
-	protected $factory = null;
-
-	/**
-	 *
 	 * @param Config $config
-	 * @param AvatarGeneratorFactory|null $factory
+	 * @param AvatarGeneratorFactory $factory
+	 * @param StorageHandler $storageHandler
+	 * @param \RepoGroup $repoGroup
 	 */
-	public function __construct( Config $config, ?AvatarGeneratorFactory $factory = null ) {
-		$this->config = $config;
-		if ( !$factory ) {
-			// deprecated since version 3.1.13 - Use Service BSAvatarsAvatarGenerator
-			// to create this instance
-			wfDebugLog( 'bluespice-deprecations', __METHOD__, 'private' );
-			$factory = MediaWikiServices::getInstance()->getService(
-				'BSAvatarsAvatarGeneratorFactory'
-			);
-		}
-		$this->factory = $factory;
+	public function __construct(
+		private readonly Config $config,
+		private readonly AvatarGeneratorFactory $factory,
+		private readonly StorageHandler $storageHandler,
+		private readonly \RepoGroup $repoGroup
+	) {
 	}
 
 	/**
 	 * @param User $user
 	 * @param array $params
-	 * @return string
+	 * @return void
 	 * @throws RuntimeException
 	 */
 	public function generate( User $user, array $params = [] ) {
 		$defaultSize = 1024;
 
 		$oFile = $this->getAvatarFile( $user );
-		if ( !$oFile ) {
-			return '';
-		}
 
 		if ( !$oFile->exists() || isset( $params[static::PARAM_OVERWRITE] ) ) {
 			$generator = $this->factory->newFromName(
@@ -70,30 +54,17 @@ class Generator {
 
 			$rawPNGAvatar = $generator->generate( $user, $defaultSize );
 
-			$status = \BsFileSystemHelper::saveToDataDirectory(
-				$oFile->getName(),
-				$rawPNGAvatar,
-				'Avatars'
-			);
+			$status = $this->storageHandler->newTransaction()
+				->create( $oFile->getName(), $rawPNGAvatar, 'Avatars', [ 'overwrite' => true ] )
+				->deleteDirectory( "Avatars/thumb/{$oFile->getName()}" )
+				->commit();
+
 			if ( !$status->isGood() ) {
 				throw new RuntimeException(
-					'FATAL: Avatar could not be saved! ' . $status->getMessage()->plain()
+					'FATAL: Avatar could not be saved! ' .
+					Message::newFromSpecifier( $status->getMessages()[0] )->text()
 				);
 			}
-			# Delete thumb folder if it exists
-			$status = \BsFileSystemHelper::deleteFolder(
-				"Avatars/thumb/{$oFile->getName()}",
-				true
-			);
-			if ( !$status->isGood() ) {
-				throw new RuntimeException(
-					'FATAL: Avatar thumbs could no be deleted!'
-				);
-			}
-			$oFile = \BsFileSystemHelper::getFileFromRepoName(
-				$oFile->getName(),
-				'Avatars'
-			);
 
 			$user->invalidateCache();
 		}
@@ -102,12 +73,10 @@ class Generator {
 	/**
 	 * Gets Avatar file from user ID
 	 * @param User $user
-	 * @return bool|\File
+	 * @return File|null
 	 */
-	public function getAvatarFile( User $user ) {
-		return \BsFileSystemHelper::getFileFromRepoName(
-			static::FILE_PREFIX . $user->getId() . ".png",
-			'Avatars'
-		);
+	public function getAvatarFile( User $user ): ?File {
+		$repo = $this->repoGroup->getRepoByName( 'Avatars' );
+		return $repo->newFile( static::FILE_PREFIX . $user->getId() . ".png" );
 	}
 }
