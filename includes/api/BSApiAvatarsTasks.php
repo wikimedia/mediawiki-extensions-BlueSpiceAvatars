@@ -42,24 +42,17 @@ class BSApiAvatarsTasks extends BSApiTasksBase {
 		$oUser = $this->getUser();
 		\BlueSpice\Avatars\Extension::unsetUserImage( $oUser );
 		$sAvatarFileName = Generator::FILE_PREFIX . $oUser->getId() . ".png";
-		$oStatus = BsFileSystemHelper::uploadAndConvertImage(
-			$this->getRequest()->getVal( 'name' ),
-			'Avatars',
-			$sAvatarFileName
+
+		$helper = new \BlueSpice\Avatars\AvatarHelper(
+			$this->services->getService( 'MWStake.StorageUtilities' )
 		);
-		if ( !$oStatus->isGood() ) {
-			$oResponse->message = $oStatus->getMessage()->text();
+		$status = $helper->uploadAndConvertImage( $this->getRequest()->getVal( 'name' ), $sAvatarFileName );
+		if ( !$status->isGood() ) {
+			$oResponse->message = \MediaWiki\Message\Message::newFromSpecifier( $status->getMessages()[0] )->text();
 			return $oResponse;
 		}
 
-		# found no way to regenerate thumbs. just delete thumb folder if it exists
-		$oStatus = BsFileSystemHelper::deleteFolder(
-			"Avatars/thumb/$sAvatarFileName",
-			true
-		);
-		if ( !$oStatus->isGood() ) {
-			throw new RuntimeException( 'FATAL: Avatar thumbs could no be deleted!' );
-		}
+		$helper->deleteThumbs( $sAvatarFileName );
 
 		$oResponse->message = $this->msg( 'bs-avatars-upload-complete' )->text();
 		$oResponse->success = true;

@@ -12,7 +12,8 @@
 	],
 	"require": {
 		"composer/installers": "~1.0|~2",
-		"mwstake/mediawiki-component-generictaghandler": "^2.0.0"
+		"mwstake/mediawiki-component-generictaghandler": "^2.0.0",
+		"mwstake/mediawiki-component-filestorageutilities": "~1"
 	},
 	"require-dev": {
 		"mediawiki/mediawiki-codesniffer": "45.0.0",

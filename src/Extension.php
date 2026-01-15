@@ -36,6 +36,31 @@ use MediaWiki\User\User;
 class Extension extends \BlueSpice\Extension {
 
 	/**
+	 * Extension callback
+	 * @return void
+	 */
+	public static function onRegistration() {
+		mwsInitComponents();
+
+		$GLOBALS['wgForeignFileRepos'][] = [
+			'class' => \FileRepo::class,
+			'name' => 'Avatars',
+			'backend' => $GLOBALS['mwsgFileStorageBackend'],
+			'hashLevels' => 0,
+			'zones' => [
+				'public' => [
+					'container' => 'wiki_data',
+					'directory' => 'Avatars'
+				],
+				'thumb' => [
+					'container' => 'wiki_data',
+					'directory' => 'Avatars/thumb'
+				]
+			]
+		];
+	}
+
+	/**
 	 * Clears a user's UserImage setting
 	 * @param User $oUser
 	 */

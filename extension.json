@@ -123,9 +123,9 @@
 			"class": "\\BlueSpice\\Avatars\\Hook\\RegisterTags"
 		}
 	},
+	"callback": "BlueSpice\\Avatars\\Extension::onRegistration",
 	"Hooks": {
 		"UploadVerifyFile": "\\BlueSpice\\Avatars\\Hook\\UploadVerifyFile\\PreventUserImageOverwrite::callback",
-		"SetupAfterCache": "\\BlueSpice\\Avatars\\Hook\\SetupAfterCache\\AddForeignFileRepo::callback",
 		"MWStakeGenericTagHandlerInitTags": "registerTags"
 	},
 	"manifest_version": 2
