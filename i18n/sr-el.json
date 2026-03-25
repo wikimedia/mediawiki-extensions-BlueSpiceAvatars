@@ -22,9 +22,10 @@
 	"bs-avatars-userimage-alt": "Profilna slika korisnika \"$1\".",
 	"bs-avatars-set-userimage-failed": "Nekorektna slika sa vikija.",
 	"bs-avatars-set-userimage-saved": "Profilna slika je sačuvana.",
-	"bs-avatars-file-upload-fieldset-title": "Otpremanje slika",
+	"bs-avatars-file-upload-fieldset-title": "Otpremi novu sliku",
 	"bs-avatars-auto-generate-fieldset-title": "Automatsko generisanje avatara",
 	"apihelp-bs-avatars-tasks-description": "Otpremanje, generisanje i postavljanje korisnike slike",
 	"apihelp-bs-avatars-tasks-summary": "Otpremanje, generisanje i postavljanje korisnike slike",
-	"bs-avatars-tag-profileimage-error-invalidusername": "Parametar \"username\" je preporučen i mora da sadrži validno korisničko ime."
+	"bs-avatars-tag-profileimage-error-invalidusername": "Parametar \"username\" je preporučen i mora da sadrži validno korisničko ime.",
+	"bs-avatars-generic-cancel": "Otkaži"
 }

@@ -4,6 +4,7 @@
 			"BaRaN6161 TURK",
 			"Can",
 			"KediÇobanı",
+			"SaldırganSincap",
 			"Sayginer",
 			"ToprakM"
 		]
@@ -26,7 +27,7 @@
 	"bs-avatars-userimage-alt": "\"$1\" adlı kullanıcının profil görüntüsü",
 	"bs-avatars-set-userimage-failed": "Vikiden geçerli bir görsel değil.",
 	"bs-avatars-set-userimage-saved": "Kullanıcı resmi kaydedildi.",
-	"bs-avatars-file-upload-fieldset-title": "Resim yükleme",
+	"bs-avatars-file-upload-fieldset-title": "Yeni bir resim yükle",
 	"bs-avatars-auto-generate-fieldset-title": "Otomatik avatar oluştur",
 	"apihelp-bs-avatars-tasks-description": "Kullanıcı avatarlarını yükleme, oluşturma ve ayarlama",
 	"apihelp-bs-avatars-tasks-summary": "Kullanıcı avatarlarını yükleme, oluşturma ve ayarlama",

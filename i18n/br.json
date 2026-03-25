@@ -10,7 +10,7 @@
 	"bs-avatars-pref-generator": "Ganer :",
 	"bs-avatars-pref-defaultsize": "Ment dre ziouer e pikseloù :",
 	"bs-avatars-upload-complete": "Pellgarget eo bet ar skeudenn.",
-	"bs-avatars-generate-complete": "Krouet ez eus bet un avatar nevez.",
+	"bs-avatars-generate-complete": "Un avatar nevez zo bet krouet.",
 	"bs-avatars-upload-title": "Cheñch skeudenn ar profil",
 	"bs-avatars-upload-label": "Skeudenn",
 	"bs-avatars-generate-new-label": "Krouiñ un avatar nevez",
@@ -18,5 +18,5 @@
 	"bs-avatars-userimage-title": "Skeudenn eus ar wiki",
 	"bs-avatars-userimage-help": "da sk. Skeudenn.jpg",
 	"bs-avatars-set-userimage-saved": "Enrollet eo bet skeudenn an implijer.",
-	"bs-avatars-file-upload-fieldset-title": "Ezporzhiadur skeudenn"
+	"bs-avatars-file-upload-fieldset-title": "Ezkargañ ur skeudenn nevez"
 }

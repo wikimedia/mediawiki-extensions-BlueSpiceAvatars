@@ -2,6 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Alirezaaa",
+			"Ebrahim",
+			"Ebraminio",
 			"FarsiNevis",
 			"Jeeputer",
 			"LordProfo",
@@ -9,7 +11,7 @@
 		]
 	},
 	"prefs-avatars": "آواتارها",
-	"bs-avatars-desc": "تصاویری عمومی و شخصی ازکاربر فراهم می کند",
+	"bs-avatars-desc": "تصاویری عمومی و شخصی ازکاربر فراهم می‌کند",
 	"bs-avatars-pref-generator": "تولیدکننده:",
 	"bs-avatars-pref-defaultsize": "اندازه پیش فرض بر حسب پیکسل:",
 	"bs-avatars-pref-userimage": "تصویر کاربری:",
