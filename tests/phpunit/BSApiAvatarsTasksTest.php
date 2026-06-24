@@ -43,7 +43,7 @@ class BSApiAvatarsTasksTest extends BSApiTasksTestBase {
 		  'generateAvatar', []
 		);
 
-		$this->assertTrue( $data->success, "Avatar was not generated" );
+		$this->assertTrue( $data->success, "Avatar was not generated: " . ( $data->message ?? 'unknown error' ) );
 	}
 
 	/**
