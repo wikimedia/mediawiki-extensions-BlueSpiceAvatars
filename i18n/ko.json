@@ -24,5 +24,7 @@
 	"bs-avatars-upload-button": "업로드",
 	"bs-avatars-generate-button": "생성",
 	"bs-avatars-generic-cancel": "취소",
-	"bs-avatars-generate-description": "자동 아바타를 새롭게 생성합니다. 이렇게 하면 기존에 업로드된 프로필 이미지(설정된 경우)가 영구적으로 교체됩니다"
+	"bs-avatars-generate-description": "자동 아바타를 새롭게 생성합니다. 이렇게 하면 기존에 업로드된 프로필 이미지(설정된 경우)가 영구적으로 교체됩니다",
+	"bs-avatars-upload-unsupported-type": "이 파일 형식은 지원되지 않습니다.",
+	"bs-avatars-upload-tempfile-missing": "임시 파일을 가져오는 데 실패했습니다"
 }
