@@ -47,7 +47,6 @@ class BSApiAvatarsTasksTest extends BSApiTasksTestBase {
 	}
 
 	/**
-	 *
 	 * 'uploadFile' => [
 	 *	   'examples' => [],
 	 *	   'params' => []
