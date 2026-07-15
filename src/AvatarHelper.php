@@ -71,7 +71,6 @@ class AvatarHelper {
 		imagefilledrectangle( $rNewImage, 0, 0, $iNewWidth, $iNewHeight, $iTransparent );
 		imagecopyresampled( $rNewImage, $rImage, 0, 0, 0, 0, $iNewWidth, $iNewHeight, $iWidth, $iHeight );
 		imagepng( $rNewImage, $tempName );
-		imagedestroy( $rNewImage );
 
 		# Move image to main storage
 		$tempFile = $this->storageHandler->getTempFile( $filename, 'Avatars' );
