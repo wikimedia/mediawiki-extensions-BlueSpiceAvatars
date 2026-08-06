@@ -2,10 +2,10 @@
 
 namespace BlueSpice\Avatars;
 
+use MediaWiki\Context\RequestContext;
 use MediaWiki\Request\WebRequest;
 use MediaWiki\Status\Status;
 use MWStake\MediaWiki\Component\FileStorageUtilities\StorageHandler;
-use RequestContext;
 use StatusValue;
 use UploadFromFile;
 
