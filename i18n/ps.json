@@ -20,5 +20,7 @@
 	"bs-avatars-upload-button": "راپورته‌کول",
 	"bs-avatars-generate-button": "زېږول",
 	"bs-avatars-generic-cancel": "ناگارل",
-	"bs-avatars-generate-description": "يو نوې خپلکاري ځان‌بڼه جوړول. دا به د هر يو راپورته‌شوي پېژنيال انځور ځايناستی شي (که واوڼل شي)"
+	"bs-avatars-generate-description": "يو نوې خپلکاري ځان‌بڼه جوړول. دا به د هر يو راپورته‌شوي پېژنيال انځور ځايناستی شي (که واوڼل شي)",
+	"bs-avatars-upload-unsupported-type": "د دوتنې دا ډول نه ملاتړ کېږي.",
+	"bs-avatars-upload-tempfile-missing": "د لنډمهاله دوتنې په ترلاسنه کې پاتې راغی"
 }
