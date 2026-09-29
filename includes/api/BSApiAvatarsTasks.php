@@ -41,9 +41,7 @@ class BSApiAvatarsTasks extends BSApiTasksBase {
 		\BlueSpice\Avatars\Extension::unsetUserImage( $oUser );
 		$sAvatarFileName = Generator::FILE_PREFIX . $oUser->getId() . ".png";
 
-		$helper = new \BlueSpice\Avatars\AvatarHelper(
-			$this->services->getService( 'MWStake.StorageUtilities' )
-		);
+		$helper = $this->services->getService( 'BSAvatars.Helper' );
 		$status = $helper->uploadAndConvertImage( $this->getRequest()->getVal( 'name' ), $sAvatarFileName );
 		if ( !$status->isGood() ) {
 			$oResponse->message = \MediaWiki\Message\Message::newFromSpecifier( $status->getMessages()[0] )->text();

@@ -2,17 +2,20 @@
 
 namespace BlueSpice\Avatars;
 
+use MediaWiki\Config\Config;
 use MediaWiki\Context\RequestContext;
 use MediaWiki\Request\WebRequest;
 use MediaWiki\Status\Status;
 use MWStake\MediaWiki\Component\FileStorageUtilities\StorageHandler;
+use MWStake\MediaWiki\Component\FileStorageUtilities\StorageTransaction;
 use StatusValue;
 use UploadFromFile;
 
 class AvatarHelper {
 
 	public function __construct(
-		private readonly StorageHandler $storageHandler
+		private readonly StorageHandler $storageHandler,
+		private readonly Config $config
 	) {
 	}
 
@@ -78,12 +81,10 @@ class AvatarHelper {
 			return StatusValue::newFatal( wfMessage( 'bs-avatars-upload-tempfile-missing' )->text() );
 		}
 		$content = file_get_contents( $tempFile->getPath() );
-		$status = $this->storageHandler->newTransaction()
-			->create( $filename, $content, 'Avatars', [ 'overwrite' => true ] )
-			->commit();
 
-		$this->storageHandler->newTransaction( true )
-			->delete( $filename, 'Avatars' )
+		$status = $this->newStorageTransaction()
+			->setContainer( $this->config->get( 'AvatarContainer' ) )
+			->create( $filename, $content, 'Avatars', [ 'overwrite' => true ] )
 			->commit();
 
 		if ( !$status->isOK() ) {
@@ -98,8 +99,19 @@ class AvatarHelper {
 	 * @return StatusValue
 	 */
 	public function deleteThumbs( string $avatarName ): StatusValue {
-		return $this->storageHandler->newTransaction()
+		return $this->newStorageTransaction()
+			->setContainer( $this->config->get( 'AvatarContainer' ) )
 			->deleteDirectory( "Avatars/thumb/$avatarName" )
 			->commit();
+	}
+
+	/**
+	 * @return StorageTransaction
+	 */
+	public function newStorageTransaction(): StorageTransaction {
+		$backend = $this->config->get( 'AvatarBackend' ) ?
+			$this->storageHandler->getBackend( $this->config->get( 'AvatarBackend' ) ) :
+			$this->storageHandler->getMainBackend();
+		return new StorageTransaction( $backend );
 	}
 }
