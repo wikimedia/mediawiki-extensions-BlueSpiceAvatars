@@ -116,6 +116,12 @@
 	"config": {
 		"AvatarsGenerator": {
 			"value": "InstantAvatar"
+		},
+		"AvatarContainer": {
+			"value": "wiki_data"
+		},
+		"AvatarBackend": {
+			"value": null
 		}
 	},
 	"HookHandlers": {

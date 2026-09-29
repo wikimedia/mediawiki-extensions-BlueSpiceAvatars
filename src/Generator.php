@@ -21,12 +21,14 @@ class Generator {
 	 * @param AvatarGeneratorFactory $factory
 	 * @param StorageHandler $storageHandler
 	 * @param \RepoGroup $repoGroup
+	 * @param AvatarHelper $avatarHelper
 	 */
 	public function __construct(
 		private readonly Config $config,
 		private readonly AvatarGeneratorFactory $factory,
 		private readonly StorageHandler $storageHandler,
-		private readonly \RepoGroup $repoGroup
+		private readonly \RepoGroup $repoGroup,
+		private readonly AvatarHelper $avatarHelper
 	) {
 	}
 
@@ -53,7 +55,8 @@ class Generator {
 
 			$rawPNGAvatar = $generator->generate( $user, $defaultSize );
 
-			$status = $this->storageHandler->newTransaction()
+			$status = $this->avatarHelper->newStorageTransaction()
+				->setContainer( $this->config->get( 'AvatarContainer' ) )
 				->create( $oFile->getName(), $rawPNGAvatar, 'Avatars', [ 'overwrite' => true ] )
 				->deleteDirectory( "Avatars/thumb/{$oFile->getName()}" )
 				->commit();

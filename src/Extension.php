@@ -45,15 +45,15 @@ class Extension extends \BlueSpice\Extension {
 		$GLOBALS['wgForeignFileRepos'][] = [
 			'class' => \FileRepo::class,
 			'name' => 'Avatars',
-			'backend' => $GLOBALS['mwsgFileStorageBackend'],
+			'backend' => $GLOBALS['bsgAvatarBackend'] ?? $GLOBALS['mwsgFileStorageBackend'],
 			'hashLevels' => 0,
 			'zones' => [
 				'public' => [
-					'container' => 'wiki_data',
+					'container' => $GLOBALS['bsgAvatarContainer'],
 					'directory' => 'Avatars'
 				],
 				'thumb' => [
-					'container' => 'wiki_data',
+					'container' => $GLOBALS['bsgAvatarContainer'],
 					'directory' => 'Avatars/thumb'
 				]
 			]

@@ -17,7 +17,8 @@ return [
 			$services->getConfigFactory()->makeConfig( 'bsg' ),
 			$services->getService( 'BSAvatarsAvatarGeneratorFactory' ),
 			$services->getService( 'MWStake.StorageUtilities' ),
-			$services->getRepoGroup()
+			$services->getRepoGroup(),
+			$services->getService( 'BSAvatars.Helper' )
 		);
 	},
 
@@ -32,7 +33,8 @@ return [
 	},
 	'BSAvatars.Helper' => static function ( MediaWikiServices $services ) {
 		return new \BlueSpice\Avatars\AvatarHelper(
-			$services->getService( 'MWStake.StorageUtilities' )
+			$services->getService( 'MWStake.StorageUtilities' ),
+			$services->getConfigFactory()->makeConfig( 'bsg' )
 		);
 	},
 ];
