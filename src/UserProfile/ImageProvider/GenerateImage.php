@@ -3,9 +3,9 @@
 namespace BlueSpice\Avatars\UserProfile\ImageProvider;
 
 use BlueSpice\Avatars\Generator;
-use File;
 use MediaWiki\Extension\UserProfile\ProfileImage\IProfileImageProvider;
 use MediaWiki\Extension\UserProfile\ProfileImage\ProfileImageInfo;
+use MediaWiki\FileRepo\File\File;
 use MediaWiki\User\User;
 use MediaWiki\User\UserIdentity;
 use ThumbnailImage;

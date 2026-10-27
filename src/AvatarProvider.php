@@ -2,9 +2,9 @@
 
 namespace BlueSpice\Avatars;
 
-use File;
 use MediaWiki\Extension\UserProfile\ProfileImage\IProfileImageProvider;
 use MediaWiki\Extension\UserProfile\ProfileImage\ProfileImageInfo;
+use MediaWiki\FileRepo\File\File;
 use MediaWiki\User\User;
 use MediaWiki\User\UserIdentity;
 use ThumbnailImage;
