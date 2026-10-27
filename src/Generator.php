@@ -2,8 +2,8 @@
 
 namespace BlueSpice\Avatars;
 
-use File;
 use MediaWiki\Config\Config;
+use MediaWiki\FileRepo\File\File;
 use MediaWiki\FileRepo\RepoGroup;
 use MediaWiki\Message\Message;
 use MediaWiki\User\User;
