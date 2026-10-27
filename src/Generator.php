@@ -4,6 +4,7 @@ namespace BlueSpice\Avatars;
 
 use File;
 use MediaWiki\Config\Config;
+use MediaWiki\FileRepo\RepoGroup;
 use MediaWiki\Message\Message;
 use MediaWiki\User\User;
 use MWStake\MediaWiki\Component\FileStorageUtilities\StorageHandler;
@@ -20,14 +21,14 @@ class Generator {
 	 * @param Config $config
 	 * @param AvatarGeneratorFactory $factory
 	 * @param StorageHandler $storageHandler
-	 * @param \RepoGroup $repoGroup
+	 * @param RepoGroup $repoGroup
 	 * @param AvatarHelper $avatarHelper
 	 */
 	public function __construct(
 		private readonly Config $config,
 		private readonly AvatarGeneratorFactory $factory,
 		private readonly StorageHandler $storageHandler,
-		private readonly \RepoGroup $repoGroup,
+		private readonly RepoGroup $repoGroup,
 		private readonly AvatarHelper $avatarHelper
 	) {
 	}
