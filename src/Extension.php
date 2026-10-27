@@ -30,6 +30,7 @@
 namespace BlueSpice\Avatars;
 
 use MediaWiki\Extension\UserProfile\ProfileImage\ProfileImageProviderFactory;
+use MediaWiki\FileRepo\FileRepo;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\User\User;
 
@@ -43,7 +44,7 @@ class Extension extends \BlueSpice\Extension {
 		mwsInitComponents();
 
 		$GLOBALS['wgForeignFileRepos'][] = [
-			'class' => \FileRepo::class,
+			'class' => FileRepo::class,
 			'name' => 'Avatars',
 			'backend' => $GLOBALS['bsgAvatarBackend'] ?? $GLOBALS['mwsgFileStorageBackend'],
 			'hashLevels' => 0,
