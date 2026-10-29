@@ -5,9 +5,9 @@ namespace BlueSpice\Avatars;
 use MediaWiki\Extension\UserProfile\ProfileImage\IProfileImageProvider;
 use MediaWiki\Extension\UserProfile\ProfileImage\ProfileImageInfo;
 use MediaWiki\FileRepo\File\File;
+use MediaWiki\Media\ThumbnailImage;
 use MediaWiki\User\User;
 use MediaWiki\User\UserIdentity;
-use ThumbnailImage;
 
 class AvatarProvider implements IProfileImageProvider {
 
